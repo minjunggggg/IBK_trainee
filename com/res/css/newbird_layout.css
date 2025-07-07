@@ -1,0 +1,54 @@
+/* onload */
+body.onload #aside .a_pop {
+  visibility: hidden;
+}
+
+body.onload #aside .a_ai {
+  visibility: hidden;
+}
+
+.u_skip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.u_skip a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10rem;
+  background: var(--ibk-blue);
+}
+
+.u_skip a:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* header */
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 102.4rem;
+  z-index: 12;
+  height: 8rem;
+  background: var(--basic-color-w);
+  box-shadow: 0 0 2rem 0 rgba(13, 14, 15, 0.04);
+}
+
+#header .h_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 124.4rem;
+  padding: 0 2.2rem;
+}
