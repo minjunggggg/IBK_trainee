@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* 웹폰트 */
+/* 오픈산스 레귤러 400 */
+/* @font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/OpenSans-Regular.woff) format("woff");
+} */
+/* 오픈산스 세미볼드 500 */
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../font/OpenSans-SemiBold.woff) format("woff");
+}
+/* 오픈산스 볼드 600 */
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../font/OpenSans-Bold.woff) format("woff");
+}
+/* 오픈산스 엑스트라볼드 700 */
+/* @font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font/OpenSans-ExtraBold.woff) format("woff");
+} */
+/* 프리텐다드 레귤러 400 */
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/Pretendard-Regular.woff) format("woff");
+}
+/* 프리텐다드 미디움 500 */
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../font/Pretendard-Medium.woff) format("woff");
+}
+/* 프리텐다드 세미볼드 600 */
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../font/Pretendard-SemiBold.woff) format("woff");
+}
+/* 프리텐다드 볼드 700 */
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font/Pretendard-Bold.woff) format("woff");
+}
+/* 프리텐다드 엑스트라볼드 800 */
+/* @font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(../font/Pretendard-ExtraBold.woff) format("woff");
+} */
+/* 프리텐다드 블랙 900 */
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../font/Pretendard-Black.woff) format("woff");
+}
+/* 나눔스퀘어 B 700 */
+/* @font-face {
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font/NanumSquareB.woff) format("woff");
+} */
+/* IBK 아이드림웹 L 400 */
+@font-face {
+  font-family: "iDreamWeb";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/IBKIDreamWebL.woff) format("woff");
+}
+/* IBK 아이드림웹 B 700 */
+@font-face {
+  font-family: "iDreamWeb";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font/IBKIDreamWebB.woff) format("woff");
+}
+
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  background: none;
+}
