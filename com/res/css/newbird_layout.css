@@ -506,6 +506,58 @@ body.onload #aside .a_ai {
 /* cate, loading 일단 보류 */
 
 /* footer */
+/* container, charge_area, p_box 생략 */
+#footer {
+  display: inline-block; width: 100%; padding-top: 2rem; border-top: 0.1rem solid var(--secondary-color-6-line); font-size: 1.4rem;
+}
+#footer .wrap {
+  height: auto;
+}
+#footer .f_top {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;
+}
+#footer .f_top ul {
+  display: flex; align-items: center;
+}
+#footer .f_check a {
+  display: block; font-weight: 500; letter-spacing: -0.07rem;
+}
+#footer .f_check li:not(:last-child) {
+  margin-right: 1rem;
+}
+#footer .f_function > li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+#footer .f_function > li > a {
+  display: flex; align-items: center; padding: 0.5rem 1rem 0.5rem 1.5rem; border-radius: 3rem; background: var(--secondary-color-6); font-weight: 500; line-height: 3rem;
+}
+#footer .f_function .ff_familysite {
+  display: flex; align-items: center; justify-content: space-between; position: relative; width: 20rem; padding: 0.5rem 1rem 0.5rem 1.5rem; border-radius: 3rem; background: var(--secondary-color-6); font-weight: 500; line-height: 3rem; color: var(--secondary-color-1); cursor: pointer;
+}
+#footer .f_function .ff_familysite.on {
+  background: var(--ibk-blue); border-radius: 0 0 2rem 2rem; color: var(--basic-color-w); box-shadow: 0 1rem 2rem 0 rgba(0, 85, 162, 0.30);
+}
+#footer .f_function .ff_familysite:hover {
+  background: var(--ibk-blue); color: var(--basic-color-w)
+}
+#footer .f_function > li > a::before {
+  content: ""; display: block; width: 1.6rem; height: 1.6rem; margin-right: 1rem; background-size: 1100% auto; background-repeat: no-repeat;
+}
+#footer .f_function .ff_familysite span::before {
+  content: ""; display: block; width: 1.6rem; height: 1.6rem; margin-right: 1rem; background-size: 1100% auto; background-repeat: no-repeat; background-image: url("../images/common/icon_line_b.svg"); background-position: 70% -6.4rem;
+}
+#footer .f_function .ff_familysite.on span::before, #footer .f_function .ff_familysite:hover span::before {
+  content: ""; display: block; width: 1.6rem; height: 1.6rem; margin-right: 1rem; background-size: 1100% auto; background-repeat: no-repeat; background-image: url("../images/common/icon_line_w.svg"); background-position: 70% -6.4rem;
+}
+#footer .f_function > li:nth-child(1) > a::before {
+  background-image: url("../images/common/icon_line.svg"); background-position: 90% -4.8rem;
+}
+#footer .f_function > li:nth-child(2) > a::before {
+  background-image: url("../images/common/icon_line.svg"); background-position: 80% -14.4rem;
+}
+#footer .f_function li a > i, #footer .f_function li select + i {
+  display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 100%; background: var(--basic-color-w); transform: rotate(45deg);
+}
 
 /* wrap, container, content */
 #wrap {
