@@ -17,7 +17,7 @@ body.onload #aside .a_ai {
 
 /* header */
 #header {
-  display: flex; align-items: center; position: fixed; top: 0; left: 0; right: 0; min-width: 102.4rem; z-index: 12; height: 8rem; background: var(--basic-color-w); box-shadow: 0 0 2rem 0 rgba(13, 14, 15, 0.04);
+  display: flex; align-items: center; position: fixed; top: 0; left: 0; right: 0; min-width: 102.4rem; z-index: 12; height: 8rem; background: var(--basic-color-w); box-shadow: 0 0 2rem 0 rgba(13, 14, 15, 0.04); width: auto; min-height: auto; margin: 0;
 }
 #header .h_wrap {
   display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; width: 100%; margin: 0 auto; max-width: 124.4rem; padding: 0 2.2rem;
@@ -110,6 +110,17 @@ body.onload #aside .a_ai {
   margin-right: 0.6rem; background-image: url("../images/common/icon_line_w.svg");
 }
 /* hm_sub(서브메뉴), h_allview, menu_ani, ha_nav, nav_ani1~7, ha_wrap, ha_search, ha_sitemap 제외 */
+
+/* 순서 변경 */
+#header * {
+    letter-spacing: inherit;
+}
+#header a {
+    color: var(--secondary-color-1);
+}
+#header .ha_search .has_searchbox input {
+    height: 3rem;
+}
 
 /* aside */
 #aside {
@@ -271,5 +282,255 @@ body.onload #aside .a_ai {
   display: inline-block; float: left; position: relative; z-index: 1; width: 100%;
 }
 #aside .a_ai .aa_menu strong, #aside .a_ai .aa_menu p {
+  display: inline-block; float: left; width: 100%;
+}
+#aside .a_ai .aa_menu strong span {
+  display: inline-block; float: left; width: 100%; font-size: 3rem; font-weight: 300; color: var(--basic-color-w); line-height: 4rem; letter-spacing: -0.12rem;
+}
+#aside .a_ai .aa_menu strong span mark {
+  display: inline-block; font-weight: 600; color: var(--basic-color-w);
+}
+#aside .a_ai .aa_menu p {
+  margin-top: 2.5rem; margin-bottom: 4rem;
+}
+#aside .a_ai .aa_menu p span {
+  display: inline-block; float: left; width: 100%; font-size: 1.4rem; font-weight: 300; color: var(--basic-color-w); line-height: 2.5rem; letter-spacing: -0.056rem; opacity: 0.8;
+}
+#aside .a_ai .aa_menu p span mark {
+  display: inline-block; font-weight: 600; color: var(--basic-color-w); text-decoration: underline; text-underline-position: under; text-decoration-thickness: 0.1rem;
+}
+#aside .a_ai .aa_menu ul, #aside .a_ai .aa_menu ul li {
+  display: inline-block; float: left; width: 100%;
+}
+#aside .a_ai .aa_menu ul li + li {
+  margin-top: 1rem;
+}
+#aside .a_ai .aa_menu ul li a {
+  display: inline-block; float: left; box-sizing: border-box; width: 100%; padding: 1.5rem; padding-left: 2.5rem; border-radius: 3rem; background-color: var(--basic-color-w); font-size: 1.8rem; font-weight: 500; color: var(--ibk-blue); line-height: 3rem; letter-spacing: -0.072rem;
+}
+#aside .a_ai .aa_menu ul li a > i, #aside .a_ai .aa_menu ul li a > span {
+  display: inline-block; float: left;
+}
+#aside .a_ai .aa_menu ul li a > i {
+  position: relative; top: 0.5rem; margin-right: 1rem;
+}
+#aside .a_ai .aa_menu ul li a > .aam_more {
+  display: inline-block; float: left; box-sizing: border-box; width: 3rem; height: 3rem; padding: 0.7rem; border-radius: 50%; background-color: var(--ibk-blue); transform: rotate(45deg);
+}
+#aside .a_ai .aa_menu ul li a > .aam_more i {
+  float: left;
+}
+#aside .a_ai .aa_menu ul li a:hover {
+  color: var(--secondary-color-1);
+}
+#aside .a_ai .aa_menu ul li a:hover > i {
+  background-image: url("../images/common/icon_line.svg");
+}
+#aside .a_ai .aa_menu ul li a:hover > .aam_more {
+  background-color: var(--secondary-color-1);
+}
+#aside .a_ai .aa_bg {
+  position: absolute; overflow: hidden; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none;
+}
+#aside .a_ai .aa_bg .aab_ballwrap {
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+}
+#aside .a_ai .aa_bg .aab_ball {
+  position: absolute; left: 0; top: 0;
+}
+#aside .a_ai .aa_bg .aab_ball i {
+  position: absolute; left: 0; top: 0; width: 15rem; height: 15rem; background-image: url("../images/common/deco_aiball01.png"); background-repeat: no-repeat; background-size: 100% auto; background-position: center; transform: scale(10);
+}
+#aside .a_ai .aa_bg .aab_ball.p i {
+  background-image: url("../images/common/deco_aiball02.png");
+}
+#aside .a_ai .aa_bg .aab_ball.w i {
+  background-image: url("../images/common/deco_aiball03.png"); opacity: 0.5;
+}
+#aside .a_ai .aa_bg .aab_ball.t1 i {
+  width: 20rem; height: 20rem;
+}
+#aside .a_ai .aa_bg .aab_ball.t2 i {
+  width: 20rem; height: 30rem;
+}
+#aside .a_pop {
+  display: inline-block; overflow: hidden; position: fixed; right: 1.5rem; bottom: -50rem; z-index: 10; width: 39rem; border: 0.5rem solid var(--basic-color-w); border-bottom: none; border-radius: 3rem; pointer-events: none; box-shadow: 0 0 9rem rgba(13, 14, 15, 0.25); transition: 0.5s;
+}
+#aside .a_pop.open {
+  visibility: visible !important;
+}
+#aside .a_pop.open2 {
+  bottom: 1.5rem; pointer-events: auto;
+}
+#aside .a_pop .ap_slide {
+  display: inline-block; position: relative; float: left; width: 100%;
+}
+#aside .a_pop .ap_slide .slick-arrow {
+  display: none !important;
+}
+#aside .a_pop .ap_slide a {
+  display: inline-block; float: left; width: 100%; font-size: 0; line-height: 0;
+}
+#aside .a_pop .ap_slide a img {
+  display: inline-block; width: 100%; height: auto;
+}
+#aside .a_pop .ap_slide .slick-slide, #aside .a_pop .ap_slide .slick-slide > div {
+  display: inline-block; float: left; width: 100%; aspect-ratio: 1/1;
+}
+#aside .a_pop .slick-dots {
+  display: inline-block; position: absolute; left: 4rem; bottom: 1rem; width: auto; margin-left: 1.5rem; padding: 1.1rem 0;
+}
+#aside .a_pop .slick-dots li {
+  display: inline-block; float: left;
+}
+#aside .a_pop .slick-dots li + li {
+  margin-left: 1rem;
+}
+#aside .a_pop .slick-dots li button {
+  position: relative; width: 0.8rem; height: 0.8rem; margin: 0; border-radius: 1rem; background-color: #574767; transition: 0.3s; opacity: 1; font-size: 0; line-height: 0;
+}
+#aside .a_pop .slick-dots li button:hover {
+  background-color: var(--secondary-color-1);
+}
+#aside .a_pop .slick-dots li button:before {
+  content: ""; position: absolute; left: -0.5rem; right: -0.5rem; top: -0.5rem; bottom: -0.5rem;
+}
+#aside .a_pop .slick-dots li.slick-active button {
+  width: 2.4rem; background-color: var(--secondary-color-1);
+}
+#aside .a_pop .ap_nav {
+  display: inline-block; float: left; box-sizing: border-box; width: 100%; padding: 1rem 1.5rem; background-color: var(--basic-color-w);
+}
+#aside .a_pop .ap_nav .apn_control {
+  display: inline-block; float: left; width: 3rem; height: 3rem;
+}
+#aside .a_pop .ap_nav .apn_control i {
+  transform: scale(1.5);
+}
+/* font width -> weight으로 수정 */
+#aside .a_pop .ap_nav .apn_close {
+  display: inline-block; float: right; font-size: 1.5rem; font-weight: 400; color: var(--secondary-color-1); line-height: 3rem; letter-spacing: -0.06rem;
+}
+#aside .a_pop .ap_nav .apn_close button {
+  padding: 0 0.5rem;
+}
+#aside .a_pop .ap_nav .apn_close button + button {
+  margin-left: 1rem;
+}
+#aside .a_pop .ap_nav .apn_close button:hover { 
+  text-decoration: underline dotted; -webkit-text-decoration: underline dotted; text-decoration-color: rgba(13, 14, 15, 0.3); text-decoration-thickness: 0.1rem; text-underline-offset: 0.3rem;
+}
+#aside .a_pop .ap_nav .apn_close i {
+  float: left; position: relative; top: 0.7rem; margin-right: 0.5rem;
+}
+#aside .a_ad {
+  display: none; position: absolute; left: 1rem; top: 15rem; pointer-events: auto;
+}
+#aside .a_ad.on {
   display: inline-block;
 }
+#aside .a_ad > ul {
+  display: inline-block; float: left; width: 10rem;
+}
+#aside .a_ad > ul > li {
+  display: inline-block; vertical-align: middle; float: left; width: 100%;
+}
+#aside .a_ad > ul > li + li {
+  margin-top: 1rem;
+}
+#aside .a_ad > ul > li figure {
+  font-size: 0; line-height: 0;
+}
+#aside .a_ad > ul > li img {
+  width: 100%; height: auto;
+}
+#aside .a_ad > ul > li > * {
+  display: inline-block; overflow: hidden; float: left; position: relative; top: 0; width: 100%; border-radius: 1.5rem; transition: 0.3s;
+}
+#aside .a_ad > ul > li > a:hover {
+  top: -0.5rem;
+}
+#aside .a_ad > ul > li > a:hover {
+  top: -0.5rem;
+}
+#aside .a_ad > ul > li > .aa_rate {
+  box-sizing: border-box; padding: 1rem 0.5rem; background-color: var(--ibk-blue); color: var(--basic-color-w);
+}
+#aside .a_ad > ul > li > .aa_rate li {
+  position: relative;
+}
+#aside .a_ad > ul > li > .aa_rate li + li {
+  margin-top: 1rem; padding-top: 1rem;
+}
+#aside .a_ad > ul > li > .aa_rate li + li:before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 0.1rem; background-color: var(--basic-color-w); opacity: 0.1;
+}
+#aside .a_ad > ul > li > .aa_rate li > strong {
+  font-size: 1.2rem; font-weight: 700; color: var(--basic-color-w); letter-spacing: -0.048rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > em {
+  display: inline-block; width: calc(100% - 0.5rem); margin-top: 0.4rem; margin-bottom: 1rem; border-radius: 1rem; background-color: rgba(13, 14, 15, 0.2); font-size: 1.1rem; font-weight: 400; color: var(--basic-color-w); line-height: 2rem; letter-spacing: -0.044rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > span {
+  display: inline-block; width: 100%; font-size: 1.1rem; font-weight: 400; color: var(--basic-color-w); line-height: 2rem; letter-spacing: -0.044rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > span > mark {
+  display: inline-block; vertical-align: middle; width: 2rem; margin-left: 0.2rem; border-radius: 0.5rem; background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.00) 100%), var(--ibk-red);
+  font-size: 1.7rem; font-weight: 900; color: var(--basic-color-w); line-height: 2.4rem; letter-spacing: -0.068rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > span > span {
+  display: inline-block; vertical-align: middle; margin-left: 0.2rem; font-size: 1.3rem; font-weight: 900; color: var(--basic-color-w); line-height: 2.4rem; letter-spacing: -0.068rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > a {
+  display: inline-block; width: 100%; margin-top: 0.4rem; font-family: 'OpenSans'; font-size: 1.2rem; font-weight: 500; color: var(--basic-color-w); line-height: 1.5rem; letter-spacing: -0.024rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > a:hover {
+  text-decoration: underline dotted; -webkit-text-decoration: underline dotted; text-decoration-color: rgba(255, 255, 255, 0.4); text-decoration-thickness: 0.1rem; text-underline-offset: 0.3rem;
+}
+#aside .a_ad > ul > li > .aa_rate li > a:focus-visible {
+  outline: 2px dashed #e21750;
+}
+#aside .a_ad > .aa_close {
+  position: absolute; left: 50%; bottom: -4rem; width: 3rem; height: 3rem; margin-left: -1.5rem; border-radius: 50%; background-color: var(--secondary-color-1);
+}
+#aside .a_ad > .aa_close:hover {
+  background-color: var(--ibk-blue);
+}
+#aside .a_ad > .aa_close i {
+  vertical-align: middle; transition: 0.3s;
+}
+#aside .a_ad > .aa_close:hover i {
+  transform: rotate(90deg);
+}
+
+/* cate, loading 일단 보류 */
+
+/* footer */
+
+/* wrap, container, content */
+#wrap {
+    background: none;
+}
+#container {
+    margin-top: 8rem; font: initial; font-family: 'ibkiDream', Dotum, sans-serif; font-size: 12px; color: #575757; text-align: left;
+}
+#content .paging {
+    margin: 0;
+}
+#content legend, #content caption {
+    width: 0; height: 0; font-size: 0; line-height: 0;
+}
+#content .select {
+    height: 21px; padding: 1px; border: 1px solid #e5e5e5; border-radius: 0; background: none; font-size: 12px; color: #575757; line-height: 18px; letter-spacing: 0;
+}
+#content select {
+    border: 1px solid #e5e5e5; border-radius: 0; -webkit-appearance: revert; -moz-appearance: revert; appearance: revert;
+}
+#content th, #content dl.dl_list03, #content strong, #content b {
+    font-weight: 700;
+}
+#content .tbl_list_srch input {
+    width: 146px;
+}
+
+/* 반응형 */
