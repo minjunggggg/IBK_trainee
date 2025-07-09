@@ -6305,24 +6305,6 @@ form + #contents {
         height: 6.5rem;
     }
 
-    /* 내가 임의로 추가 */
-#contents .c_main .cm_info ul li:nth-child(2) .cmi_box:before {
-    background-position: center -12rem;
-}
-#contents .c_main .cm_info ul li .cmi_box:before {
-    content: "";
-    position: absolute;
-    left: 3rem;
-    bottom: 3rem;
-    width: 12rem;
-    height: 12rem;
-    background-image: url(../images/main/icon_supoort.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center 0;
-    filter: drop-shadow(1rem 1rem 3rem rgba(13, 14, 15, 0.15));
-    animation: bounceY 3s infinite;
-}
     #contents .c_more:before {
         left: -6rem;
         width: 6rem;
