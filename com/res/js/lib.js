@@ -28,10 +28,10 @@ $(document).ready(function () {
   $(window).scroll(function () {
     scTop = $(window).scrollTop();
     if (scTop + window.innerHeight >= $(document).height() - 1) {
-      $("#aside .a_fuction").addClass("off");
+      $("#aside .a_function").addClass("off");
       $("#aside .a_ai").addClass("off");
     } else {
-      $("#aside .a_fuction").removeClass("off");
+      $("#aside .a_function").removeClass("off");
       $("#aside .a_ai").removeClass("off");
     }
   });
@@ -184,36 +184,36 @@ $(document).ready(function () {
     }
   );
 
-  $("#header .h_fuction button").on("click", function () {
+  $("#header .h_function button").on("click", function () {
     if ($(this).hasClass("on")) {
       $("body").addClass("on");
       $(this).removeClass("on").addClass("off");
       $(".h_allview").show();
-      $("#header .h_fuction button span").text(decodeURIComponent("%EB%A9%94%EB%89%B4%20%EB%8B%AB%EA%B8%B0"));
-      $("#header .h_fuction button").attr("aria-expanded", "true");
+      $("#header .h_function button span").text(decodeURIComponent("%EB%A9%94%EB%89%B4%20%EB%8B%AB%EA%B8%B0"));
+      $("#header .h_function button").attr("aria-expanded", "true");
     } else if ($(this).hasClass("off")) {
       $(this).removeClass("off").addClass("on");
       $("body").removeClass("on");
       $(".h_allview").hide();
-      $("#header .h_fuction button span").text(decodeURIComponent("%EB%A9%94%EB%89%B4%20%EC%97%B4%EA%B8%B0"));
-      $("#header .h_fuction button").attr("aria-expanded", "false");
+      $("#header .h_function button span").text(decodeURIComponent("%EB%A9%94%EB%89%B4%20%EC%97%B4%EA%B8%B0"));
+      $("#header .h_function button").attr("aria-expanded", "false");
     }
   });
 
   $(".u_skip .uk_btn").on("click", function () {
-    if ($("#header .h_fuction button").hasClass("on")) {
+    if ($("#header .h_function button").hasClass("on")) {
       $("body").addClass("on");
-      $("#header .h_fuction button").removeClass("on").addClass("off");
+      $("#header .h_function button").removeClass("on").addClass("off");
       $(".h_allview").show();
-      $("#header .h_fuction button span").text(decodeURIComponent("%EB%A9%94%EB%89%B4%20%EB%8B%AB%EA%B8%B0"));
-      $("#header .h_fuction button").attr("aria-expanded", "true");
+      $("#header .h_function button span").text(decodeURIComponent("%EB%A9%94%EB%89%B4%20%EB%8B%AB%EA%B8%B0"));
+      $("#header .h_function button").attr("aria-expanded", "true");
     }
   });
 
   $("#header .h_menu > ul a,header .h_menu > ul button").on("focus", function () {
     var submenu = $(this).next("ul");
-    // å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì»¤å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹¹ê³¤ì˜™ å ì™ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
-    // å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì»¤å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?™?˜™ì»¤å ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹¹ê³¤ì˜™ ? ?™?˜™? ï¿? ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?™?˜™ì»¤å ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?™?˜™? ?™?˜™
     if (submenu.length) {
       submenu.css("display", "block");
     }
@@ -221,19 +221,19 @@ $(document).ready(function () {
   $("#header .h_menu > ul a,header .h_menu > ul button").on("blur", function () {
     var submenu = $(this).next("ul");
     if (submenu.length) {
-      // å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ì™ì˜™å ì‹¸ë¤„ì˜™ å ì™ì˜™ì»¤å ì™ì˜™å ì™ì˜™ å ì‹±ë“¸ì˜™å ì‹¹ëŒì˜™å ì™ì˜™ í™•å ì™ì˜™ å ì™ì˜™ å ìŒ¥ê¹ì˜™
+      // ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?™?˜™? ?‹¸ë¤„ì˜™ ? ?™?˜™ì»¤å ?™?˜™? ?™?˜™ ? ?‹±?“¸?˜™? ?‹¹?Œ?˜™? ?™?˜™ ?™•? ?™?˜™ ? ?™?˜™ ? ?Œ¥ê¹ì˜™
       setTimeout(function () {
         if (!submenu.find("a").is(":focus")) {
           submenu.css("display", "none");
         }
-      }, 100); // å ì…ê°„å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì‹¸ì–µì˜™ å ì™ì˜™ì»¤å ì™ì˜™ å ì‹±ë“¸ì˜™å ì™ì˜™ å ì™ì˜™æ‘¸å ï¿½
+      }, 100); // ? ?…ê°„å ?™?˜™ ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?‹¸?–µ?˜™ ? ?™?˜™ì»¤å ?™?˜™ ? ?‹±?“¸?˜™? ?™?˜™ ? ?™?˜™?‘¸? ï¿?
     }
   });
-  // å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ì™ì˜™å ì™ì˜™ å ì™ì˜™í¬å ì™ì˜™ å ì™ì˜™ì»¤å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ìŒê³¤ì˜™ å ì™ì˜™å ì™ì˜™
+  // ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?™?˜™? ?™?˜™ ? ?™?˜™?¬? ?™?˜™ ? ?™?˜™ì»¤å ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?Œê³¤ì˜™ ? ?™?˜™? ?™?˜™
   $("#header .h_menu ul.hm_sub a").on("focus", function () {
     $(this).closest("ul.hm_sub").css("display", "block");
   });
-  // å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì»¤å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì˜ë‚˜å ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+  // ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?™?˜™ì»¤å ?™?˜™? ?™?˜™ ? ?™?˜™? ?˜?‚˜? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
   $("#header .h_menu ul.hm_sub a").on("blur", function () {
     var submenu = $(this).closest("ul.hm_sub");
     setTimeout(function () {
@@ -244,8 +244,8 @@ $(document).ready(function () {
   });
   let isClick = false;
 
-  // í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸ ì²˜å ì™ì˜™
-  // 1å ì™ì˜™ å ìŒ¨ëŒì˜™ (has_depth01) í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸
+  // ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸ ì²˜å ?™?˜™
+  // 1? ?™?˜™ ? ?Œ¨?Œ?˜™ (has_depth01) ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸
   $("#header .ha_sitemap").on("click", ".has_depth01 > .accordion", function (e) {
     if ($(this).hasClass("on")) {
       $(this).removeClass("on");
@@ -254,7 +254,7 @@ $(document).ready(function () {
     }
   });
 
-  // 2å ì™ì˜™ å ìŒ¨ëŒì˜™ (has_depth01) í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸
+  // 2? ?™?˜™ ? ?Œ¨?Œ?˜™ (has_depth01) ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸
   $("#header .ha_sitemap").on("click", ".has_depth02 .accordion", function (e) {
     if ($(this).hasClass("on")) {
       $(this).removeClass("on");
@@ -263,7 +263,7 @@ $(document).ready(function () {
     }
   });
 
-  // ï§ë¶¿ì”¤ ï¿½ã…»í‰¬å¯ƒëš¯ì” ï¿½ï¿½ ï§ë¨°ë­¾ï¿½ï¿½
+  // ï§ë¶¿?”¤ ï¿½ã…»?‰¬å¯ƒëš¯?” ï¿½ï¿½ ï§ë?°ë?¾ï¿½ï¿?
   $("#contents.c_main .cm_nav ul li .cmn_explanation").hover(
     function () {
       $(this).parent("li").css("z-index", "1");
@@ -283,7 +283,7 @@ $(document).ready(function () {
       $(this).parent("li").css("z-index", "0");
     });
 
-  // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™
+  // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ï¿? ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™
   if ($(".cmh_slide").length) {
     var speed = 0.67;
     var bar = $("#contents.c_main .cm_hero .cmh_nav .cmhn_bar .cmhnb_progress");
@@ -299,8 +299,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        dots: false, // ï¿½ï¿½ ï¿½ë†ë¸·æ¹²ï¿½
-        arrows: false, // ï¿½ëŒìŸ¾/ï¿½ã…¼ì“¬ è¸°ê¾ªë“‰ ï¿½ë†ë¸·æ¹²ï¿½
+        dots: false, // ï¿½ï¿½ ï¿½ë†ë¸·æ¹²ï¿?
+        arrows: false, // ï¿½ëŒ?Ÿ¾/ï¿½ã…¼?“¬ è¸°ê¾ª?“‰ ï¿½ë†ë¸·æ¹²ï¿?
       })
       .on("init afterChange", function () {
         $(".cmh_slide.t1 .slick-slide").attr("tabindex", "-1");
@@ -316,22 +316,22 @@ $(document).ready(function () {
       infinite: true,
       vertical: true,
       asNavFor: ".cmh_slide.t1",
-      dots: false, // ï¿½ï¿½ ï¿½ë†ë¸·æ¹²ï¿½
-      arrows: false, // ï¿½ëŒìŸ¾/ï¿½ã…¼ì“¬ è¸°ê¾ªë“‰ ï¿½ë†ë¸·æ¹²ï¿½
+      dots: false, // ï¿½ï¿½ ï¿½ë†ë¸·æ¹²ï¿?
+      arrows: false, // ï¿½ëŒ?Ÿ¾/ï¿½ã…¼?“¬ è¸°ê¾ª?“‰ ï¿½ë†ë¸·æ¹²ï¿?
     });
 
-    // å ì™ì˜™å ì™ì˜™ å ì™ì˜™íŠ¼ í´å ì™ì˜™ å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?™?˜™?Š¼ ?´? ?™?˜™ ? ?™?˜™
     $("#contents.c_main .cm_hero .cmh_nav .cmhn_control .prev").on("click", function () {
-      $(".cmh_slide.t1").slick("slickPrev"); // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™å ï¿½ å ì‹±ë“¸ì˜™
+      $(".cmh_slide.t1").slick("slickPrev"); // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™? ï¿? ? ?‹±?“¸?˜™
     });
 
-    // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™å ï¿½ å ì‹±ë“¸ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™? ï¿? ? ?‹±?“¸?˜™
     $("#contents.c_main .cm_hero .cmh_nav .cmhn_control .next").on("click", function () {
-      $(".cmh_slide.t1").slick("slickNext"); // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™å ï¿½ å ì‹±ë“¸ì˜™
+      $(".cmh_slide.t1").slick("slickNext"); // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™? ï¿? ? ?‹±?“¸?˜™
     });
 
-    //å ì™ì˜™å ï¿½/å ì™ì˜™å ì™ì˜™ å ì™ì˜™íŠ¼ í´å ì™ì˜™ å ì™ì˜™
-    let isPlaying = true; // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ (å ì™ì˜™å ï¿½/å ì™ì˜™å ì™ì˜™)
+    //? ?™?˜™? ï¿?/? ?™?˜™? ?™?˜™ ? ?™?˜™?Š¼ ?´? ?™?˜™ ? ?™?˜™
+    let isPlaying = true; // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ (? ?™?˜™? ï¿?/? ?™?˜™? ?™?˜™)
 
     $("#contents.c_main .cm_hero .cmh_nav .cmhn_control .control").on("click", function () {
       if (isPlaying) {
@@ -351,14 +351,14 @@ $(document).ready(function () {
 
     const totalSlides = $(".cmh_slide.t1").slick("getSlick").slideCount;
     var totalCount = "0" + totalSlides;
-    $(".cmhn_pagination .total").text(totalCount); // å ì™ì˜™ì²´ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™ í‘œå ì™ì˜™
+    $(".cmhn_pagination .total").text(totalCount); // ? ?™?˜™ì²? ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™ ?‘œ? ?™?˜™
 
-    // å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™, å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™í˜¸ å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™, ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™?˜¸ ? ?™?˜™? ?™?˜™
     $(".cmh_slide.t1").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
       var count = "0" + (nextSlide + 1);
-      $(".cmhn_pagination .current").text(count); // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™í˜¸ í‘œå ì™ì˜™ (1å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™)
+      $(".cmhn_pagination .current").text(count); // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™?˜¸ ?‘œ? ?™?˜™ (1? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™)
       startProgressbar();
-      if (!isPlaying) changeWhenPaused = true; // å ì‹¹ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹¹ë°ì˜™ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™í™˜
+      if (!isPlaying) changeWhenPaused = true; // ? ?‹¹?™?˜™? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹¹?°?˜™ ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™?™˜
     });
     startProgressbar();
 
@@ -366,7 +366,7 @@ $(document).ready(function () {
       resetProgressbar();
       percentTime = 0;
       if (isPlaying) {
-        tick = setInterval(interval, 30); // å ì‹¹ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ìŠ¹ê³¤ì˜™ å ì‹£ë‹ˆëªŒì˜™ å ì™ì˜™å ì™ì˜™å ì™ì˜™å ï¿½
+        tick = setInterval(interval, 30); // ? ?‹¹?™?˜™? ?™?˜™? ?™?˜™ ? ?™?˜™? ?Š¹ê³¤ì˜™ ? ?‹£?‹ˆëªŒì˜™ ? ?™?˜™? ?™?˜™? ?™?˜™? ï¿?
       }
     }
     function interval() {
@@ -422,7 +422,7 @@ $(document).ready(function () {
     $(".cmh_slide.t1").on("beforeChange", function (event, slick, currentSlide, nextSlide) {});
   }
 
-  // å ì‹¯ì–µì˜™ å ì™ì˜™å ì™ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™
+  // ? ?‹¯?–µ?˜™ ? ?™?˜™? ?™?˜™? ï¿? ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™
   if ($("#aside .a_pop .ap_silde").length) {
     $("#aside .a_pop .ap_silde").slick({
       infinite: true,
@@ -431,18 +431,18 @@ $(document).ready(function () {
       autoplaySpeed: 5000,
       dots: true,
     });
-    let ispopPlaying = true; // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ (å ì™ì˜™å ï¿½/å ì™ì˜™å ì™ì˜™)
+    let ispopPlaying = true; // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ (? ?™?˜™? ï¿?/? ?™?˜™? ?™?˜™)
     $("#aside .a_pop .ap_nav .apn_control").on("click", function () {
       if (ispopPlaying) {
-        $("#aside .a_pop .ap_silde").slick("slickPause"); // å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™å ì™ì˜™
-        $(this).find("i").removeClass("pause").addClass("play"); // å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+        $("#aside .a_pop .ap_silde").slick("slickPause"); // ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™? ?™?˜™
+        $(this).find("i").removeClass("pause").addClass("play"); // ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
         $("#aside .a_pop .ap_nav .apn_control span").text(decodeURIComponent("%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%9E%AC%EC%83%9D"));
       } else {
-        $("#aside .a_pop .ap_silde").slick("slickPlay"); // å ì™ì˜™å ì™ì˜™å ì‹±ë“¸ì˜™ å ì™ì˜™å ï¿½
-        $(this).find("i").removeClass("play").addClass("pause"); // å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+        $("#aside .a_pop .ap_silde").slick("slickPlay"); // ? ?™?˜™? ?™?˜™? ?‹±?“¸?˜™ ? ?™?˜™? ï¿?
+        $(this).find("i").removeClass("play").addClass("pause"); // ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
         $("#aside .a_pop .ap_nav .apn_control span").text(decodeURIComponent("%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%A0%95%EC%A7%80"));
       }
-      ispopPlaying = !ispopPlaying; // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ï¿½
+      ispopPlaying = !ispopPlaying; // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ï¿?
     });
 
     const dots = document.querySelector("#aside .slick-dots");
@@ -465,31 +465,31 @@ $(document).ready(function () {
   }
 
   /* ai On Off */
-  $("#aside .a_fuction ul li.af_ai button").click(function () {
-    $("#aside .a_fuction ul li.af_ai .afa_dim").addClass("on");
+  $("#aside .a_function ul li.af_ai button").click(function () {
+    $("#aside .a_function ul li.af_ai .afa_dim").addClass("on");
     if (!$("#aside .a_ai").hasClass("open")) {
       $("#aside .a_ai").addClass("open");
-      $("#aside .a_fuction ul li.af_ai").addClass("open");
+      $("#aside .a_function ul li.af_ai").addClass("open");
       setTimeout(function () {
         $("#aside .a_ai").addClass("open2");
-        $("#aside .a_fuction .af_ai button span").text(decodeURIComponent("AI%20%EC%83%81%EB%8B%B4%20%EB%8B%AB%EA%B8%B0"));
-        $("#aside .a_fuction .af_ai button").attr("aria-expanded", "true");
+        $("#aside .a_function .af_ai button span").text(decodeURIComponent("AI%20%EC%83%81%EB%8B%B4%20%EB%8B%AB%EA%B8%B0"));
+        $("#aside .a_function .af_ai button").attr("aria-expanded", "true");
       }, 10);
     } else {
       $("#aside .a_ai").removeClass("open2");
       setTimeout(function () {
         $("#aside .a_ai").removeClass("open");
-        $("#aside .a_fuction ul li.af_ai .afa_dim").removeClass("on");
-        $("#aside .a_fuction ul li.af_ai").removeClass("open");
-        $("#aside .a_fuction .af_ai button span").text(decodeURIComponent("AI%20%EC%83%81%EB%8B%B4%20%EC%97%B4%EA%B8%B0"));
-        $("#aside .a_fuction .af_ai button").attr("aria-expanded", "false");
+        $("#aside .a_function ul li.af_ai .afa_dim").removeClass("on");
+        $("#aside .a_function ul li.af_ai").removeClass("open");
+        $("#aside .a_function .af_ai button span").text(decodeURIComponent("AI%20%EC%83%81%EB%8B%B4%20%EC%97%B4%EA%B8%B0"));
+        $("#aside .a_function .af_ai button").attr("aria-expanded", "false");
       }, 300);
     }
   });
 
-  $("#aside .a_fuction ul li.af_ai button").click(function () {});
+  $("#aside .a_function ul li.af_ai button").click(function () {});
 
-  $("#aside .a_fuction ul li.af_ai .afa_dim").click(function () {
+  $("#aside .a_function ul li.af_ai .afa_dim").click(function () {
     $(this).removeClass("on");
     $("#aside .a_ai").removeClass("open");
     $("#aside .a_ai").removeClass("open2");
@@ -499,15 +499,15 @@ $(document).ready(function () {
   });
 
   /* popbanner On Off */
-  $("#aside .a_fuction ul li.af_popbanner button").click(function () {
+  $("#aside .a_function ul li.af_popbanner button").click(function () {
     if (!$("#aside .a_pop").hasClass("open")) {
       $("#aside .a_pop").addClass("open");
-      $("#aside .a_fuction ul li.af_popbanner").addClass("open");
+      $("#aside .a_function ul li.af_popbanner").addClass("open");
 
       setTimeout(function () {
         $("#aside .a_pop").addClass("open2");
-        $("#aside .a_fuction ul li.af_popbanner button > span").text(decodeURIComponent("%EB%B0%B0%EB%84%88%20%EB%8B%AB%EA%B8%B0"));
-        $("#aside .a_fuction ul li.af_popbanner button").attr("aria-expanded", "true");
+        $("#aside .a_function ul li.af_popbanner button > span").text(decodeURIComponent("%EB%B0%B0%EB%84%88%20%EB%8B%AB%EA%B8%B0"));
+        $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "true");
 
         if ($("#aside .a_pop .ap_silde").length) {
           const dots = document.querySelector("#aside .slick-dots");
@@ -535,9 +535,9 @@ $(document).ready(function () {
       $("#aside .a_pop").removeClass("open2");
       setTimeout(function () {
         $("#aside .a_pop").removeClass("open");
-        $("#aside .a_fuction ul li.af_popbanner").removeClass("open");
-        $("#aside .a_fuction ul li.af_popbanner button > span").text(decodeURIComponent("%EB%B0%B0%EB%84%88%20%EC%97%B4%EA%B8%B0"));
-        $("#aside .a_fuction ul li.af_popbanner button").attr("aria-expanded", "false");
+        $("#aside .a_function ul li.af_popbanner").removeClass("open");
+        $("#aside .a_function ul li.af_popbanner button > span").text(decodeURIComponent("%EB%B0%B0%EB%84%88%20%EC%97%B4%EA%B8%B0"));
+        $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false");
       }, 300);
     }
   });
@@ -546,10 +546,10 @@ $(document).ready(function () {
     $("#aside .a_pop").removeClass("open2");
     setTimeout(function () {
       $("#aside .a_pop").removeClass("open");
-      $("#aside .a_fuction ul li.af_popbanner").removeClass("open");
-      $("#aside .a_fuction ul li.af_popbanner button > span").text(decodeURIComponent("%EB%B0%B0%EB%84%88%20%EC%97%B4%EA%B8%B0"));
+      $("#aside .a_function ul li.af_popbanner").removeClass("open");
+      $("#aside .a_function ul li.af_popbanner button > span").text(decodeURIComponent("%EB%B0%B0%EB%84%88%20%EC%97%B4%EA%B8%B0"));
     }, 300);
-    $("#aside .a_fuction ul li.af_popbanner button").attr("aria-expanded", "false");
+    $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false");
   });
 
   /* popbanner Off */
@@ -557,17 +557,17 @@ $(document).ready(function () {
     $("#aside .a_pop").removeClass("open2");
     setTimeout(function () {
       $("#aside .a_pop").removeClass("open");
-      $("#aside .a_fuction ul li.af_popbanner").removeClass("open");
+      $("#aside .a_function ul li.af_popbanner").removeClass("open");
     }, 300);
 
-    /* å ì™ì˜™å ì™ì˜™å ì‹­ìš¸ì˜™ */
-    /* å ì‹¹ë£¨ë™å ì™ì˜™ í˜¹å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì‹¹ë“¸ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™  */
+    /* ? ?™?˜™? ?™?˜™? ?‹­?š¸?˜™ */
+    /* ? ?‹¹ë£¨ë™? ?™?˜™ ?˜¹? ?™?˜™ ? ?™?˜™? ?™?˜™? ?‹¹?“¸?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™  */
     setCookie("popupClosed", "true", 1);
-    $("#aside .a_fuction ul li.af_popbanner button").attr("aria-expanded", "false");
+    $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false");
   });
 
-  /* å ì™ì˜™í¬å ì™ì˜™ í´å ì™ì˜™å ì™ì˜™ å ìŒì‚¼ì˜™å ì™ì˜™å ì™ì˜™å ï¿½ å ì‹±ë“¸ì˜™ */
-  $("#aside .a_fuction ul li.af_scrolltop button").click(function () {
+  /* ? ?™?˜™?¬? ?™?˜™ ?´? ?™?˜™? ?™?˜™ ? ?Œ?‚¼?˜™? ?™?˜™? ?™?˜™? ï¿? ? ?‹±?“¸?˜™ */
+  $("#aside .a_function ul li.af_scrolltop button").click(function () {
     $("html, body").animate({ scrollTop: "0" }, 1000, "swing");
   });
 
@@ -575,7 +575,7 @@ $(document).ready(function () {
     $("body,html").stop(false);
   });
 
-  // AI Ball í°í™”å ì™ì˜™
+  // AI Ball ?°?™”? ?™?˜™
   const MIN_SPEED = 3;
   const MAX_SPEED = 6;
 
@@ -641,7 +641,7 @@ $(document).ready(function () {
 
   initBlobs();
 
-  // AI Ballå ì™ì˜™å ì™ì˜™í™”å ì™ì˜™
+  // AI Ball? ?™?˜™? ?™?˜™?™”? ?™?˜™
   const MIN_SPEED2 = 0.25;
   const MAX_SPEED2 = 0.5;
 
@@ -718,10 +718,10 @@ $(document).ready(function () {
   }, 100);
 
   $("#cate .c_copy").on("click", function () {
-    // å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì™ì˜™ URLå ì™ì˜™ å ì™ì˜™å ì™ì˜™å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ?™?˜™ URL? ?™?˜™ ? ?™?˜™? ?™?˜™? ?™?˜™? ?™?˜™
     var currentUrl = window.location.href;
 
-    // å ìŒˆì™ì˜™ å ìŒ”ì™ì˜™íŠ¸ å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™å ï¿½ URLå ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    // ? ?Œˆ?™?˜™ ? ?Œ”?™?˜™?Š¸ ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™? ï¿? URL? ?™?˜™ ? ?™?˜™? ?™?˜™
     var tempInput = $("<input>");
     $("body").append(tempInput);
     tempInput.val(currentUrl).select();
@@ -740,15 +740,15 @@ $(document).ready(function () {
     }
   });
 
-  // í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸ å ìŒ˜ë“¤ëŸ¬
+  // ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸ ? ?Œ˜?“¤?Ÿ¬
   $("#contents .c_menu > li").on("click", function (e) {
-    e.stopPropagation(); // í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì²´å ì™ì˜™ å ì™ì˜™å ì‹ë“¸ì˜™å ì™ì˜™ å ì‹­ë“¸ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    e.stopPropagation(); // ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™ì²´å ?™?˜™ ? ?™?˜™? ?‹?“¸?˜™? ?™?˜™ ? ?‹­?“¸?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
 
-    // í´å ì™ì˜™å ì™ì˜™ li å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ï¿½ liå ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+    // ?´? ?™?˜™? ?™?˜™ li ? ?™?˜™? ?™?˜™ ? ?™?˜™? ï¿? li? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
     $("#contents .c_menu > li").not(this).removeClass("on").addClass("off");
     $("#contents .c_menu > li").not(this).children("ul").hide();
 
-    // í´å ì™ì˜™å ì™ì˜™ liå ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ì™ì˜™å ì™ì˜™/å ìŒ¥ê¹ì˜™
+    // ?´? ?™?˜™? ?™?˜™ li? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?™?˜™? ?™?˜™/? ?Œ¥ê¹ì˜™
     if ($(this).hasClass("on")) {
       $(this).removeClass("on").addClass("off");
       $(this).children("ul").hide();
@@ -758,19 +758,19 @@ $(document).ready(function () {
     }
   });
 
-  // å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì²´å ì™ì˜™å ì™ì˜™ í´å ì™ì˜™ å ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™ (å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™)
+  // ? ?™?˜™? ?™?˜™ ? ?™?˜™ì²´å ?™?˜™? ?™?˜™ ?´? ?™?˜™ ? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™ (? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™)
   $(document).on("click", function (e) {
-    // å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
     if ($("#contents .c_menu > li.on").length) {
-      // í´å ì™ì˜™å ì™ì˜™ å ì™ì˜™æŸ°å ï¿½ .c_menu å ì™ì˜™å ì‹¸ê³¤ì˜™ å ì‹£ëŒì˜™ å ì™ì˜™è‘âˆ½ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+      // ?´? ?™?˜™? ?™?˜™ ? ?™?˜™?Ÿ°? ï¿? .c_menu ? ?™?˜™? ?‹¸ê³¤ì˜™ ? ?‹£?Œ?˜™ ? ?™?˜™?‘?ˆ½?˜™? ï¿? ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
       if (!$(e.target).closest("#contents .c_menu").length) {
         $("#contents .c_menu ul").hide();
         $("#contents .c_menu > li").removeClass("on").addClass("off");
       }
     }
-    // å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
     if ($("#footer .f_function .ff_familysite.on").length) {
-      // í´å ì™ì˜™å ì™ì˜™ å ì™ì˜™æŸ°å ï¿½ .c_menu å ì™ì˜™å ì‹¸ê³¤ì˜™ å ì‹£ëŒì˜™ å ì™ì˜™è‘âˆ½ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+      // ?´? ?™?˜™? ?™?˜™ ? ?™?˜™?Ÿ°? ï¿? .c_menu ? ?™?˜™? ?‹¸ê³¤ì˜™ ? ?‹£?Œ?˜™ ? ?™?˜™?‘?ˆ½?˜™? ï¿? ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
       if (!$(e.target).closest("#footer .f_function .ff_familysite").length) {
         $("#footer .f_function .ff_familysite ul").hide();
         $("#footer .f_function .ff_familysite").removeClass("on");
@@ -778,15 +778,15 @@ $(document).ready(function () {
     }
   });
 
-  // í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸ å ìŒ˜ë“¤ëŸ¬
+  // ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸ ? ?Œ˜?“¤?Ÿ¬
   $("#cate .c_menu > ul > li").on("click", function (e) {
-    e.stopPropagation(); // í´å ì™ì˜™ å ì‹±ë¸ì˜™íŠ¸å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì²´å ì™ì˜™ å ì™ì˜™å ì‹ë“¸ì˜™å ì™ì˜™ å ì‹­ë“¸ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    e.stopPropagation(); // ?´? ?™?˜™ ? ?‹±ë¸ì˜™?Š¸? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™ì²´å ?™?˜™ ? ?™?˜™? ?‹?“¸?˜™? ?™?˜™ ? ?‹­?“¸?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
 
-    // í´å ì™ì˜™å ì™ì˜™ li å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ï¿½ liå ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+    // ?´? ?™?˜™? ?™?˜™ li ? ?™?˜™? ?™?˜™ ? ?™?˜™? ï¿? li? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
     $("#cate .c_menu > ul > li").not(this).removeClass("on").addClass("off");
     $("#cate .c_menu > ul > li").not(this).children("ul").hide();
 
-    // í´å ì™ì˜™å ì™ì˜™ liå ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ì™ì˜™å ì™ì˜™/å ìŒ¥ê¹ì˜™
+    // ?´? ?™?˜™? ?™?˜™ li? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?™?˜™? ?™?˜™/? ?Œ¥ê¹ì˜™
     if ($(this).hasClass("on")) {
       $(this).removeClass("on").addClass("off");
       $(this).children("ul").hide();
@@ -798,19 +798,19 @@ $(document).ready(function () {
     }
   });
 
-  // å ì™ì˜™å ì™ì˜™ å ì™ì˜™ì²´å ì™ì˜™å ì™ì˜™ í´å ì™ì˜™ å ì™ì˜™ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™ (å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™)
+  // ? ?™?˜™? ?™?˜™ ? ?™?˜™ì²´å ?™?˜™? ?™?˜™ ?´? ?™?˜™ ? ?™?˜™ ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™ (? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™)
   $(document).on("click", function (e) {
-    // å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
     if ($("#cate .c_menu > ul > li.on").length) {
-      // í´å ì™ì˜™å ì™ì˜™ å ì™ì˜™æŸ°å ï¿½ .c_menu å ì™ì˜™å ì‹¸ê³¤ì˜™ å ì‹£ëŒì˜™ å ì™ì˜™è‘âˆ½ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+      // ?´? ?™?˜™? ?™?˜™ ? ?™?˜™?Ÿ°? ï¿? .c_menu ? ?™?˜™? ?‹¸ê³¤ì˜™ ? ?‹£?Œ?˜™ ? ?™?˜™?‘?ˆ½?˜™? ï¿? ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
       if (!$(e.target).closest("#cate .c_menu > ul").length) {
         $("#cate .c_menu > ul > li > ul").hide();
         $("#cate .c_menu > ul > li").removeClass("on").addClass("off");
       }
     }
-    // å ì™ì˜™å ì™ì˜™ å ìŒ¨ëŒì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™ å ì™ì˜™å ì™ì˜™
+    // ? ?™?˜™? ?™?˜™ ? ?Œ¨?Œ?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™ ? ?™?˜™? ?™?˜™
     if ($("#footer .f_function .ff_familysite.on").length) {
-      // í´å ì™ì˜™å ì™ì˜™ å ì™ì˜™æŸ°å ï¿½ .c_menu å ì™ì˜™å ì‹¸ê³¤ì˜™ å ì‹£ëŒì˜™ å ì™ì˜™è‘âˆ½ì˜™å ï¿½ å ì™ì˜™å ì™ì˜™æ¿±å ï¿½ å ìŒ¥ê¹ì˜™
+      // ?´? ?™?˜™? ?™?˜™ ? ?™?˜™?Ÿ°? ï¿? .c_menu ? ?™?˜™? ?‹¸ê³¤ì˜™ ? ?‹£?Œ?˜™ ? ?™?˜™?‘?ˆ½?˜™? ï¿? ? ?™?˜™? ?™?˜™æ¿±å ï¿? ? ?Œ¥ê¹ì˜™
       if (!$(e.target).closest("#footer .f_function .ff_familysite").length) {
         $("#footer .f_function .ff_familysite ul").hide();
         $("#footer .f_function .ff_familysite").removeClass("on");
@@ -834,18 +834,18 @@ $(document).ready(function () {
     $("body").addClass("firefox");
   }
 
-  // å ì™ì˜™å ï¿½ class="comma" å ì™ì˜™å¥´å ï¿½ å ì‹±ë¸ì˜™íŠ¸ å ì™ì˜™å ì™ì˜™å ì™ì˜™ å ìŒ©ê³¤ì˜™
+  // ? ?™?˜™? ï¿? class="comma" ? ?™?˜™å¥´å ï¿? ? ?‹±ë¸ì˜™?Š¸ ? ?™?˜™? ?™?˜™? ?™?˜™ ? ?Œ©ê³¤ì˜™
   const inputBoxes = document.querySelectorAll(".comma");
   inputBoxes.forEach((inputBox) => {
     inputBox.addEventListener("input", (event) => {
       let value = event.target.value;
-      // å ì™ì˜™å ì™ì˜™ å ìŒ¨ëªŒì˜™ å ì™ì˜™å ì™ì˜™
+      // ? ?™?˜™? ?™?˜™ ? ?Œ¨ëªŒì˜™ ? ?™?˜™? ?™?˜™
       value = value.replace(/,/g, "");
-      // å ì™ì˜™å ìŒ˜ê³¤ì˜™ å ì‹£ëŒì˜™ å ì™ì˜™ å ì™ì˜™å ì‹¶ëªŒì˜™
+      // ? ?™?˜™? ?Œ˜ê³¤ì˜™ ? ?‹£?Œ?˜™ ? ?™?˜™ ? ?™?˜™? ?‹¶ëªŒì˜™
       if (isNaN(value)) {
         value = value.replace(/[^0-9]/g, "");
       }
-      // ì²œ å ì™ì˜™å ì™ì˜™ å ìŒ¨ëªŒì˜™ å ìŒ©ê³¤ì˜™
+      // ì²? ? ?™?˜™? ?™?˜™ ? ?Œ¨ëªŒì˜™ ? ?Œ©ê³¤ì˜™
       event.target.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     });
   });
@@ -873,14 +873,14 @@ $(document).ready(function () {
   });
 });
 
-// å ì™ì˜™í‚¤ å ì™ì˜™å ì™ì˜™
+// ? ?™?˜™?‚¤ ? ?™?˜™? ?™?˜™
 function setCookie(name, value, days) {
   const date = new Date();
   date.setDate(date.getDate() + days);
   document.cookie = `${name}=${value}; path=/; expires=${date.toUTCString()}`;
 }
 
-// å ì™ì˜™í‚¤ å ì™ì˜™å ì™ì˜™å ì™ì˜™å ì™ì˜™
+// ? ?™?˜™?‚¤ ? ?™?˜™? ?™?˜™? ?™?˜™? ?™?˜™
 function getCookie(name) {
   const cookies = document.cookie.split("; ");
   for (let i = 0; i < cookies.length; i++) {

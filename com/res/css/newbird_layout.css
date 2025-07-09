@@ -126,7 +126,56 @@ body.onload #aside .a_ai {
 #aside {
   position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 11; pointer-events: none;
 }
-/* a_wrap(하단메뉴), a_nav, a_control 제외 */
+/* a_nav(하단메뉴) 제외 */
+#aside .a_wrap {
+  position: absolute; right: 0; top: 15rem; pointer-events: auto;
+}
+#aside .a_wrap {
+  position: fixed; left: 0; bottom: 0; top: initial; width: 100%; pointer-events: none;
+}
+#aside .a_wrap.active {
+  pointer-events: auto;
+}
+#aside .a_wrap {
+  position: fixed; left: 0; bottom: 0; top: initial; width: 100%; pointer-events: none;
+}
+#aside .a_wrap.active {
+  pointer-events: auto;
+}
+#aside .a_control {
+  position: absolute; top: calc(100% + 2rem); right: 2rem; width: 6rem; height: 6rem; background: var(--secondary-color-1); border-radius: 100%; font-size: 1.3rem; font-weight: 600; line-height: 1.7rem; letter-spacing: -0.052rem; color: var(--basic-color-w); pointer-events: auto;
+}
+#aside .a_control:hover, #aside .a_control:focus-visible {
+  background: var(--ibk-blue)
+}
+#aside .a_control .blind.t1::after {
+  content: "";
+}
+#aside .a_control.on .blind.t1::after {
+  content: "";
+}
+#aside .a_control .ac_deco {
+  display: block; position: absolute; top: 50%; left: 50%; width: 1.6rem; height: 0.2rem; border-radius: 3rem; background: var(--basic-color-w); transform: translate(-50%, -50%)
+}
+#aside .a_control .ac_deco.t1 {
+  transition: 0.2s
+}
+#aside .a_control .ac_deco.t1.trs {
+  transition: none
+}
+#aside .a_control.on .ac_deco.t1 {
+  transform: translate(-50%, -50%) rotate(90deg)
+}
+#aside .a_control {
+  position: fixed; right: 2.2rem; bottom: 2rem; top: calc(100% - 6rem); width: 4rem; height: 4rem;
+}
+#aside .a_control .ac_deco {
+  width: 1.2rem;
+}
+#aside .a_control .ac_deco.t1 {
+  -webkit-transition: none;
+}
+
 /* a_fuction 오타 수정 */
 #aside .a_function {
   position: absolute; right: 2rem; bottom: 2rem; font-size: 0; line-height: 0; pointer-events: auto;
@@ -757,3 +806,262 @@ body.onload #aside .a_ai {
 }
 
 /* 반응형 */
+@media (max-height: 900px) {
+  #aside a_function {
+    bottom: 10rem; right: 2.2rem;
+  }
+  #aside .a_function ul {
+    width: 4rem;
+  }
+  #aside .a_function ul li.af_popbanner button i {
+    transform: scale(0.857)
+  }
+  #aside .a_function ul li.af_popbanner button .afp_count {
+    right: -0.5rem; top: -0.5rem;
+  }
+  #aside .a_wrap {
+    position: fixed; left: 0; bottom: 0; top: initial; width: 100%; pointer-events: none;
+  }
+  #aside .a_wrap.active {
+    pointer-events: auto;
+  }
+  #aside .a_control {
+    position: fixed; right: 2.2rem; bottom: 2rem; top: calc(100% - 6rem); width: 4rem; height: 4rem;
+  }
+  #aside .a_control .ac_deco {
+    width: 1.2rem;
+  }
+  #aside .a_control .ac_deco.t1 {
+    -webkit-transition: none;
+  }
+  #aside .a_function ul li.af_ai button i {
+    width: 2.8rem; height: 2.8rem;
+  }
+  #aside .a_ai {
+    bottom: 14.5rem;
+  }
+  #aside .a_ai.open2 {
+    right: 8.4rem;
+  }
+  #footer {
+    padding-bottom: 8rem;
+  }
+  #footer.on {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-height: 840px) {
+  #aside .a_ai.open2 {
+    height: auto;
+  }
+  #header .h_menu .hm_sub {
+    max-height: 35.1rem; overflow-y: auto;
+  }
+}
+
+@media (max-width: 1440px) {
+  #aside .a_function {
+    bottom: 10rem; right: 2.2rem;
+  }
+  #aside .a_function ul {
+    width: 4rem;
+  }
+  #aside .a_function ul li.af_popbanner button i {
+    transform: scale(0.857);
+  }
+  #aside .a_function ul li.af_popbanner button .afp_count {
+    right: -0.5rem; top: -0.5rem;
+  }
+  #aside .a_wrap {
+    position: fixed; left: 0; bottom: 0; top: initial; width: 100%; pointer-events: none;
+  }
+  #aside .a_wrap.active {
+    pointer-events: auto;
+  }
+  #aside .a_control {
+    position: fixed; right: 2.2rem; bottom: 2rem; top: calc(100% - 6rem); width: 4rem; height: 4rem;
+  }
+  #aside .a_control .ac_deco {
+    width: 1.2rem;
+  }
+  #aside .a_control .ac_deco.t1 {
+    -webkit-transition: none;
+  }
+  #aside .a_function ul li.af_ai button i {
+    width: 2.8rem; height: 2.8rem;
+  }
+  #aside .a_ai {
+    bottom: 9.5rem; border-radius: 3rem;
+  }
+  #aside.ismain .a_ai {
+    bottom: 14.5rem;
+  }
+  #aside .a_ad {
+    display: none !important;
+  }
+  #aside .a_function.off .af_ai #aside .a_function.off .af_popbanner {
+    right: -8rem;
+  }
+  #aside .a_ai.open2.off {
+    right: -39rem;
+  }
+  #footer {
+    padding-bottom: 8rem;
+  }
+  #footer.on {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  #header {
+    height:7rem;
+  }
+  #header .h_menu {
+    margin-left: 3.1rem;
+  }
+  #header .h_menu > ul a, #header .h_menu > ul button {
+    font-size: 1.6rem; line-height: 7rem;
+  }
+  #header .h_wrap > a {
+    width: 13.6rem;
+  }
+  #header .h_wrap > a img {
+    width: 100%;
+  }
+  #header .h_menu > ul > li:not(:last-child) {
+    margin-right: 3rem;
+  }
+  #header .h_function a {
+    font-size: 1.4rem;
+  }
+
+  /* footer */
+  #footer {
+    font-size: 1.3rem;
+  }
+  #footer .f_wrap.t1 .wrap {
+    padding: 0 2.45rem;
+  }
+  #footer .f_check a {
+    letter-spacing: -0.065rem;
+  }
+  #footer .f_cs {
+    margin-bottom: 3rem;
+  }
+  #footer .f_cs h3 {
+    margin-right: 1.2rem; font-size: 1.6rem; letter-spacing: 0
+  }
+  #footer .f_terms a, #footer .f_terms button {
+    font-size: 1.3rem;
+  }
+  #footer .f_terms li:not(:last-child)::after {
+    width: 0.3rem; height: 0.3rem; margin: 0 1rem;
+  }
+  #footer .f_function li .ff_familysite select {
+    width: 10.3rem;
+  }
+  #footer .f_cs ul {
+    justify-content: center; flex-shrink: unset; width: 100%;
+  }
+  #footer .f_cs li strong {
+    min-width: 5.5rem; margin-right: 1rem; font-size: 1.6rem; letter-spacing: -0.064rem;
+  }
+  #footer .f_cs li a {
+    font-size: 2rem; letter-spacing: -0.04rem;
+  }
+  #footer .f_cs > div {
+    width: 100%
+  }
+  #footer .f_cs > div > div {
+    flex-shrink: 0
+  }
+  #footer .f_cs div > strong {
+    margin-right: 5rem;
+  }
+  #footer .f_cs li:not(:last-child) {
+    margin-right: 2.6rem;
+  }
+  #footer .f_cs li a:not(:last-child) {
+    margin-right: 1.4rem;
+  }
+  #footer .f_cs .fc_ars {
+    margin-right: 0; letter-spacing: -0.065rem
+  }
+  #footer .f_info li {
+    font-size: 1.4rem; line-height: 2.5rem; letter-spacing: -0.056rem;
+  }
+  #footer .f_info .fi_copyright {
+    line-height: 2.5rem;
+  }
+  #footer .f_info .fi_qr {
+    width: 9rem; height: 9rem; margin-right: 2rem;
+  }
+  #footer .f_info li:nth-child(2)::after, #footer .f_info li:nth-child(3)::after {
+    margin: 0 1rem;
+  }
+  #footer .f_info strong {
+    font-size: 1.6rem;
+  }
+  #footer .f_info span {
+    font-size: 1.4rem; line-height: 2rem; letter-spacing: -0.056rem;
+  }
+  #footer .f_info mark {
+    font-size: 1.2rem; line-height: 2rem; letter-spacing: -0.048rem;
+  }
+  #footer .f_info > div {
+    width: auto;
+  }
+  #footer .f_info > div:last-child {
+    flex-shrink: 0; width: 52.2%;
+  }
+  #footer .f_function li a span {
+    width: 6.1rem;
+  }
+  #footer .f_function .ff_familysite {
+    width: 18rem;
+  }
+  #footer .f_function .ff_familysite ul {
+    width: 15rem;
+  }
+  #footer .f_info .fi_qrlink {
+    font-size: 1.6rem; letter-spacing: 0
+  }
+}
+
+@media (max-width: 1100px) {
+  #footer.f_istablet .f_terms li:not(:last-child)::after {
+    margin:0 0.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #aside .a_pop .ap_silde {
+    top:0.1rem;
+  }
+}
+
+@media (max-height: 900px) {
+  #aside .a_function {
+    bottom: 10rem; right: 2.2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #aside .a_control {
+    position: absolute;
+    top: calc(100% - 30rem);
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    background: var(--secondary-color-1);
+    border-radius: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+    letter-spacing: -0.052rem;
+    color: var(--basic-color-w);
+    pointer-events: auto;
+  }
+}
