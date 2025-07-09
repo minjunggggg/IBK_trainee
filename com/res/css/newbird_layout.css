@@ -109,9 +109,9 @@ body.onload #aside .a_ai {
 #header .h_function a:hover i {
   margin-right: 0.6rem; background-image: url("../images/common/icon_line_w.svg");
 }
-/* hm_sub(ì„œë¸Œë©”ë‰´), h_allview, menu_ani, ha_nav, nav_ani1~7, ha_wrap, ha_search, ha_sitemap ì œì™¸ */
+/* hm_sub(¼­ºê¸Ş´º), h_allview, menu_ani, ha_nav, nav_ani1~7, ha_wrap, ha_search, ha_sitemap Á¦¿Ü */
 
-/* ìˆœì„œ ë³€ê²½ */
+/* ¼ø¼­ º¯°æ */
 #header * {
     letter-spacing: inherit;
 }
@@ -126,8 +126,8 @@ body.onload #aside .a_ai {
 #aside {
   position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 11; pointer-events: none;
 }
-/* a_wrap(í•˜ë‹¨ë©”ë‰´), a_nav, a_control ì œì™¸ */
-/* a_fuction ì˜¤íƒ€ ìˆ˜ì • */
+/* a_wrap(ÇÏ´Ü¸Ş´º), a_nav, a_control Á¦¿Ü */
+/* a_fuction ¿ÀÅ¸ ¼öÁ¤ */
 #aside .a_function {
   position: absolute; right: 2rem; bottom: 2rem; font-size: 0; line-height: 0; pointer-events: auto;
 }
@@ -407,7 +407,7 @@ body.onload #aside .a_ai {
 #aside .a_pop .ap_nav .apn_control i {
   transform: scale(1.5);
 }
-/* font width -> weightìœ¼ë¡œ ìˆ˜ì • */
+/* font width -> weightÀ¸·Î ¼öÁ¤ */
 #aside .a_pop .ap_nav .apn_close {
   display: inline-block; float: right; font-size: 1.5rem; font-weight: 400; color: var(--secondary-color-1); line-height: 3rem; letter-spacing: -0.06rem;
 }
@@ -503,10 +503,10 @@ body.onload #aside .a_ai {
   transform: rotate(90deg);
 }
 
-/* cate, loading ì¼ë‹¨ ë³´ë¥˜ */
+/* cate, loading ÀÏ´Ü º¸·ù */
 
 /* footer */
-/* container, charge_area, p_box ìƒëµ */
+/* container, charge_area, p_box »ı·« */
 #footer {
   display: inline-block; width: 100%; padding-top: 2rem; border-top: 0.1rem solid var(--secondary-color-6-line); font-size: 1.4rem;
 }
@@ -756,4 +756,4 @@ body.onload #aside .a_ai {
     width: 146px;
 }
 
-/* ë°˜ì‘í˜• */
+/* ¹İÀÀÇü */
