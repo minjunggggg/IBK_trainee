@@ -132,7 +132,7 @@
             </ul>
           </nav>
 
-          <!-- 우측 메뉴 2개 -->
+          <!-- 상단 우측 메뉴 2개 -->
           <!-- 제외: 자식 메뉴, 검색 바, 스크립트 -->
           <div class="h_function">
             <ul>
@@ -258,34 +258,38 @@
 
         <!-- 팝업 -->
         <div class="a_pop">
-          <div class="ap_slide">
-            <div class="slick-slide">
-              <p>
-                <!-- 변경: base64 이미지 -> png -->
-                <img
-                  src="../filedir/editor/Image/SKT통신사 이용고객 안내 팝업2(웹접근성).png"
-                  style="width: 392.203px; height: 392.203px"
-                  data-filename="SKT통신사 이용고객 안내 팝업2(웹접근성).png"
-                  alt="SKT통신사 이용고객 안내 SKT유심정보 유출사고의 영향으로 금융사고를 미연에 방지하고자 일시적으로 알뜰폰을 포함한 SKT통신사의 본인확인을 제한하고 있습니다. 이로인해 비대면 업무처리가 불가하시거나, 휴대폰이 갑자기 동작하지 않는 경우 SKT통신사 혹은 당사 콜센터로 연락바랍니다. 불편하시더라도 고객님의 소중한 정보를 보호하기 위함이니 양해부탁드립니다. IBK연금보험은 고객님의 정보보호를 위해 최선을 다하겠습니다. 감사합니다. 아이비케이연금보험 콜센터 1577-4117"
-                /><br />
-              </p>
-            </div>
-            <div class="slick-slide">
-              <a onclick="goTaskId4Device(`/paging/HP_DIRECTPENSION_EVENT_VIEW?pageNum=1&evnt_seq=176&evnt_rnum=1&evnt_tnum=01`,`2`)" href="#" title="진행중인 이벤트 새창 열림" aria-label="진행중인 이벤트 새창 열림">
-                <img
-                  alt="다이렉트연금보험 가입이벤트 IBK연금보험에서 노후준비하고 풍성한 선물받자! 가입 시 모바일 상품권 증정! 이벤트 참여하기 > ※ 자세한 사항은 이벤트 상세페이지에서 확인하시기 바랍니다. ※ 준법감시인 심의필 제2025-0033호 (2025.02.17 ~ 2026.02.16)"
-                  width="780"
-                  height="780"
-                  src="../filedir/editor/Image/250218_CM채널 가입이벤트 팝업 (심의)(1).png"
-                />
-              </a>
-            </div>
-            <div class="ap_nav">
-              <button type="button" class="apn_control" tabindex="100"><i class="icon line pause"></i> <span class="blind">슬라이드 정지</span></button>
-              <div class="apn_close">
-                <button type="button" class="today" tabindex="102"><i class="icon line small checkbox"></i>오늘 보지 않기</button>
-                <button type="button" class="close" tabindex="103"><i class="icon line small close2"></i>닫기</button>
+          <div class="ap_slide slick-initialized slick-slider slick-dotted">
+            <div class="slick-list">
+              <div class="slick-track">
+                <div class="slick-slide">
+                  <p>
+                    <!-- 변경: base64 이미지 -> png -->
+                    <img
+                      src="../filedir/editor/Image/SKT통신사 이용고객 안내 팝업2(웹접근성).png"
+                      style="width: 392.203px; height: 392.203px"
+                      data-filename="SKT통신사 이용고객 안내 팝업2(웹접근성).png"
+                      alt="SKT통신사 이용고객 안내 SKT유심정보 유출사고의 영향으로 금융사고를 미연에 방지하고자 일시적으로 알뜰폰을 포함한 SKT통신사의 본인확인을 제한하고 있습니다. 이로인해 비대면 업무처리가 불가하시거나, 휴대폰이 갑자기 동작하지 않는 경우 SKT통신사 혹은 당사 콜센터로 연락바랍니다. 불편하시더라도 고객님의 소중한 정보를 보호하기 위함이니 양해부탁드립니다. IBK연금보험은 고객님의 정보보호를 위해 최선을 다하겠습니다. 감사합니다. 아이비케이연금보험 콜센터 1577-4117"
+                    /><br />
+                  </p>
+                </div>
+                <div class="slick-slide">
+                  <a onclick="goTaskId4Device(`/paging/HP_DIRECTPENSION_EVENT_VIEW?pageNum=1&evnt_seq=176&evnt_rnum=1&evnt_tnum=01`,`2`)" href="#" title="진행중인 이벤트 새창 열림" aria-label="진행중인 이벤트 새창 열림">
+                    <img
+                      alt="다이렉트연금보험 가입이벤트 IBK연금보험에서 노후준비하고 풍성한 선물받자! 가입 시 모바일 상품권 증정! 이벤트 참여하기 > ※ 자세한 사항은 이벤트 상세페이지에서 확인하시기 바랍니다. ※ 준법감시인 심의필 제2025-0033호 (2025.02.17 ~ 2026.02.16)"
+                      width="780"
+                      height="780"
+                      src="../filedir/editor/Image/250218_CM채널 가입이벤트 팝업 (심의)(1).png"
+                    />
+                  </a>
+                </div>
               </div>
+            </div>
+          </div>
+          <div class="ap_nav">
+            <button type="button" class="apn_control" tabindex="100"><i class="icon line pause"></i> <span class="blind">슬라이드 정지</span></button>
+            <div class="apn_close">
+              <button type="button" class="today" tabindex="102"><i class="icon line small checkbox"></i>오늘 보지 않기</button>
+              <button type="button" class="close" tabindex="103"><i class="icon line small close2"></i>닫기</button>
             </div>
           </div>
         </div>
@@ -361,6 +365,7 @@
                   </div>
                   <div class="cmh_slide t1">
                     13
+                    <!-- 슬라이드 1 -->
                     <div class="slick-slide">
                       <div class="cmhs_wrap">
                         <div class="cmhs_bg" style="background-color: #0055a2"></div>
@@ -373,6 +378,7 @@
                       </div>
                     </div>
                     15
+                    <!-- 슬라이드 2 -->
                     <div class="slick-slide">
                       <div class="cmhs_wrap">
                         <div class="cmhs_bg" style="background-color: #ab6254"></div>
@@ -388,6 +394,7 @@
                       </div>
                     </div>
                     10
+                    <!-- 슬라이드 3 -->
                     <div class="slick-slide">
                       <div class="cmhs_wrap">
                         <div class="cmhs_bg" style="background-color: #698082"></div>
@@ -403,6 +410,7 @@
                       </div>
                     </div>
                     18
+                    <!-- 슬라이드 4 -->
                     <div class="slick-slide">
                       <div class="cmhs_wrap">
                         <div class="cmhs_bg" style="background-color: #6bb9ff"></div>
@@ -811,172 +819,172 @@
       <!-- form 생략 -->
       <!-- Contents E -->
       <!-- charge_area 생략 -->
+
+      <!-- Footer S -->
+      <footer id="footer" class="on">
+        <div class="f_wrap">
+          <div class="wrap">
+            <h2 class="blind">푸터 정보</h2>
+            <div class="f_top">
+              <!-- 첫줄 좌측 버튼 2개 -->
+              <ul class="f_check">
+                <li>
+                  <button
+                    type="button"
+                    class="btn small filled blue"
+                    onclick="goTaskId4Device('/logincy/CYExtSesssionChecker.jsp?sessionCheckerKey=741244555745454&taskSecd=1&goTask=1&appSchemPage=WE_MA_WEMA04000000&mobAppSchemPage=APMINE004.do&mobAppSchemOp=V02','2'); return false;"
+                    aria-label="개인신용정보 이용 · 제공 조회 새창으로 열림"
+                  >
+                    개인신용정보 이용 · 제공 조회
+                  </button>
+                </li>
+                <li>
+                  <button
+                    tye="button"
+                    class="btn small filled blue"
+                    onclick="goTaskId4Device('/logincy/CYExtSesssionChecker.jsp?sessionCheckerKey=865445557454543&taskSecd=1&goTask=1&appSchemPage=CY_MKT_AGRM_APPL_WDRW_INQ&mobAppSchemPage=APMINE004.do&mobAppSchemOp=V01','2'); return false;"
+                    aria-label="마케팅동의 및 철회 조회 새창으로 열림"
+                  >
+                    마케팅동의 및 철회 조회
+                  </button>
+                </li>
+              </ul>
+
+              <!-- 첫줄 우측 버튼 3개 -->
+              <ul class="f_function">
+                <li>
+                  <a href="https://113366.com/ibki" target="_blank" title="원격지원 새창열림" class="ff_box">
+                    <span>원격지원</span>
+                    <i>
+                      <i class="icon line xsmall arrowup2"></i>
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/process/HP_CSCETR_INDEX" class="ff_box">
+                    <span>고객지원</span>
+                    <i>
+                      <i class="icon line xsmall arrowup2"></i>
+                    </i>
+                  </a>
+                </li>
+                <li class="t1">
+                  <button class="ff_box ff_familysite" aria-expanded="false">
+                    <span>패밀리 사이트</span>
+                    <i>
+                      <i class="icon line xsmall arrowup1"></i>
+                    </i>
+                    <ul>
+                      <li>
+                        <a href="http://www.ibk.co.kr" target="_blank" title="IBK기업은행 새창열림" aria-label="IBK기업은행 새창열림">IBK기업은행</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibks.com" target="_blank" title="IBK투자증권 새창열림" aria-label="IBK투자증권 새창열림">IBK투자증권</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibkfoundation.or.kr" target="_blank" title="IBK행복나눔재단 새창열림" aria-label="IBK행복나눔재단 새창열림">IBK행복나눔재단</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibkcapital.co.kr" target="_blank" title="IBK캐피탈 새창열림" aria-label="IBK캐피탈 새창열림">IBK캐피탈</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibksystem.co.kr" target="_blank" title="IBK시스템 새창열림" aria-label="IBK시스템 새창열림">IBK시스템</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibkcredit.co.kr" target="_blank" title="IBK신용정보(주) 새창열림" aria-label="IBK신용정보(주) 새창열림">IBK신용정보(주)</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibkasset.com" target="_blank" title="IBK자산운용(주) 새창열림" aria-label="IBK자산운용(주) 새창열림">IBK자산운용(주)</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibksvc.co.kr" target="_blank" title="IBK서비스 새창열림" aria-label="IBK서비스 새창열림">IBK서비스</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ibksb.co.kr" target="_blank" title="IBK저축은행 새창열림" aria-label="IBK저축은행 새창열림">IBK저축은행</a>
+                      </li>
+                    </ul>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="f_wrap t1">
+          <div class="wrap">
+            <div class="f_terms">
+              <ul>
+                <li><a href="/process/HP_CSCERT_INDV_INF_CON_NTC" class="cm">개인정보 처리방침</a></li>
+                <li><a href="/process/HP_CSCETR_CR_INF_UTLZ">신용정보 활용체제</a></li>
+                <li><a href="/process/HP_SFGD_FNC_PDT_RGST">보호금융상품등록부</a></li>
+                <li><a href="/pr/about/ibk_ethics.jsp">IBK 윤리헌장</a></li>
+                <li><a href="https://cont.insure.or.kr/cont_web/intro.do" target="_blank" title="휴면보험금 조회 새창열림" aria-label="휴면보험금 조회 새창열림">휴면보험금 조회</a></li>
+                <li><a href="https://www.fss.or.kr/fss/cvpl/inhCerEc/main.do?menuNo=200010" target="_blank" title="상속금융거래 조회 서비스 새창열림" aria-label="상속금융거래 조회 서비스 새창열림">상속금융거래 조회 서비스</a></li>
+                <li><a href="https://www.fss.or.kr/fss/cvpl/icnyViolt/forInsertAgre.do?menuNo=200299" target="_blank" title="보험모집 질서위반 새창열림" aria-label="보험모집 질서위반 새창열림">보험모집 질서위반</a></li>
+                <li><a href="/process/HP_CSCETR_PERINFO_EXPOS">개인정보노출 등록/해제</a></li>
+                <li><a href="/process/HP_VILT_DCLR_POP">위법신고</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="f_wrap">
+          <div class="wrap">
+            <div class="f_cs">
+              <div class="fc_wrap">
+                <h3 class="cm">
+                  <i class="icon line b medium wallet"></i>
+                  고객센터
+                </h3>
+                <button type="button" class="fc_ars" onclick="openPopup('/pr/popup/pop_info_ars.jsp', 'BK연금보험 ARS 안내', 900, 750);" title="IBK연금보험 ARS 안내 새창열림" aria-label="IBK연금보험 ARS 안내 새창열림">IBK연금보험 ARS 안내</button>
+                <ul>
+                  <li>
+                    <strong class="cm">연금보험</strong>
+                    <a href="tel:15777117"><i class="icon small line call"></i>1577-4117</a>
+                    <a href="tel:16444117"><i class="icon small line call"></i>1644-4117</a>
+                  </li>
+                  <li>
+                    <strong class="cr">퇴직연금</strong>
+                    <a href="tel:16614117"><i class="icon small line call"></i>1661-4117</a>
+                  </li>
+                </ul>
+              </div>
+              <span>※ 상담가능시간 : 평일 09시 ~ 18시</span>
+            </div>
+            <div class="f_info">
+              <h3 class="blind">사업장 정보</h3>
+              <div class="fi_wrap">
+                <ul>
+                  <li>주소 : 04511 서울시 중구 칠패로 37, (봉래동 1가, HSBC 빌딩) IBK연금보험</li>
+                  <li>대표이사 : 임문택</li>
+                  <li>대표전화 :&nbsp<a href="tel:0222701600">02-2270-1600</a></li>
+                  <li>사업자번호 : 104-86-29322</li>
+                </ul>
+                <div style="display: flex; align-items: center">
+                  <p class="fi_copyright">&copy; IBK INSURANCE</p>
+                  <img src="../com/res/images/common/Web_accessibility.png" alt="IBK연금보험 웹접근성 인증 취득 마크" style="margin-left: 1rem; width: 4.5rem" />
+                </div>
+              </div>
+              <div class="fi_wrap">
+                <div class="fi_qr">
+                  <img src="../com/res/images/common/pic_qr.png" alt="IBK연금보험 스마트창구 앱 QR코드" />
+                </div>
+                <div>
+                  <a href="https://m.ibki.co.kr/mob/goSmartAPP.jsp" target="_blank" title="IBK연금보험 스마트창구 새창열림" aria-label="IBK연금보험 스마트창구 새창열림" class="fi_qrlink cm">
+                    <i class="icon line b mobile medium"></i>
+                    IBK연금보험 스마트창구
+                  </a>
+                  <span>IBK연금보험 스마트창구를 통해 쉽고 빠르게 다양한 보험서비스를 만나보세요.</span>
+                  <mark>※ 스마트폰의 카메라로 왼쪽 QR코드를 촬영해주세요!</mark>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer E -->
+
+      <!-- TODO: form, script 남은 것 -->
     </div>
-
-    <!-- Footer S -->
-    <footer id="footer" class="on">
-      <div class="f_wrap">
-        <div class="wrap">
-          <h2 class="blind">푸터 정보</h2>
-          <div class="f_top">
-            <!-- 첫줄 좌측 버튼 2개 -->
-            <ul class="f_check">
-              <li>
-                <button
-                  type="button"
-                  class="btn small filled blue"
-                  onclick="goTaskId4Device('/logincy/CYExtSesssionChecker.jsp?sessionCheckerKey=741244555745454&taskSecd=1&goTask=1&appSchemPage=WE_MA_WEMA04000000&mobAppSchemPage=APMINE004.do&mobAppSchemOp=V02','2'); return false;"
-                  aria-label="개인신용정보 이용 · 제공 조회 새창으로 열림"
-                >
-                  개인신용정보 이용 · 제공 조회
-                </button>
-              </li>
-              <li>
-                <button
-                  tye="button"
-                  class="btn small filled blue"
-                  onclick="goTaskId4Device('/logincy/CYExtSesssionChecker.jsp?sessionCheckerKey=865445557454543&taskSecd=1&goTask=1&appSchemPage=CY_MKT_AGRM_APPL_WDRW_INQ&mobAppSchemPage=APMINE004.do&mobAppSchemOp=V01','2'); return false;"
-                  aria-label="마케팅동의 및 철회 조회 새창으로 열림"
-                >
-                  마케팅동의 및 철회 조회
-                </button>
-              </li>
-            </ul>
-
-            <!-- 첫줄 우측 버튼 3개 -->
-            <ul class="f_function">
-              <li>
-                <a href="https://113366.com/ibki" target="_blank" title="원격지원 새창열림" class="ff_box">
-                  <span>원격지원</span>
-                  <i>
-                    <i class="icon line xsmall arrowup2"></i>
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="/process/HP_CSCETR_INDEX" class="ff_box">
-                  <span>고객지원</span>
-                  <i>
-                    <i class="icon line xsmall arrowup2"></i>
-                  </i>
-                </a>
-              </li>
-              <li class="t1">
-                <button class="ff_box ff_familysite" aria-expanded="false">
-                  <span>패밀리 사이트</span>
-                  <i>
-                    <i class="icon line xsmall arrowup1"></i>
-                  </i>
-                  <ul>
-                    <li>
-                      <a href="http://www.ibk.co.kr" target="_blank" title="IBK기업은행 새창열림" aria-label="IBK기업은행 새창열림">IBK기업은행</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibks.com" target="_blank" title="IBK투자증권 새창열림" aria-label="IBK투자증권 새창열림">IBK투자증권</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibkfoundation.or.kr" target="_blank" title="IBK행복나눔재단 새창열림" aria-label="IBK행복나눔재단 새창열림">IBK행복나눔재단</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibkcapital.co.kr" target="_blank" title="IBK캐피탈 새창열림" aria-label="IBK캐피탈 새창열림">IBK캐피탈</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibksystem.co.kr" target="_blank" title="IBK시스템 새창열림" aria-label="IBK시스템 새창열림">IBK시스템</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibkcredit.co.kr" target="_blank" title="IBK신용정보(주) 새창열림" aria-label="IBK신용정보(주) 새창열림">IBK신용정보(주)</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibkasset.com" target="_blank" title="IBK자산운용(주) 새창열림" aria-label="IBK자산운용(주) 새창열림">IBK자산운용(주)</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibksvc.co.kr" target="_blank" title="IBK서비스 새창열림" aria-label="IBK서비스 새창열림">IBK서비스</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ibksb.co.kr" target="_blank" title="IBK저축은행 새창열림" aria-label="IBK저축은행 새창열림">IBK저축은행</a>
-                    </li>
-                  </ul>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="f_wrap t1">
-        <div class="wrap">
-          <div class="f_terms">
-            <ul>
-              <li><a href="/process/HP_CSCERT_INDV_INF_CON_NTC" class="cm">개인정보 처리방침</a></li>
-              <li><a href="/process/HP_CSCETR_CR_INF_UTLZ">신용정보 활용체제</a></li>
-              <li><a href="/process/HP_SFGD_FNC_PDT_RGST">보호금융상품등록부</a></li>
-              <li><a href="/pr/about/ibk_ethics.jsp">IBK 윤리헌장</a></li>
-              <li><a href="https://cont.insure.or.kr/cont_web/intro.do" target="_blank" title="휴면보험금 조회 새창열림" aria-label="휴면보험금 조회 새창열림">휴면보험금 조회</a></li>
-              <li><a href="https://www.fss.or.kr/fss/cvpl/inhCerEc/main.do?menuNo=200010" target="_blank" title="상속금융거래 조회 서비스 새창열림" aria-label="상속금융거래 조회 서비스 새창열림">상속금융거래 조회 서비스</a></li>
-              <li><a href="https://www.fss.or.kr/fss/cvpl/icnyViolt/forInsertAgre.do?menuNo=200299" target="_blank" title="보험모집 질서위반 새창열림" aria-label="보험모집 질서위반 새창열림">보험모집 질서위반</a></li>
-              <li><a href="/process/HP_CSCETR_PERINFO_EXPOS">개인정보노출 등록/해제</a></li>
-              <li><a href="/process/HP_VILT_DCLR_POP">위법신고</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="f_wrap">
-        <div class="wrap">
-          <div class="f_cs">
-            <div class="fc_wrap">
-              <h3 class="cm">
-                <i class="icon line b medium wallet"></i>
-                고객센터
-              </h3>
-              <button type="button" class="fc_ars" onclick="openPopup('/pr/popup/pop_info_ars.jsp', 'BK연금보험 ARS 안내', 900, 750);" title="IBK연금보험 ARS 안내 새창열림" aria-label="IBK연금보험 ARS 안내 새창열림">IBK연금보험 ARS 안내</button>
-              <ul>
-                <li>
-                  <strong class="cm">연금보험</strong>
-                  <a href="tel:15777117"><i class="icon small line call"></i>1577-4117</a>
-                  <a href="tel:16444117"><i class="icon small line call"></i>1644-4117</a>
-                </li>
-                <li>
-                  <strong class="cr">퇴직연금</strong>
-                  <a href="tel:16614117"><i class="icon small line call"></i>1661-4117</a>
-                </li>
-              </ul>
-            </div>
-            <span>※ 상담가능시간 : 평일 09시 ~ 18시</span>
-          </div>
-          <div class="f_info">
-            <h3 class="blind">사업장 정보</h3>
-            <div class="fi_wrap">
-              <ul>
-                <li>주소 : 04511 서울시 중구 칠패로 37, (봉래동 1가, HSBC 빌딩) IBK연금보험</li>
-                <li>대표이사 : 임문택</li>
-                <li>대표전화 :&nbsp<a href="tel:0222701600">02-2270-1600</a></li>
-                <li>사업자번호 : 104-86-29322</li>
-              </ul>
-              <div style="display: flex; align-items: center">
-                <p class="fi_copyright">&copy; IBK INSURANCE</p>
-                <img src="../com/res/images/common/Web_accessibility.png" alt="IBK연금보험 웹접근성 인증 취득 마크" style="margin-left: 1rem; width: 4.5rem" />
-              </div>
-            </div>
-            <div class="fi_wrap">
-              <div class="fi_qr">
-                <img src="../com/res/images/common/pic_qr.png" alt="IBK연금보험 스마트창구 앱 QR코드" />
-              </div>
-              <div>
-                <a href="https://m.ibki.co.kr/mob/goSmartAPP.jsp" target="_blank" title="IBK연금보험 스마트창구 새창열림" aria-label="IBK연금보험 스마트창구 새창열림" class="fi_qrlink cm">
-                  <i class="icon line b mobile medium"></i>
-                  IBK연금보험 스마트창구
-                </a>
-                <span>IBK연금보험 스마트창구를 통해 쉽고 빠르게 다양한 보험서비스를 만나보세요.</span>
-                <mark>※ 스마트폰의 카메라로 왼쪽 QR코드를 촬영해주세요!</mark>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer E -->
-
-    <!-- TODO: form, script 남은 것 -->
   </body>
 </html>
