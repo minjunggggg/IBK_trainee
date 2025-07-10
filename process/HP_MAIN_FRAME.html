@@ -251,7 +251,21 @@
             if (getCookie("popupAdClosed") !== "true") {
               document.querySelector(".a_ad").classList.add("on");
             }
-            if (getCookie("popupClosed") !== "true") {
+            // if (getCookie("popupClosed") !== "true") {
+            //   setTimeout(function () {
+            //     $("#aside .a_pop").addClass("open");
+            //     setTimeout(function () {
+            //       $("#aside .a_pop").addClass("open2");
+            //       $("#aside .a_function ul li.af_popbanner").addClass("open");
+            //     }, 10);
+            //   }, 1000);
+            // }
+
+            const key = "popupClosed";
+            const now = new Date();
+            const saved = localStorage.getItem(key);
+
+            if (!saved || new Date(saved) < now) {
               setTimeout(function () {
                 $("#aside .a_pop").addClass("open");
                 setTimeout(function () {

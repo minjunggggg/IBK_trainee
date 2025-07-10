@@ -528,15 +528,25 @@ $(document).ready(function () {
   });
 
   /* popbanner Off */
+  // 오늘 보지 않기 로직이 로컬에선 cookie로 안 되고, localStorage로 됨
+  // 원래 로직
   $("#aside .a_pop .ap_nav .apn_close button.today").click(function () {
+    // 닫기
     $("#aside .a_pop").removeClass("open2");
     setTimeout(function () {
       $("#aside .a_pop").removeClass("open");
       $("#aside .a_function ul li.af_popbanner").removeClass("open");
     }, 300);
 
+    // 쿠키와 스크린 리더 저장
     setCookie("popupClosed", "true", 1);
-    $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false");
+    $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false"); //스크린 리더
+
+    // 로컬 스토리지 추가
+    const key = "popupClosed";
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    localStorage.setItem(key, tomorrow.toISOString());
   });
 
   $("#aside .a_function ul li.af_scrolltop button").click(function () {
