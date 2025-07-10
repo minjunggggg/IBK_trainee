@@ -1,40 +1,30 @@
 $(document).ready(function () {
+  // ��ũ�� �ִϸ��̼� ���̺귯�� AOS ����
   AOS.init({
     // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: "aos-init", // class applied after initialization
-    animatedClassName: "aos-animate", // class applied on animation
-    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    disable: false,
+    startEvent: "DOMContentLoaded",
+    initClassName: "aos-init",
+    animatedClassName: "aos-animate",
+    useClassNames: false,
+    disableMutationObserver: false,
+    debounceDelay: 50,
+    throttleDelay: 99,
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 180, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 400, // values from 0 to 3000, with step 50ms
-    easing: "ease", // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-    anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    offset: 180,
+    delay: 0,
+    duration: 400,
+    easing: "ease",
+    once: false,
+    mirror: false,
+    anchorPlacement: "top-bottom",
   });
   AOS.refresh();
   setTimeout("AOS.refresh()", 1000);
   setTimeout("AOS.refresh()", 2000);
 
-  var lastScroll = 0;
-  var scTop = $(window).scrollTop();
-  $(window).scroll(function () {
-    scTop = $(window).scrollTop();
-    if (scTop + window.innerHeight >= $(document).height() - 1) {
-      $("#aside .a_function").addClass("off");
-      $("#aside .a_ai").addClass("off");
-    } else {
-      $("#aside .a_function").removeClass("off");
-      $("#aside .a_ai").removeClass("off");
-    }
-  });
+  // ���� ����� �����̵�
   $(window).resize(function () {
     AOS.refresh();
     setTimeout("AOS.refresh()", 1000);
@@ -175,7 +165,7 @@ $(document).ready(function () {
     }
   });
 
-  $("#header .h_menu > ul  button").hover(
+  $("#header .h_menu > ul button").hover(
     function () {
       $(this).parent("li").addClass("on");
     },
@@ -212,8 +202,6 @@ $(document).ready(function () {
 
   $("#header .h_menu > ul a,header .h_menu > ul button").on("focus", function () {
     var submenu = $(this).next("ul");
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½ï¿½ï¿½ï¿½
     if (submenu.length) {
       submenu.css("display", "block");
     }
@@ -221,19 +209,16 @@ $(document).ready(function () {
   $("#header .h_menu > ul a,header .h_menu > ul button").on("blur", function () {
     var submenu = $(this).next("ul");
     if (submenu.length) {
-      // ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½ï¿½ï¿½Î·ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ï´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½ ï¿½Ý±ï¿½
       setTimeout(function () {
         if (!submenu.find("a").is(":focus")) {
           submenu.css("display", "none");
         }
-      }, 100); // ï¿½à°£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¾ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿?
+      }, 100);
     }
   });
-  // ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½
   $("#header .h_menu ul.hm_sub a").on("focus", function () {
     $(this).closest("ul.hm_sub").css("display", "block");
   });
-  // ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³ªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
   $("#header .h_menu ul.hm_sub a").on("blur", function () {
     var submenu = $(this).closest("ul.hm_sub");
     setTimeout(function () {
@@ -244,8 +229,6 @@ $(document).ready(function () {
   });
   let isClick = false;
 
-  // Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
-  // 1ï¿½ï¿½ ï¿½Þ´ï¿½ (has_depth01) Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®
   $("#header .ha_sitemap").on("click", ".has_depth01 > .accordion", function (e) {
     if ($(this).hasClass("on")) {
       $(this).removeClass("on");
@@ -254,7 +237,6 @@ $(document).ready(function () {
     }
   });
 
-  // 2ï¿½ï¿½ ï¿½Þ´ï¿½ (has_depth01) Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®
   $("#header .ha_sitemap").on("click", ".has_depth02 .accordion", function (e) {
     if ($(this).hasClass("on")) {
       $(this).removeClass("on");
@@ -263,7 +245,6 @@ $(document).ready(function () {
     }
   });
 
-  // ë©ì¸ ?¤ë¹ê²ì´?? ë§í??
   $("#contents.c_main .cm_nav ul li .cmn_explanation").hover(
     function () {
       $(this).parent("li").css("z-index", "1");
@@ -283,7 +264,6 @@ $(document).ready(function () {
       $(this).parent("li").css("z-index", "0");
     });
 
-  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½
   if ($(".cmh_slide").length) {
     var speed = 0.67;
     var bar = $("#contents.c_main .cm_hero .cmh_nav .cmhn_bar .cmhnb_progress");
@@ -299,8 +279,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        dots: false, // ?? ?ì ê¸?
-        arrows: false, // ?´ì /?¤ì ë²í¼ ?ì ê¸?
+        dots: false,
+        arrows: false,
       })
       .on("init afterChange", function () {
         $(".cmh_slide.t1 .slick-slide").attr("tabindex", "-1");
@@ -316,22 +296,19 @@ $(document).ready(function () {
       infinite: true,
       vertical: true,
       asNavFor: ".cmh_slide.t1",
-      dots: false, // ?? ?ì ê¸?
-      arrows: false, // ?´ì /?¤ì ë²í¼ ?ì ê¸?
+      dots: false,
+      arrows: false,
     });
 
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½
     $("#contents.c_main .cm_hero .cmh_nav .cmhn_control .prev").on("click", function () {
-      $(".cmh_slide.t1").slick("slickPrev"); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿? ï¿½Ìµï¿½
+      $(".cmh_slide.t1").slick("slickPrev");
     });
 
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿? ï¿½Ìµï¿½
     $("#contents.c_main .cm_hero .cmh_nav .cmhn_control .next").on("click", function () {
-      $(".cmh_slide.t1").slick("slickNext"); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿? ï¿½Ìµï¿½
+      $(".cmh_slide.t1").slick("slickNext");
     });
 
-    //ï¿½ï¿½ï¿?/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½
-    let isPlaying = true; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿?/ï¿½ï¿½ï¿½ï¿½)
+    let isPlaying = true;
 
     $("#contents.c_main .cm_hero .cmh_nav .cmhn_control .control").on("click", function () {
       if (isPlaying) {
@@ -351,14 +328,13 @@ $(document).ready(function () {
 
     const totalSlides = $(".cmh_slide.t1").slick("getSlick").slideCount;
     var totalCount = "0" + totalSlides;
-    $(".cmhn_pagination .total").text(totalCount); // ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ Ç¥ï¿½ï¿½
+    $(".cmhn_pagination .total").text(totalCount);
 
-    // ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½
     $(".cmh_slide.t1").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
       var count = "0" + (nextSlide + 1);
-      $(".cmhn_pagination .current").text(count); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½È£ Ç¥ï¿½ï¿½ (1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+      $(".cmhn_pagination .current").text(count);
       startProgressbar();
-      if (!isPlaying) changeWhenPaused = true; // ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½È¯
+      if (!isPlaying) changeWhenPaused = true;
     });
     startProgressbar();
 
@@ -366,7 +342,7 @@ $(document).ready(function () {
       resetProgressbar();
       percentTime = 0;
       if (isPlaying) {
-        tick = setInterval(interval, 30); // ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        tick = setInterval(interval, 30);
       }
     }
     function interval() {
@@ -422,7 +398,6 @@ $(document).ready(function () {
     $(".cmh_slide.t1").on("beforeChange", function (event, slick, currentSlide, nextSlide) {});
   }
 
-  // ï¿½Ë¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½
   if ($("#aside .a_pop .ap_slide").length) {
     $("#aside .a_pop .ap_slide").slick({
       infinite: true,
@@ -431,18 +406,18 @@ $(document).ready(function () {
       autoplaySpeed: 5000,
       dots: true,
     });
-    let ispopPlaying = true; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿?/ï¿½ï¿½ï¿½ï¿½)
+    let ispopPlaying = true;
     $("#aside .a_pop .ap_nav .apn_control").on("click", function () {
       if (ispopPlaying) {
-        $("#aside .a_pop .ap_slide").slick("slickPause"); // ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½
-        $(this).find("i").removeClass("pause").addClass("play"); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        $("#aside .a_pop .ap_slide").slick("slickPause");
+        $(this).find("i").removeClass("pause").addClass("play");
         $("#aside .a_pop .ap_nav .apn_control span").text(decodeURIComponent("%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%9E%AC%EC%83%9D"));
       } else {
-        $("#aside .a_pop .ap_slide").slick("slickPlay"); // ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿?
-        $(this).find("i").removeClass("play").addClass("pause"); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        $("#aside .a_pop .ap_slide").slick("slickPlay");
+        $(this).find("i").removeClass("play").addClass("pause");
         $("#aside .a_pop .ap_nav .apn_control span").text(decodeURIComponent("%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%A0%95%EC%A7%80"));
       }
-      ispopPlaying = !ispopPlaying; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿?
+      ispopPlaying = !ispopPlaying;
     });
 
     const dots = document.querySelector("#aside .slick-dots");
@@ -560,13 +535,10 @@ $(document).ready(function () {
       $("#aside .a_function ul li.af_popbanner").removeClass("open");
     }, 300);
 
-    /* ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ */
-    /* ï¿½Ï·çµ¿ï¿½ï¿½ È¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  */
     setCookie("popupClosed", "true", 1);
     $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false");
   });
 
-  /* ï¿½ï¿½Å©ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿? ï¿½Ìµï¿½ */
   $("#aside .a_function ul li.af_scrolltop button").click(function () {
     $("html, body").animate({ scrollTop: "0" }, 1000, "swing");
   });
@@ -575,7 +547,7 @@ $(document).ready(function () {
     $("body,html").stop(false);
   });
 
-  // AI Ball Å«È­ï¿½ï¿½
+  // AI Ball
   const MIN_SPEED = 3;
   const MAX_SPEED = 6;
 
@@ -641,7 +613,7 @@ $(document).ready(function () {
 
   initBlobs();
 
-  // AI Ballï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½
+  // AI Ball
   const MIN_SPEED2 = 0.25;
   const MAX_SPEED2 = 0.5;
 
@@ -718,10 +690,8 @@ $(document).ready(function () {
   }, 100);
 
   $("#cate .c_copy").on("click", function () {
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ URLï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var currentUrl = window.location.href;
 
-    // ï¿½Ó½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿? URLï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     var tempInput = $("<input>");
     $("body").append(tempInput);
     tempInput.val(currentUrl).select();
@@ -740,15 +710,12 @@ $(document).ready(function () {
     }
   });
 
-  // Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½Úµé·¯
   $("#contents .c_menu > li").on("click", function (e) {
-    e.stopPropagation(); // Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    e.stopPropagation();
 
-    // Å¬ï¿½ï¿½ï¿½ï¿½ li ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿? liï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
     $("#contents .c_menu > li").not(this).removeClass("on").addClass("off");
     $("#contents .c_menu > li").not(this).children("ul").hide();
 
-    // Å¬ï¿½ï¿½ï¿½ï¿½ liï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½ï¿½ï¿½ï¿½/ï¿½Ý±ï¿½
     if ($(this).hasClass("on")) {
       $(this).removeClass("on").addClass("off");
       $(this).children("ul").hide();
@@ -758,19 +725,14 @@ $(document).ready(function () {
     }
   });
 
-  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
   $(document).on("click", function (e) {
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     if ($("#contents .c_menu > li.on").length) {
-      // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿? .c_menu ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
       if (!$(e.target).closest("#contents .c_menu").length) {
         $("#contents .c_menu ul").hide();
         $("#contents .c_menu > li").removeClass("on").addClass("off");
       }
     }
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     if ($("#footer .f_function .ff_familysite.on").length) {
-      // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿? .c_menu ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
       if (!$(e.target).closest("#footer .f_function .ff_familysite").length) {
         $("#footer .f_function .ff_familysite ul").hide();
         $("#footer .f_function .ff_familysite").removeClass("on");
@@ -778,15 +740,11 @@ $(document).ready(function () {
     }
   });
 
-  // Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½Úµé·¯
   $("#cate .c_menu > ul > li").on("click", function (e) {
-    e.stopPropagation(); // Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-
-    // Å¬ï¿½ï¿½ï¿½ï¿½ li ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿? liï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
+    e.stopPropagation();
     $("#cate .c_menu > ul > li").not(this).removeClass("on").addClass("off");
     $("#cate .c_menu > ul > li").not(this).children("ul").hide();
 
-    // Å¬ï¿½ï¿½ï¿½ï¿½ liï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½ï¿½ï¿½ï¿½/ï¿½Ý±ï¿½
     if ($(this).hasClass("on")) {
       $(this).removeClass("on").addClass("off");
       $(this).children("ul").hide();
@@ -798,19 +756,14 @@ $(document).ready(function () {
     }
   });
 
-  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
   $(document).on("click", function (e) {
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     if ($("#cate .c_menu > ul > li.on").length) {
-      // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿? .c_menu ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
       if (!$(e.target).closest("#cate .c_menu > ul").length) {
         $("#cate .c_menu > ul > li > ul").hide();
         $("#cate .c_menu > ul > li").removeClass("on").addClass("off");
       }
     }
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     if ($("#footer .f_function .ff_familysite.on").length) {
-      // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿? .c_menu ï¿½ï¿½ï¿½Î°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½Þ´ï¿? ï¿½Ý±ï¿½
       if (!$(e.target).closest("#footer .f_function .ff_familysite").length) {
         $("#footer .f_function .ff_familysite ul").hide();
         $("#footer .f_function .ff_familysite").removeClass("on");
@@ -834,18 +787,14 @@ $(document).ready(function () {
     $("body").addClass("firefox");
   }
 
-  // ï¿½ï¿½ï¿? class="comma" ï¿½ï¿½Ò¿ï¿? ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
   const inputBoxes = document.querySelectorAll(".comma");
   inputBoxes.forEach((inputBox) => {
     inputBox.addEventListener("input", (event) => {
       let value = event.target.value;
-      // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½ï¿½ï¿½ï¿½
       value = value.replace(/,/g, "");
-      // ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½
       if (isNaN(value)) {
         value = value.replace(/[^0-9]/g, "");
       }
-      // Ãµ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½ß°ï¿½
       event.target.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     });
   });
@@ -873,14 +822,12 @@ $(document).ready(function () {
   });
 });
 
-// ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
 function setCookie(name, value, days) {
   const date = new Date();
   date.setDate(date.getDate() + days);
   document.cookie = `${name}=${value}; path=/; expires=${date.toUTCString()}`;
 }
 
-// ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function getCookie(name) {
   const cookies = document.cookie.split("; ");
   for (let i = 0; i < cookies.length; i++) {
