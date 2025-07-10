@@ -1068,3 +1068,52 @@ body.onload #aside .a_ai {
     width: 1.6rem;
   }
 }
+
+/* 모바일 */
+@media (max-width: 1033px) {
+  /* 헤더 */
+  #header {
+    min-width: auto;
+  }
+  #header .h_wrap .h_menu ul {
+    display: none;
+  }
+
+  /* 첫 번째 영역 */
+  .cm_area {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .cm_hero.cm_left {
+    margin-bottom: 3rem;
+  }
+
+  .cm_hero.cm_left {
+    width: calc(100vw - 5rem) !important;
+  }
+  .cm_nav.cm_right {
+    width: 100vw !important;
+    padding-left: 0 !important;
+    padding-right: 5rem;
+  }
+
+  #contents.c_main .cm_nav ul li a > strong {
+    font-size: 2rem !important;
+  }
+
+  /* 두 번째 영역 */
+  .cm_info {
+    display: flex !important;
+    width: calc(100vw - 5rem) !important;
+  }
+  #contents.c_main .cm_info ul li .cmi_box strong {
+    font-size: 20px !important;
+  }
+  #contents.c_main .cm_info ul li .cmi_box p span {
+    font-size: 16px;
+  }
+
+  /* 세 번째 영역 */
+
+}
