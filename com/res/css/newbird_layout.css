@@ -364,7 +364,7 @@ body.onload #aside .a_ai {
   position: relative; top: 0.5rem; margin-right: 1rem;
 }
 #aside .a_ai .aa_menu ul li a > .aam_more {
-  display: inline-block; float: left; box-sizing: border-box; width: 3rem; height: 3rem; padding: 0.7rem; border-radius: 50%; background-color: var(--ibk-blue); transform: rotate(45deg);
+  display: inline-block; float: right; box-sizing: border-box; width: 3rem; height: 3rem; padding: 0.7rem; border-radius: 50%; background-color: var(--ibk-blue); transform: rotate(45deg);
 }
 #aside .a_ai .aa_menu ul li a > .aam_more i {
   float: left;
@@ -843,12 +843,12 @@ body.onload #aside .a_ai {
   #aside .a_ai.open2 {
     right: 8.4rem;
   }
-  #footer {
+  /* #footer {
     padding-bottom: 8rem;
-  }
-  #footer.on {
+  } */
+  /* #footer.on {
     padding-bottom: 0;
-  }
+  } */
 }
 
 @media (max-height: 840px) {
@@ -906,12 +906,12 @@ body.onload #aside .a_ai {
   #aside .a_ai.open2.off {
     right: -39rem;
   }
-  #footer {
+  /* #footer {
     padding-bottom: 8rem;
   }
   #footer.on {
     padding-bottom: 0;
-  }
+  } */
 }
 
 @media (max-width: 1280px) {
@@ -1037,7 +1037,7 @@ body.onload #aside .a_ai {
 }
 
 @media (max-width: 1024px) {
-  #aside .a_pop .ap_silde {
+  #aside .a_pop .ap_slide {
     top:0.1rem;
   }
 }
@@ -1048,10 +1048,10 @@ body.onload #aside .a_ai {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (min-height: 900px) {
   #aside .a_control {
     position: absolute;
-    top: calc(100% - 30rem);
+    top: calc(100% - 27.5rem);
     right: 2rem;
     width: 6rem;
     height: 6rem;
@@ -1063,5 +1063,8 @@ body.onload #aside .a_ai {
     letter-spacing: -0.052rem;
     color: var(--basic-color-w);
     pointer-events: auto;
+  }
+  #aside .a_control .ac_deco, .ac_deco.t1 {
+    width: 1.6rem;
   }
 }
