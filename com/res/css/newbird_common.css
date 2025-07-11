@@ -24,10 +24,10 @@ input[type=number] {-moz-appearance:textfield;}
 .wrap {display:inline-block; vertical-align:middle; position:relative; box-sizing:border-box; width:100%; max-width:124.4rem; padding:0 2.2rem;}
 
 /* body fixed */
-body.on #wrap {overflow:hidden; height:100vh;width:calc(100vw - 1rem); left:-0.5rem;}
+/* body.on #wrap {overflow:hidden; height:100vh;width:calc(100vw - 1rem); left:-0.5rem;}
 body.on #header {width:calc(100vw - 1rem);}
 body.on #aside {right:1rem;}
-body.on #header .ha_nav {left:-1rem}
+body.on #header .ha_nav {left:-1rem} */
 
 /* focus */
 *:focus-visible {outline:2px dashed var(--ibk-blue);}
@@ -160,7 +160,7 @@ u a:hover {color:var(--ibk-blue) !important;}
 /* flex */
 .flexbox {display:flex;}
 
-/* å ì™ì˜™é‡Žê»“ì˜™å ìŽˆï¿½å ì™ì˜™ */
+/* å ì?��ì?�™é??�Žê»�?��??�™å ìŽ?��?¿½å ì?��ì?�™ */
 #targettab {padding-top:18rem; margin-top:-13rem;}
 
 /* button */
