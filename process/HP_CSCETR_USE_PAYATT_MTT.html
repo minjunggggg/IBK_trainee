@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜센터 이용안내</title>
+    <link rel="stylesheet" href="/com/res/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_init.css" />
+    <link rel="stylesheet" href="/com/res/css/aos.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_icon.css" />
+    <link rel="stylesheet" href="/com/res/css/slick.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_common.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_layout.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_contents.css" />
+    <link rel="stylesheet" href="/com/res/css/typeahead.css" />
+    <script src="/com/res/js/jquery-1.11.0.min.js"></script>
+
+    <!-- jquery include 돌면서 보여주기 -->
+    <script>
+      $(function () {
+        $("div[data-include-path]").each(function () {
+          var path = $(this).attr("data-include-path");
+          $(this).load(path, function (response, status, xhr) {
+            if (status == "error") {
+              var msg = "Sorry but there was an error:";
+              $(this).html(msg + xhr.status + "" + xhr.statusText);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더 -->
+      <div data-include-path="../process/include/header.html"></div>
+
+      <!-- 브레드크럼 바 -->
+      <div data-include-path="../process/include/breadcrumb.html"></div>
+
+      <!-- Aside S -->
+      <div data-include-path="../process/include/aside.html"></div>
+      <div id="contents">
+        <h2 class="blind">본문</h2>
+        <section class="c_wrap c_callcenter">
+          <div class="c_title">
+            <h3 class="title"><mark class="cm">콜센터</mark> 이용안내</h3>
+            <p class="text">전문 상담사와의 전화 상담 및 개인 거래 고객 ARS 자동화 서비스를 통해 다양한 서비스를 빠르고 편리하게 이용할 수 있습니다.</p>
+          </div>
+          <div class="wrap">
+            <div class="cc_info">
+              <div>
+                <mark class="cm text middle medium">연금보험</mark>
+                <i class="icon line call small"></i>
+                <a href="tel:15774117">1577-4117</a>
+                <i class="icon line call small"></i>
+                <a href="tel:16444117">1644-4117</a>
+              </div>
+              <div>
+                <mark class="cr text middle medium">퇴직연금</mark>
+                <i class="icon line call small"></i>
+                <a href="tel:16614117">1661-4117</a>
+              </div>
+              <p class="text tiny cs3">※ 상담가능시간 : 평일 <time datetime="09:00">09시</time> ~ <time datetime="18:00">18시</time></p>
+            </div>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인거래고객 ARS 자동화 서비스 안내</h4>
+              <div class="tablewrap">
+                <table>
+                  <caption class="blind">
+                    개인거래고객 ARS 자동화 서비스 안내 테이블
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10rem" />
+                    <col style="width: 16.67%" />
+                    <col style="width: 12.5%" />
+                    <col style="width: 16.67%" />
+                    <col />
+                    <col style="width: 16.67%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">서비스안내</th>
+                      <th scope="col">이용시간</th>
+                      <th scope="col">이용금액한도</th>
+                      <th scope="col">이용방법</th>
+                      <th scope="col">처리가능은행</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2" scope="row">조회 서비스</td>
+                      <td class="t_left">보험계약대출<br />중도인출<br />휴면보험금</td>
+                      <td rowspan="4">24시간<br />(365일)</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="t_left t1">보험료 납입내역</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td scope="col">증명서 팩스신청</td>
+                      <td class="t_left">세액공제용 납입증명서 보험증권 재발행</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td scope="col">보이스피싱 지급정지</td>
+                      <td class="t_left">개인정보유출, 보이스피싱 관련 지급정지 신청</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2" scope="col">지급</td>
+                      <td class="t_left">보험계약대출 신청<br />중도인출 신청</td>
+                      <td rowspan="4"><time datetime="08:00">08:00</time>~<time datetime="23:00">23:00</time><br />(365일)</td>
+                      <td>신청금액 기준<br />1,000만원 이하</td>
+                      <td class="t_left" rowspan="2">계약자 본인명의의 지정계좌로 지급 가능<br /><br />본인 인증 절차 필수 (휴대폰 인증)</td>
+                      <td rowspan="2">전 은행</td>
+                    </tr>
+                    <tr>
+                      <td class="t_left t1">휴면보험금 신청</td>
+                      <td>지급금액 기준<br />1,000만원 이하</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2" scope="col">입금</td>
+                      <td class="t_left">월 보험료 실시간 납입<br />추가납입 보험료 납입</td>
+                      <td></td>
+                      <td class="t_left">계약자 본인명의의<br />보험료 자동이체계좌에서 출금 가능</td>
+                      <td class="t_left" rowspan="2">IBK기업, 경남, KB국민, NH농협, 광주, 부산, 신한, DGB대구, 씨티, 우리, 전북, 하나, 우체국, SC제일</td>
+                    </tr>
+                    <tr>
+                      <td class="t_left t1">보험계약대출 상환<br />(원리금/이자)</td>
+                      <td></td>
+                      <td class="t_left">계약자 본인명의의 보험료, 보험계약대출이자 자동이체계좌에서 출금 가능</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="c_notice">
+                <strong class="text semibold crt tl">[고객안내 사항]</strong>
+                <p class="text tl">개인거래고객 ARS 자동화 서비스는 만 19세 이상 계약자에 한하여 이용 가능합니다.<br />단, 변액연금보험은 ARS를 통한 지급 및 입금 서비스 이용이 제한되므로, 상담사를 통해 업무처리 부탁드립니다.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <!-- Footer S -->
+      <div data-include-path="../process/include/footer.html"></div>
+    </div>
+  </body>
+</html>

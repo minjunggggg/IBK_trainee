@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품안내</title>
+    <link rel="stylesheet" href="/com/res/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_init.css" />
+    <link rel="stylesheet" href="/com/res/css/aos.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_icon.css" />
+    <link rel="stylesheet" href="/com/res/css/slick.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_common.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_layout.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_contents.css" />
+    <link rel="stylesheet" href="/com/res/css/typeahead.css" />
+    <script src="/com/res/js/jquery-1.11.0.min.js"></script>
+
+    <!-- jquery include 돌면서 보여주기 -->
+    <script>
+      $(function () {
+        $("div[data-include-path]").each(function () {
+          var path = $(this).attr("data-include-path");
+          $(this).load(path, function (response, status, xhr) {
+            if (status == "error") {
+              var msg = "Sorry but there was an error:";
+              $(this).html(msg + xhr.status + "" + xhr.statusText);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더 -->
+      <div data-include-path="../process/include/header.html"></div>
+
+      <!-- 브레드크럼 바 -->
+      <div data-include-path="../process/include/breadcrumb.html"></div>
+
+      <!-- Aside S -->
+      <div data-include-path="../process/include/aside.html"></div>
+      <div id="contents">
+        <h2 class="blind">본문</h2>
+        <section class="c_wrap c_guide">
+          <div class="c_title">
+            <h3 class="title"><mark class="cm">보험계약대출</mark> 가이드</h3>
+            <p class="text">언제든지 자유롭게 대출 및 상환이 가능한 보험계약대출<br />납입한 보험료의 해지환급금 내에서 언제든지 쉽고 간편하게 이용실 수 있는 대출서비스입니다.</p>
+          </div>
+          <div class="wrap">
+            <div class="cg_banner">
+              <div class="cgb_contents">
+                <div>
+                  <i class="icon solid sb xxxlarge rocket"></i>
+                  <div>
+                    <em class="text middle">쉽고 빠르며 저렴하게</em>
+                    <p class="text small">콜센터나 사이버창구를 통해 쉽고 빠르며 <br />신용대출보다 저렴하게 이용이 가능합니다.</p>
+                  </div>
+                </div>
+                <div>
+                  <i class="icon solid sb xxxlarge card"></i>
+                  <div>
+                    <em class="text middle">누구나 신용등급 상관없이</em>
+                    <p class="text small">누구나 신용등급에 상관없이 가능하며 대출 <br />정보는 타 금융기관 등에 공유되지 않습니다.</p>
+                  </div>
+                </div>
+                <div>
+                  <i class="icon solid sb xxxlarge withdrawal"></i>
+                  <div>
+                    <em class="text middle">추가 수수료 없이</em>
+                    <p class="text small">취급수수료, 중도 상환수수료 없이 수시로 <br />대출 및 상환이 가능합니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cgb_buttons">
+                <button
+                  class="btn filled ic ri"
+                  type="button"
+                  onclick="openPopup('/process/HP_CSCETR_REC_INS?TaskID=paging/HP_INDYANTY_BCSRC_LIST&amp;VOC_PR_1depth=04&amp;VOC_PR_2depth=00&amp;cvapApplParmt=2', '상담예약', 900, 750);"
+                  title="상담예약 새창열림"
+                  aria-label="상담예약 새창열림"
+                >
+                  <i class="icon line small w reservation"></i>
+                  상담예약
+                </button>
+                <button class="btn filled gray ic ri" type="button" title="바로 가기" onclick="goTaskId('/process/CY_AC_CYPCIN050200I1,1'); return false;">
+                  <i class="icon line small w magicpen"></i>
+                  보험계약대출 신청 및 한도조회
+                </button>
+              </div>
+            </div>
+            <ul class="tabwrap t1 mt-50">
+              <li class="tab on">
+                <a class="t_btn on" href="/process/HP_CSCETR_LON_GUID_PDT_NTC" aria-expanded="true">상품안내</a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_CSCETR_LON_GUID_CACL" aria-expanded="false">대출계산기</a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_CSCETR_LON_GUID_FINANCE" aria-expanded="false">채무조정안내</a>
+              </li>
+            </ul>
+            <article class="c_article">
+              <h4 class="title t1 dot"><mark class="cm">힘들 때 잠시 기댈 수 있는 혜택,&nbsp;</mark>IBK연금보험 보험계약대출</h4>
+              <div class="tablewrap">
+                <table>
+                  <caption class="blind">
+                    IBK연금보험 보험계약대출 테이블
+                  </caption>
+                  <colgroup>
+                    <col style="width: 16.6%" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="semibold t_left">대출대상</th>
+                      <td class="t_left">IBK연금보험에 보험을 가입한 고객</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="semibold t_left">대출한도</th>
+                      <td class="t_left">해지환급금의 50% ~ 90%</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="semibold t_left" rowspan="2">대출금리</th>
+                      <td class="t_left">2014. 3. 31일까지 판매 상품 연 <em class="bold cm">3.56% ~ 4.61%</em></td>
+                    </tr>
+                    <tr>
+                      <td class="t_left">2014. 4. 1일이후 판매 상품 연 <em class="bold cm">3.47% ~ 4.58%</em></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="t_left">대출기간</th>
+                      <td class="t_left">보험계약기간 내</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="t_left">상환방법</th>
+                      <td class="t_left">전액, 일부 등 원하는 방식으로 상환가능</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="t_left">대출수수료</th>
+                      <td class="t_left">없음</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="t_left">운용보수</th>
+                      <td class="t_left">
+                        <p>
+                          IBK연금보험 홈페이지(<a href="https://www.ibki.co.kr/" target="_blank" title="새창이동">www.ibki.co.kr</a>) 사이버창구 - 개인연금 - 보험계약대출<br />IBK연금보험 콜센터(<a href="tel:1577-4117">1577-4117</a>,
+                          <a href="tel:1644-4117">1644-4117</a>) 연결 후 이용
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="t_left">차용약정서</th>
+                      <td class="t_left t_file">
+                        <div>
+                          <a class="btn filled small ic ri" href="#!" role="button" onclick="onDownload('HPFILECOMDW','08');">
+                            <i class="icon line w download"></i>
+                            다운로드</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <!-- Footer S -->
+      <div data-include-path="../process/include/footer.html"></div>
+    </div>
+  </body>
+</html>

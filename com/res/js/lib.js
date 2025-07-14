@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  // ½ºÅ©·Ñ ¾Ö´Ï¸ŞÀÌ¼Ç ¶óÀÌºê·¯¸® AOS ¼³Á¤
+$(window).on("load", function () {
+  // ìŠ¤í¬ë¡¤ ì• ë‹ˆë©”ì´ì…˜ ë¼ì´ë¸ŒëŸ¬ë¦¬ AOS ì„¤ì •
   AOS.init({
     // Global settings:
     disable: false,
@@ -24,7 +24,7 @@ $(document).ready(function () {
   setTimeout("AOS.refresh()", 1000);
   setTimeout("AOS.refresh()", 2000);
 
-  // ¸ŞÀÎ È÷¾î·Î ½½¶óÀÌµå
+  // ë©”ì¸ íˆì–´ë¡œ ìŠ¬ë¼ì´ë“œ
   $(window).resize(function () {
     AOS.refresh();
     setTimeout("AOS.refresh()", 1000);
@@ -528,21 +528,21 @@ $(document).ready(function () {
   });
 
   /* popbanner Off */
-  // ¿À´Ã º¸Áö ¾Ê±â ·ÎÁ÷ÀÌ ·ÎÄÃ¿¡¼± cookie·Î ¾È µÇ°í, localStorage·Î µÊ
-  // ¿ø·¡ ·ÎÁ÷
+  // ì˜¤ëŠ˜ ë³´ì§€ ì•Šê¸° ë¡œì§ì´ ë¡œì»¬ì—ì„  cookieë¡œ ì•ˆ ë˜ê³ , localStorageë¡œ ë¨
+  // ì›ë˜ ë¡œì§
   $("#aside .a_pop .ap_nav .apn_close button.today").click(function () {
-    // ´İ±â
+    // ë‹«ê¸°
     $("#aside .a_pop").removeClass("open2");
     setTimeout(function () {
       $("#aside .a_pop").removeClass("open");
       $("#aside .a_function ul li.af_popbanner").removeClass("open");
     }, 300);
 
-    // ÄíÅ°¿Í ½ºÅ©¸° ¸®´õ ÀúÀå
+    // ì¿ í‚¤ì™€ ìŠ¤í¬ë¦° ë¦¬ë” ì €ì¥
     setCookie("popupClosed", "true", 1);
-    $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false"); //½ºÅ©¸° ¸®´õ
+    $("#aside .a_function ul li.af_popbanner button").attr("aria-expanded", "false"); //ìŠ¤í¬ë¦° ë¦¬ë”
 
-    // ·ÎÄÃ ½ºÅä¸®Áö Ãß°¡
+    // ë¡œì»¬ ìŠ¤í† ë¦¬ì§€ ì¶”ê°€
     const key = "popupClosed";
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);

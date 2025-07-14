@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개인정보 처리방침</title>
+    <link rel="stylesheet" href="/com/res/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_init.css" />
+    <link rel="stylesheet" href="/com/res/css/aos.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_icon.css" />
+    <link rel="stylesheet" href="/com/res/css/slick.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_common.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_layout.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_contents.css" />
+    <link rel="stylesheet" href="/com/res/css/typeahead.css" />
+    <script src="/com/res/js/jquery-1.11.0.min.js"></script>
+
+    <!-- jquery include 돌면서 보여주기 -->
+    <script>
+      $(function () {
+        $("div[data-include-path]").each(function () {
+          var path = $(this).attr("data-include-path");
+          $(this).load(path, function (response, status, xhr) {
+            if (status == "error") {
+              var msg = "Sorry but there was an error:";
+              $(this).html(msg + xhr.status + "" + xhr.statusText);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더 -->
+      <div data-include-path="../process/include/header.html"></div>
+
+      <!-- 브레드크럼 바 -->
+      <div data-include-path="../process/include/breadcrumb.html"></div>
+
+      <!-- Aside S -->
+      <div data-include-path="../process/include/aside.html"></div>
+      <div id="contents">
+        <h2 class="blind">본문</h2>
+        <section class="c_wrap c_indv">
+          <div class="c_title">
+            <h3 class="title"><mark class="cm">이용관련</mark> 주요법률</h3>
+          </div>
+          <div class="wrap">
+            <ul class="tabwrap t1 div4">
+              <li class="tab">
+                <a class="t_btn on" href="/process/HP_CSCERT_INDV_INF_CON_NTC" aria-expanded="true">개인정보 처리방침</a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_CSCETR_CR_INF_UTLZ" aria-expanded="false">신용정보 활용체제</a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_CSCETR_ELEC_FT_STD_PLYCD" aria-expanded="false">전자거래금융약관 </a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_VILT_DCLR_POP" aria-expanded="false">위법신고</a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_CSCETR_CS_RGHT_GDBK" aria-expanded="false">고객권리 안내문</a>
+              </li>
+              <li class="tab">
+                <a class="t_btn" href="/process/HP_PT_INF_DLNG_INSL_OPRG" aria-expanded="false">영상정보처리기기 설치운영</a>
+              </li>
+              <li class="tab">
+                <!-- button class="t_btn" type="button" onclick="goFootTaskId('/process/CY_CR_INF_USE_OFR_INQ','1');">개인신용정보이용·제공조회</button-->
+                <button
+                  class="t_btn"
+                  type="button"
+                  onclick="goTaskId4Device('/logincy/CYExtSesssionChecker.jsp?sessionCheckerKey=741244555745454&amp;taskSecd=1&amp;goTask=1&amp;appSchemPage=WE_MA_WEMA04000000&amp;mobAppSchemPage=APMINE004.do&amp;mobAppSchemOp=V02','2'); return false;"
+                  aria-expanded="false"
+                >
+                  개인신용정보이용·제공조회
+                </button>
+              </li>
+              <li class="tab">
+                <span class="blind">공란</span>
+              </li>
+            </ul>
+            <div class="c_notice">
+              <p class="text tl">
+                IBK연금보험주식회사(이하‘회사’)는 개인정보보호법에 따라 이용자의 개인정보보호 및 권익을 보호하고 <span class="cm bold">개인정보와 관련된 이용자의 고충을 원활하게 처리</span>할 수 있도록 다음과 같은 처리방침을 두고 있습니다.
+              </p>
+            </div>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보 처리 목적</h4>
+              <div class="pl-25">
+                <p class="text tl">소비자보호 강화를 위해 독립적인 지위의 금융소비자보호총괄 책임자(CCO)를 지정하고 최고경영진 직속의 독립전담부서를 구성하여 소비자보호 업무의 독립성과 전문성을 강화하였습니다.</p>
+                <ol class="mt-20 tl">
+                  <li>
+                    <em class="text bold">1. 보험계약 및 대출계약 체결 및 이행</em>
+                    <ul class="mt-5">
+                      <li>
+                        <p class="text dot tl">보험계약 상담, 보험계약 체결 및 인수여부 결정판단</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">보험계약의 체결, 유지, 관리, 상담, 이행, 계약적부, 가불금의 지급 및 관리, 상담, 이행, 보험금의 지급</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">조사연구, 서비스 제공, 순보험요율의 산출 및 검증</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">보험모집질서 유지, 공공기관의 정책자료로 제공</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">보험계약 및 보험금 청구에 이해관계가 있는 자와 대출계약 및 대출계약에 이해관계가 있는 자에 대한 법규 및 계약상 의무 이행</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">제환급금 및 대출금 지급신청 처리업무를 포함한 보험계약 및 대출계약 변경 처리</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">보험계약정보, 보험금지급정보, 채권결손처분 관리정보, 대출계약정보, 대출금 상환정보의 조회</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">대출계약의 체결여부 결정판단</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">대출계약의 체결, 유지, 관리, 상담, 이행, 대출금 지급 및 관리 등</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">개인식별정보, 신용거래정보, 신용능력정보, 공공정보, 신용등급 등 조회</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="mt-20">
+                    <em class="text bold">2. 직원채용 및 인사관리</em>
+                    <ul class="mt-5">
+                      <li>
+                        <p class="text dot tl">입사지원 행정처리 및 입사자 채용업무</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">
+                          입사지원자 중 최종 입사자의 경우 근로계약의 체결 및 유지와 경력증명서 발급 및 입사 후 인력관리, 업무분배, 기본급, 보너스, 수당, 성과급, 의료보험, 휴가와 같은 복지관련 사항의 처리 등 직원관리의 효율성 유지, 제고
+                        </p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">
+                          인력관리(채용, 승진, 보상, 평가, 노무, 상벌), 업무분배(부서이동, 배치, 전보) 기본급, 보너스, 수당, 성과급, 사회보험, 상해보험, 신용보증보험, 퇴직연금, 적금, 의료지원, 대부제공, 휴가, 주차와 같은 복지관련 사항의 처리 등 직원
+                          관리의 효율성 유지,제고 및 근로계약상 의무의 준수, 재직증명서의 발급
+                        </p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">
+                          소득세, 외국인세, 기타 세금의 납부, 보건, 안전의무, 불법적인 차별없는 근무환경의 제공, 4대보험 등 법정보험의 가입과 근로기준법 기타 고용관계 관련법령의 준수, 균등한 처우 및 기회제공, 보훈대상자 확인 및 처우제공, 외국인
+                          근로자 관련 법령 준수 등 회사에 부과되는 법적, 행정적 의무 준수
+                        </p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">퇴직자에 대한 재직증명서 및 경력증명서 발급</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">개인식별정보, 신용거래정보, 신용능력정보, 공공정보, 신용등급 등 조회</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="mt-20">
+                    <em class="text bold">3. FP(컨설턴트), 대출모집인 위촉 및 관리</em>
+                    <ul class="mt-5">
+                      <li>
+                        <p class="text dot tl">보험설계사, 대리점 및 대출모집인 위촉여부 판단</p>
+                      </li>
+                      <li>
+                        <p class="text dot tl">개인식별정보, 신용거래정보, 신용능력정보, 공공정보, 신용등급 및 신용평점정보, 다른기관의 신용정보, 금융위원회 및 금융감독원의 금융사고자정보 조회</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="mt-20">
+                    <em class="text bold">4. 마케팅 및 광고 등에 활용</em>
+                    <p class="text dot tl mt-5">회사의 상품, 서비스, 소개 및 판매, 사은, 판촉행사 안내(방문, 우편, 전자우편, 전화, SMS 포함), 시장조사</p>
+                  </li>
+                </ol>
+              </div>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보의 처리 및 보유 기간</h4>
+              <p class="pl-25 text tl">회사는 관계법령 규정에 의해 보존의 필요가 없는 한 이용자 개인정보는 원칙적으로 개인정보의 처리목적이 달성되면 지체 없이 파기합니다.</p>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보의 제3자 제공에 관한 사항</h4>
+              <ol class="tl mt-20">
+                <li>
+                  <em class="text bold tl">1. 보험거래 관련</em>
+                  <div class="tablewrap t1 mt-10">
+                    <table style="min-width: 600px">
+                      <caption class="blind">
+                        개인정보의 제3자 제공에 관한 사항 중 보험거래 관련 사항
+                      </caption>
+                      <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">제공받는 자</th>
+                          <th scope="col">이용목적</th>
+                          <th scope="col">제공하는 신용정보의 종류</th>
+                          <th scope="col">보유 및 이용기간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tl">
+                            <p>
+                              <em class="semibold">신용정보집중기관</em><br />
+                              - 생명보험협회 (<a href="tel:0222626600">02-2262-6600</a>)<br />
+                              - 손해보험협회 (<a href="tel:0237028500">02-3702-8500</a>)<br />
+                              - 전국은행연합회 (<a href="tel:0237055000">02-3705-5000</a>)<br />
+                              - 보험개발원 (<a href="tel:023684000">02-368-4000</a>)
+                            </p>
+                          </td>
+                          <td class="tl">보험계약정보의 집중관리 및 활용 등 신용정보집중기관의 업무</td>
+                          <td class="tl">
+                            - 개인식별정보, 가족관계등 개인정보<br />
+                            - 보험계약정보<br />
+                            - 보험금 지급정보<br />
+                            - 기타 재산<br />
+                            - 소득 등에 관한 개인신용정보 등
+                          </td>
+                          <td>
+                            신용정보집중기관의<br />
+                            업무목적 달성시까지
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tl">회사로부터 유지·관리 등의 업무를 위탁받은 자 (계약적부, IBK연금보험FP 등 컨설턴트 및 보험대리점, 전산시스템개발회사, 우편물 배달회사, 리서치회사, 서비스제공회사 등 )</td>
+                          <td class="tl">계약적부, 보험계약의 유지·관리·상담, 조사연구(리서치), 서비스 제공, 금융상품 및 서비스의 소개, 이벤트 안내 등</td>
+                          <td>위와 같음</td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                        <tr>
+                          <td class="tl">
+                            <p>
+                              <em class="semibold">타보험회사(생명보험업계, 손해보험업계)</em><br />
+                              - 우체국 (<a href="tel:0215881900">02-1588-1900</a>)<br />
+                              - 농협 (<a href="tel:0215882100">02-1588-2100</a>)<br />
+                              - 신협 (<a href="tel:0215666000">02-1566-6000</a>)<br />
+                              - 수협 (<a href="tel:0215881515">02-1588-1515</a>)<br />
+                              - 새마을금고 (<a href="tel:0215999000">02-1599-9000</a>)<br />
+                              - 재보험회사<br />
+                              - 보험개발원 (<a href="tel:023684000">02-368-4000</a>)
+                            </p>
+                          </td>
+                          <td class="tl">보험계약의 적부 및 보험모집질서의 유지, 순보험요율의 산출·검증, 보험원가 관리, 공공기관의 정책 자료로 활용 등</td>
+                          <td>위와 같음</td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                        <tr>
+                          <td class="tl">계좌개설 은행, 증권사 금융결제원, VAN사(케이아이비넷, 케이에스넷)</td>
+                          <td class="tl">전자자금이체(보험료 납입, 반환)관련 업무 수행</td>
+                          <td>성명, 주민번호, 계좌번호</td>
+                          <td>보험계약 또는 전자자금이체<br />계약 효력 종료시까지</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+                <li class="mt-50">
+                  <em class="text bold tl">2. 대출거래 관련</em>
+                  <div class="tablewrap t2 mt-10">
+                    <table style="min-width: 600px">
+                      <caption class="blind">
+                        개인정보의 제3자 제공에 관한 사항 중 대출거래 관련 사항
+                      </caption>
+                      <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">제공받는 자</th>
+                          <th scope="col">이용목적</th>
+                          <th scope="col">제공하는 신용정보의 종류</th>
+                          <th scope="col">보유 및 이용기간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tl">
+                            <p>
+                              - 전국은행연합회 (<a href="tel:0237055000">02-3705-5000</a>)<br />
+                              - NICE평가정보(주) (<a href="tel:0221224000">02-2122-4000</a>)
+                            </p>
+                          </td>
+                          <td class="tl">본인의 신용을 판단하기 위한 자료로 활용하거나 공공기관에서 정책자료로 활용</td>
+                          <td class="tl">
+                            - 개인식별정보<br />
+                            - 신용거래정보<br />
+                            - 신용능력정보 지급정보
+                          </td>
+                          <td>
+                            신용정보집중기관의<br />
+                            업무목적 달성시까지
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tl">당사가 업무를 위탁한 자 (리서치업체, 우편물배달업체 신용정보회사, 법무사 등 위탁사무의 수행을 위해 정보제공이 필요한 자)</td>
+                          <td class="tl">대출계약의 체결·유지·관리·상담, 조사연구(리서치), 금융상품 및 서비스의 소개, 이벤트 안내, 기타 위탁사무의 수행</td>
+                          <td>위와 같음</td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                        <tr>
+                          <td class="tl">
+                            <p>
+                              - 한국주택금융공사 (<a href="tel:0216888114">02-1688-8114</a>)<br />
+                              - 주택저당채권, 주택저당채권담보부채권 또는 주택저당증권의 투자자, 양수인 그 밖에 이에 준하는 이해관계인
+                            </p>
+                          </td>
+                          <td class="tl">한국주택금융공사 채권유동화 관련 업무 수행</td>
+                          <td>위와 같음</td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                        <tr>
+                          <td class="tl">계좌개설 은행, 증권사 금융결제원, VAN사(케이아이비넷, 케이에스넷)</td>
+                          <td class="tl">전자자금이체(보험료 납입, 반환)관련 업무 수행</td>
+                          <td>성명, 주민번호, 계좌번호</td>
+                          <td>보험계약 또는 전자자금이체<br />계약 효력 종료시까지</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+                <li class="mt-50">
+                  <em class="text bold tl">3. 퇴직연금거래 관련</em>
+                  <div class="tablewrap t2 mt-10">
+                    <table style="min-width: 600px">
+                      <caption class="blind">
+                        개인정보의 제3자 제공에 관한 사항 중 퇴직연금거래 관련 사항
+                      </caption>
+                      <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">제공받는 자</th>
+                          <th scope="col">이용목적</th>
+                          <th scope="col">제공하는 신용정보의 종류</th>
+                          <th scope="col">보유 및 이용기간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tl">생명보험협회, 보험개발원, 은행연합회 등 신용정보집중 기관</td>
+                          <td class="tl">퇴직연금계약 정보의 집중관리 및 활용 등 신용정보 집중기관의 업무</td>
+                          <td class="tl">
+                            - 개인식별정보<br />
+                            - 퇴직연금 계약정보<br />
+                            - 퇴직연금 지급정보<br />
+                            - 기타 재산소득 등에 관한 <br /><span class="t_hide">&nbsp;&nbsp;&nbsp;</span>개인 신용정보 등
+                          </td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                        <tr>
+                          <td class="tl">퇴직연금 계약의 체결·운용 관리업무, 자산관리 업무와 관련된 퇴직연금 사업자 및 금융기관</td>
+                          <td class="tl">퇴직연금(IRP포함) 계약 및 보험금 청구에 이해관계가 있는 자에 대한 법규 및 계약 상 의무이행</td>
+                          <td class="tl">
+                            - 개인식별정보<br />
+                            - 퇴직연금 계약정보<br />
+                            - 퇴직연금 지급정보<br />
+                            - 기타 재산소득 등에 관한 <br /><span class="t_hide">&nbsp;&nbsp;&nbsp;</span>개인 신용정보 등
+                          </td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                        <tr>
+                          <td class="tl">한국예탁결제원</td>
+                          <td class="tl">근로자 퇴직급여 보장법 등 관련 법령에 따른 퇴직연금 사업자로서 업무의 수행, 퇴직연금 관련 계약의 체결, 유지, 관리, 퇴직급여, 지급, 금융거래 관련 업무</td>
+                          <td class="tl">
+                            - 개인식별정보<br />
+                            - 퇴직연금 계약정보<br />
+                            - 퇴직연금 지급정보<br />
+                            - 기타 재산소득 등에 관한 <br /><span class="t_hide">&nbsp;&nbsp;&nbsp;</span>개인 신용정보 등
+                          </td>
+                          <td>제공목적 달성시까지</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+              </ol>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보처리의 위탁에 관한 사항</h4>
+              <div class="tablewrap mt-20">
+                <table style="min-width: 600px">
+                  <caption class="blind">
+                    개인정보처리의 위탁에 관한 사항
+                  </caption>
+                  <colgroup>
+                    <col style="width: 33.33%" />
+                    <col style="width: 33.33%" />
+                    <col style="width: 33.33%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">위탁을 받는 자</th>
+                      <th scope="col">위탁하는 업무의 내용</th>
+                      <th scope="col">연락처</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tl semibold">빌포스트(주)</td>
+                      <td class="tl">고객 안내문 발송</td>
+                      <td class="tl">
+                        <p><a href="tel:0220243322">02-2024-3322</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">(주)월앤비전</td>
+                      <td class="tl">계약 유지·관리를 위한 콜센터 업무</td>
+                      <td class="tl">
+                        <p><a href="tel:0269438208">02-6943-8208</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">NICE평가정보(주)</td>
+                      <td class="tl">실명확인 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:0221224000">02-2122-4000</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">아이언마운틴 코리아</td>
+                      <td class="tl">문서 보관 및 파쇄</td>
+                      <td class="tl">
+                        <p><a href="tel:16888610">1688-8610</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">IBK시스템(주)</td>
+                      <td class="tl">전산시스템 개발·유지·관리</td>
+                      <td class="tl">
+                        <p><a href="tel:0234076600">02-3407-6600</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">㈜모바일이앤엠애드</td>
+                      <td class="tl">디지털채널 이벤트 경품 발송 대행</td>
+                      <td class="tl">
+                        <p><a href="tel:16443614">1644-3614</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">씨제이올리브네트웍스(주)</td>
+                      <td class="tl">메시징 서비스 (문자, 카카오알림톡)</td>
+                      <td class="tl">
+                        <p><a href="tel:0262520732">02-6252-0732</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">(주)카카오</td>
+                      <td class="tl">카카오 전자문서 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:1833-9931">1833-9931</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">(주)쿠콘</td>
+                      <td class="tl">신분증 진위확인 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:0237797173">02-3779-7173</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">코리아크레딧뷰로주식회사</td>
+                      <td class="tl">PASS 본인확인 및 CI변환 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:027081000">02-708-1000</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">KT</td>
+                      <td class="tl">모바일 전자고지 안내 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:15880114">1558-0114</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">(주)더즌</td>
+                      <td class="tl">계좌점유인증 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:0263281204">02-6328-1204</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tl semibold">(주)스마트솔루션</td>
+                      <td class="tl">카카오 인증 서비스</td>
+                      <td class="tl">
+                        <p><a href="tel:03118339931">031-1833-9331</a></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">정보주체의 권리·의무 및 그 행사방법에 관한 사항</h4>
+              <ol class="mt-20 tl pl-25">
+                <li>
+                  <em class="text bold tl">1. 목적 범위외의 제공·활용 중단 요청</em>
+                  <p class="mt-5 text tl">고객님의 개인정보를 동의받은 범위 이외의 목적으로 제공·이용한 사실이 있는 경우에는 즉시 중단을 요청하실 수 있습니다.</p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">2. 영업 목적의 수집·이용, 조회, 제공에 대한 동의의 철회</em>
+                  <p class="mt-5 text tl">
+                    영업목적에 대한 동의('동의 II')를 한 때로부터 3개월 경과 후부터 이를 철회(마케팅거부)하거나 마케팅목적의 전화 수신을 거부하실 수 있습니다. 동의철회(마케팅거부) 또는 전화수신거부 신청에 대한 조치는 신청일로부터 1개월 경과후부터
+                    적용되오니 이 점 양해하여 주시기 바랍니다.
+                  </p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">3. 영리목적의 광고성 정보 수신 거부</em>
+                  <p class="mt-5 text tl">영리목적의 전화·이메일·SMS 등 광고성 정보의 수신을 거부하실 수 있습니다.</p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">4. 조회·열람 및 정정·삭제 청구 권리</em>
+                  <p class="mt-5 text tl">IBK연금보험이 보유하고 있는 고객님의 정보를 언제든지 열람하실 수 있으며, 만일 잘못된 정보가 있는 경우에는 정정·삭제를 요구하실 수 있습니다.</p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">5. 개인정보 및 개인신용정보 수집, 조회, 이용, 제공 동의 철회권</em>
+                  <ul>
+                    <li class="mt-5 text tl dot">
+                      <p>
+                        계약 체결 3개월 이후부터 개인정보 및 개인신용정보 수집, 조회, 이용, 제공 동의를 철회하실 수 있습니다. 다만, 신용조회회사 또는 신용정보집중기관에 제공하여 개인의 신용도 등을 평가하기 위한 목적에 대해서는 철회하실 수 없으며,
+                        계약의 유지·관리·상담, 기타 업무위탁에 따른 정보 제공 동의를 철회하는 경우에는 해당 용역의 제공을 받지 않을 것을 명확히 하여야 합니다.
+                      </p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>
+                        개인정보 및 개인신용정보 수집, 조회, 이용, 제공 동의를 철회하시고자 하는 경우에는 철회의 대상 및 내용 등을 특정하여 인터넷 홈페이지(<a href="http://www.ibki.co.kr" title="새창이동" target="_blank">www.ibki.co.kr</a>) 또는
+                        고객센터에 내방하여 서면으로 철회의 의사표시를 하여 주시기 바라며, 이 경우 회사는 1개월 이내에 조치를 완료하고, 철회가 불가할 경우 그 사유를 5일 이내에 알려드립니다.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">6. 제공 사실 통보 요구 권리</em>
+                  <p class="mt-5 text tl">
+                    IBK연금보험이 고객님의 정보를 제3자에게 제공한 사실이 있는 경우에 고객님께서는 정보제공사실 통보를 요구할 수 있습니다. 위 권리를 행사하시기 위해서는 인터넷홈페이지(<a href="http://www.ibki.co.kr" title="새창이동" target="_blank"
+                      >www.ibki.co.kr</a
+                    >) 또는 고객센터에 내방하여 서면으로 신청하여 주시기 바랍니다. 개인정보에 대한 고객님의 권리와 관련하여 보다 자세한 사항은 고객권리안내문을 참고하시기 바랍니다.
+                  </p>
+                </li>
+              </ol>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">처리하는 개인정보의 항목</h4>
+              <ol class="mt-20 tl pl-25">
+                <li>
+                  <em class="text bold tl">1. 보험과 관련하여 수집하는 개인정보 항목</em>
+                  <ul>
+                    <li class="mt-5 text tl dot">
+                      <p>개인식별정보 : 이름, 주소(자택/직장), 연락처(전화번호/e-Mail 등), 직업, 직장, 직위, 입사일, 취미, 세대정보.</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>고유식별정보 : 주민등록번호, 운전면허번호, 외국인의 경우 외국인등록번호·여권번호</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>보험거래 관련 정보 : 보험가입정보, 가입목적, 보험료 납입 및 보험금 지급내역, 계좌정보, 상담내역기록, 사이버창구 이용 관련기록 (서비스이용내역/접속로그 등) 등</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>소득, 재산 등의 재정정보 : 자금의 출처, 재산현황</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">2. 대출과 관련하여 수집하는 개인정보 항목</em>
+                  <ul>
+                    <li class="mt-5 text tl dot">
+                      <p>개인식별정보 : 이름, 주소(자택/직장), 연락처(전화번호/e-Mail 등), 직장, 부서, 입사일, 취미, 학력, 세대정보, 결혼일</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>고유식별정보 : 주민등록번호, 외국인의 경우 외국인등록번호·여권번호</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>대출거래 관련 정보 : 대출금 지급 및 상환 거래 내역, 계좌정보, 보증거래 내역, 상담내역, 사이버창구 이용 관련 기록 (서비스이용내역/접속로그 등) 등</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>신용능력정보 : 재산, 채무, 소득, 납세실적, 주택소유여부 등</p>
+                    </li>
+                    <li class="text tl dot">
+                      <p>채무불이행정보 : 연체, 대위변제, 대지급, 부도, 관련인 발생사실 등</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">3. 전자금융거래 서비스 제공을 위한 정보</em>
+                  <p class="mt-5 text tl">홈페이지 접속정보 및 서비스 이용정보, 쿠키, 접속IP정보, 홈페이지 이용시 거래정보</p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">4. 개인정보 수집방법</em>
+                  <p class="mt-5 text tl">정보주체가 거래신청서 또는 각종 서비스/상담 신청서 등 서면 또는 구두로 직접 제공</p>
+                </li>
+              </ol>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보의 파기의 관한 사항</h4>
+              <p class="pl-25 text tl">회사는 개인정보의 보유기간이 경과된 경우에는 다음 각 호의 사유가 없는 한 지체없이 그 개인정보를 파기합니다.</p>
+              <ul class="pl-25">
+                <li class="text tl dot">
+                  <p>신용정보집중기관 또는 신용조회회사가 신용정보의 집중관리·활용 또는 개인의 신용도 등을 평가하기 위한 목적으로 개인신용정보를 보유하는 경우(보유기간에 한함)</p>
+                </li>
+                <li class="text tl dot">
+                  <p>신용정보회사 등이 민·형사상의 책임 또는 시효가 지속되거나 분쟁의 입증자료로서 개인신용정보를 보유하는 경우</p>
+                </li>
+                <li class="text tl dot">
+                  <p>상법 제33조 등 법령에 따라 보존하여야 하는 경우</p>
+                </li>
+                <li class="text tl dot">
+                  <p>기타 이와 유사한 정당한 사유가 있는 경우</p>
+                </li>
+              </ul>
+              <div class="c_notice mt-20">
+                <p class="text tl">개인정보가 기록된 출력물, 서면 등은 파쇄 또는 소각의 방법으로 파기하고, 전자적 파 일형태의 개인정보는 복원이 불가능한 방법으로 영구 삭제하는 방법으로 파기 합니다.</p>
+              </div>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보의 안정성 확보 조치</h4>
+              <p class="pl-25 text tl">회사는 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p>
+              <ol class="pl-25 tl mt-20">
+                <li>
+                  <em class="text bold tl">① 개인정보의 암호화</em>
+                  <p class="mt-5 text tl">이용자의 개인정보 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">② 해킹 등에 대비한 기술적 대책</em>
+                  <p class="mt-5 text tl">
+                    회사는 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.
+                  </p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">③ 개인정보처리시스템 접근 제한</em>
+                  <p class="mt-5 text tl">
+                    개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.
+                  </p>
+                </li>
+                <li class="mt-20">
+                  <em class="text bold tl">④ 개인정보 취급 직원의 최소화 및 교육</em>
+                  <p class="mt-5 text tl">개인정보를 취급하는 담당자를 최소화 하여 개인정보를 관리하는 대책을 시행하고 있습니다.</p>
+                </li>
+              </ol>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보 처리방침의 변경에 관한 사항</h4>
+              <p class="pl-25 text tl">이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 변경사항은 확인할 수 있도록 고지할 것입니다.</p>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">권익침해 구제방법</h4>
+              <p class="pl-25 text tl">개인정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+              <ul class="pl-25">
+                <li class="text tl dot">
+                  <p>
+                    개인정보분쟁조정위원회 (<u><a href="http://www.kopico.or.kr" title="새창이동" target="_blank">http://www.kopico.or.kr</a></u> / <a href="tel:18336972">1833-6972</a>)
+                  </p>
+                </li>
+                <li class="text tl dot">
+                  <p>
+                    한국인터넷진흥원 개인정보침해신고센터 (<u><a href="http://privacy.kisa.or.kr" title="새창이동" target="_blank">http://privacy.kisa.or.kr</a></u> / 국번없이 <a href="tel:118">118</a>)
+                  </p>
+                </li>
+                <li class="text tl dot">
+                  <p>
+                    정보보호마크인증위원회 (<u><a href="http://www.eprivacy.or.kr" title="새창이동" target="_blank">http://www.eprivacy.or.kr</a></u> / <a href="tel:025800533">02-580-0533~4</a>)
+                  </p>
+                </li>
+                <li class="text tl dot">
+                  <p>
+                    대검찰청 사이버수사과 (<u><a href="http://www.spo.go.kr" title="새창이동" target="_blank">http://www.spo.go.kr</a></u> / 국번없이 <a href="tel:1301">1301</a>)
+                  </p>
+                </li>
+                <li class="text tl dot">
+                  <p>
+                    경찰청 사이버안전국 (<u><a href="http://www.ctrc.go.kr" title="새창이동" target="_blank">http://www.ctrc.go.kr</a></u> / 국번없이 <a href="tel:182">182</a>)
+                  </p>
+                </li>
+              </ul>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">개인정보 보호책임자</h4>
+              <ul class="pl-25">
+                <li class="text tl dot"><p>성명 : 이수청</p></li>
+                <li class="text tl dot"><p>부서 : 준법감시인</p></li>
+                <li class="text tl dot">
+                  <p>전화 : <a href="tel:0222701623">02-2270-1623</a></p>
+                </li>
+                <li class="text tl dot">
+                  <p>
+                    정보주체의 권리 의무 및 그 행사 방법안내 대표전화 : <a href="tel:15774117">1577-4117</a> / <a href="tel:16444117">1644-4117</a> 인터넷홈페이지 (<a href="http://www.ibki.co.kr" title="새창이동" target="_blank"
+                      >http://www.ibki.co.kr</a
+                    >)
+                  </p>
+                </li>
+              </ul>
+            </article>
+            <article class="c_article">
+              <h4 class="title t1 dot">고지의 의무</h4>
+              <p class="pl-25 text tl">정부의 정책 또는 보안기술의 변경에 따라 본 개인정보처리방침 내용의 추가 삭제 및 수정이 있을시에는 홈페이지 공지란을 통해 고지할 것입니다.</p>
+              <ul class="pl-25">
+                <li class="text tl dot">
+                  <div class="d_flex">
+                    <p>개인정보처리방침 버전번호 : V1.7 (개정일자 : <time datetime="2023-03-28">2023년 03월 28일</time>) 이전버전 확인</p>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup.jsp', '개인정보 처리방침', 900, 750);">V1.0</button>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup_v1.1.jsp', '개인정보 처리방침', 900, 750);">V1.1</button>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup_v1.2.jsp', '개인정보 처리방침', 900, 750);">V1.2</button>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup_v1.3.jsp', '개인정보 처리방침', 900, 750);">V1.3</button>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup_v1.4.jsp', '개인정보 처리방침', 900, 750);">V1.4</button>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup_v1.5.jsp', '개인정보 처리방침', 900, 750);">V1.5</button>
+                    <button type="button" class="btn off blue tiny" style="margin-left: 1rem" onclick="openPopup('/pr/popup/cscetr_indv_inf_con_ntc_popup_v1.6.jsp', '개인정보 처리방침', 900, 750);">V1.6</button>
+                  </div>
+                </li>
+                <li class="text tl dot mt-5">
+                  <p>개인정보처리방침 최초시행일자 : <time datetime="2011-12-08">2011년 12월 08일</time></p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+      <!-- Footer S -->
+      <div data-include-path="../process/include/footer.html"></div>
+    </div>
+  </body>
+</html>

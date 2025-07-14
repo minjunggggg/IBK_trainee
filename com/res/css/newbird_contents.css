@@ -15,7 +15,7 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
-    padding-top: 20rem;
+    padding-top: 12rem;
     padding-bottom: 6rem;
 }
 
@@ -2568,11 +2568,11 @@
 }
 
 #contents .c_submain .cs_faq .csf_list li button > span.blind:after {
-    content: "ì??�´ê¸�?"
+    content: "ì??�´ê¸�?"
 }
 
 #contents .c_submain .cs_faq .csf_list li.on button > span.blind:after {
-    content: "ë??�«ê¸�?"
+    content: "ë??�«ê¸�?"
 }
 
 #contents .c_submain .cs_faq .title.dot a {
@@ -6172,7 +6172,7 @@ form + #contents {
     }
 
     #contents .c_wrap {
-        padding-top: 16rem;
+        padding-top: 9rem;
     }
 
     #contents .c_more {

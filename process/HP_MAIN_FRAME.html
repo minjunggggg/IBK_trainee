@@ -185,7 +185,7 @@
         <script>
           /* a_pop 개발 */
           //slide가 하나라도 있을 경우 아래 코드 활성화
-          $(document).ready(function () {
+          $(window).on("load", function () {
             if (getCookie("popupAdClosed") !== "true") {
               document.querySelector(".a_ad").classList.add("on");
             }

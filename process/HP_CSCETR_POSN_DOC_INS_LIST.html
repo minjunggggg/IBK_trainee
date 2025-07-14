@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구비서류 안내</title>
+    <link rel="stylesheet" href="/com/res/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_init.css" />
+    <link rel="stylesheet" href="/com/res/css/aos.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_icon.css" />
+    <link rel="stylesheet" href="/com/res/css/slick.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_common.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_layout.css" />
+    <link rel="stylesheet" href="/com/res/css/newbird_contents.css" />
+    <link rel="stylesheet" href="/com/res/css/typeahead.css" />
+    <script src="/com/res/js/jquery-1.11.0.min.js"></script>
+
+    <!-- jquery include 돌면서 보여주기 -->
+    <script>
+      $(function () {
+        $("div[data-include-path]").each(function () {
+          var path = $(this).attr("data-include-path");
+          $(this).load(path, function (response, status, xhr) {
+            if (status == "error") {
+              var msg = "Sorry but there was an error:";
+              $(this).html(msg + xhr.status + "" + xhr.statusText);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 헤더 -->
+      <div data-include-path="../process/include/header.html"></div>
+
+      <!-- 브레드크럼 바 -->
+      <div data-include-path="../process/include/breadcrumb.html"></div>
+
+      <!-- Aside S -->
+      <div data-include-path="../process/include/aside.html"></div>
+      <div id="contents">
+        <h2 class="blind">본문</h2>
+        <section class="c_wrap">
+          <div class="c_title">
+            <h3 class="title"><mark class="cm">구비서류</mark> 안내</h3>
+            <p class="text">연금보험 관련 서비스 신청을 위한 구비서류 안내입니다.<br />필요하신 파일을 다운로드 받아 작성하시기 바랍니다.</p>
+          </div>
+          <div class="wrap">
+            <body id="unifMainContent" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="onload">
+              <form id="filedownloadForm" name="filedownloadForm" method="post" action="">
+                <input type="hidden" name="_biz_op_code" />
+                <input type="hidden" name="pFilePath" id="pFilePath" />
+                <input type="hidden" name="pFidwSeq" id="pFidwSeq" />
+                <input type="hidden" name="esChk" value="P" />
+                <iframe id="ifmdown" name="ifmdown" width="0" height="0" style="display: none" title="빈프레임"></iframe>
+              </form>
+              <form id="form" name="form" method="post" action="">
+                <input type="hidden" name="_biz_op_code" />
+                <input type="hidden" id="bltb_cod" name="bltb_cod" value="SC000014" />
+                <input type="hidden" id="pagenum" name="pagenum" value="1" />
+                <input type="hidden" id="search_gubun" name="search_gubun" value="" />
+                <input type="hidden" id="search_string" name="search_string" value="" />
+                <input type="hidden" id="seq" name="seq" value="" />
+                <input type="hidden" id="sctn" name="sctn" value="in" />
+
+                <ul class="tabwrap t1">
+                  <li class="tab">
+                    <button type="button" class="t_btn on" onclick="parent.location.href='/process/HP_CSCETR_POSN_DOC_INS_LIST?bltb_cod=SC000014&amp;sctn=in&amp;TAB=in'" aria-expanded="true">연금보험</button>
+                  </li>
+                  <li class="tab">
+                    <button type="button" class="t_btn" onclick="parent.location.href='/process/HP_CSCETR_POSN_DOC_INS_LIST?bltb_cod=SC000014&amp;sctn=pe&amp;TAB=pe'" aria-expanded="false">퇴직연금</button>
+                  </li>
+                </ul>
+
+                <!-- 개발 : 각 탭에 따른 페이지 생성 또는 탭별 테이블 숨기기 처리 / 탭별 테이블 숨기기 방식의 경우, tabwrap의 t_btn은 a태그가 아닌 button 태그로 변경되어야 함 -->
+
+                <div class="tablewrap mt-50">
+                  <table>
+                    <caption class="blind">
+                      연금보험 관련 업무별 구비서류 목록
+                    </caption>
+
+                    <colgroup>
+                      <col style="width: 16.5%" />
+                      <col style="width: 21%" />
+                      <col style="width: 37.5%" />
+                      <col style="width: 8.5%" />
+                      <col style="width: 16.5%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">업무</th>
+                        <th scope="col">신청서식명</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">당사양식</th>
+                        <th scope="col">추가필요서류</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="posn계약관련변경">
+                        <td rowspan="6" scope="row">계약관련변경</td>
+
+                        <td class="t_left">계약관련자 변경/정정</td>
+                        <td class="t_left">계약자, 수익자 등 관련자 변경 또는 개명 등으로 인한 성명 정정 등 요청 시 작성</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','398');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">계약자 신분증, 관계확인서류, (개명시)기본증명서 또는 주민등록초본</td>
+                      </tr>
+
+                      <tr class="posn계약관련변경">
+                        <td class="t_left">계약변경 신청</td>
+                        <td class="t_left">보험료, 납입기간, 연금개시연령, 연금유형 등 계약의 내용을 변경 요청시 작성</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','399');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">계약자 신분증</td>
+                      </tr>
+
+                      <tr class="posn계약관련변경">
+                        <td class="t_left">보험료 납입일시중지 신청</td>
+                        <td class="t_left">상품종류에 따라 보험료 납입기간 중에 일정기간동안 납입중지를 신청할 때 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','400');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">계약자 신분증</td>
+                      </tr>
+
+                      <tr class="posn계약관련변경">
+                        <td class="t_left">연금전환신청</td>
+                        <td class="t_left">기존 계약을 해지 후 새로운 계약으로 전환 요청시 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','111');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+
+                          <span class="blind">작성예시 파일 다운로드</span>
+                          <a class="btn tiny off" href="#!" onclick="onDownload('SC000014','112');">작성예시</a>
+                        </td>
+                        <td class="t_left">계약자 신분증</td>
+                      </tr>
+
+                      <tr class="posn계약관련변경">
+                        <td class="t_left">자동이체신청, 변경</td>
+                        <td class="t_left">보험료·보험계약대출이자 자동이체의 신규, 변경, 해지 요청 시 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','113');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+
+                          <span class="blind">작성예시 파일 다운로드</span>
+                          <a class="btn tiny off" href="#!" onclick="onDownload('SC000014','114');">작성예시</a>
+                        </td>
+                        <td class="t_left">계약자 신분증</td>
+                      </tr>
+
+                      <tr class="posn계약관련변경">
+                        <td class="t_left">조기연금전환신청</td>
+                        <td class="t_left">납입이 종료된 계약에 대해 즉시 연금을 개시하고자 하는 경우 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','402');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+
+                          <span class="blind">작성예시 파일 다운로드</span>
+                          <a class="btn tiny off" href="#!" onclick="onDownload('SC000014','110');">작성예시</a>
+                        </td>
+                        <td class="t_left">계약자 신분증</td>
+                      </tr>
+
+                      <tr class="posn민원신청">
+                        <td scope="row">민원신청</td>
+
+                        <td class="t_left">민원관련 신청서</td>
+                        <td class="t_left">계약체결시 불완전판매(자필미서명, 청약서 및 약관 미교부, 상품설명불충분 등)와 관련 고객 불만사항 접수 시 사용<br /></td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','180');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">
+                          계약자 신분증<br />
+                          단, 대리접수시 위임장/인감증명서/대리인신분증<br />
+                        </td>
+                      </tr>
+
+                      <tr class="posn사망보험금 신청">
+                        <td scope="row">사망보험금 신청</td>
+
+                        <td class="t_left">사망보험금 신청서</td>
+                        <td class="t_left">피보험자 사망 시 수익자(상속인)가 사고보험금을 신청시 사용&nbsp;</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','403');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">신청서 내 추가서류 안내 참고</td>
+                      </tr>
+
+                      <tr class="posn위법계약해지">
+                        <td scope="row">위법계약해지</td>
+
+                        <td class="t_left">위법계약 해지 신청서</td>
+                        <td class="t_left">5대 판매원칙(적합성원칙, 적정성 원칙, 설명의무, 불공정영업행위의 금지, 부당권유행위 금지)을 위반하여 계약을 해지하고자 하는 경우 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','264');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">
+                          계약자 신분증<br />
+                          단, 대리접수시 위임장/인감증명서/대리인신분증
+                        </td>
+                      </tr>
+
+                      <tr class="posn자료열람">
+                        <td scope="row">자료열람</td>
+
+                        <td class="t_left">자료열람 신청서</td>
+                        <td class="t_left"><p>분쟁 조정 또는 소송의 수행 등 권리구제를 위한 목적으로 자료의 열람을 요구할 경우</p></td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','265');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">
+                          계약자 신분증<br />
+                          단, 대리접수시 위임장/인감증명서/대리인신분증
+                        </td>
+                      </tr>
+
+                      <tr class="posn증명서 발급">
+                        <td scope="row">증명서 발급</td>
+
+                        <td class="t_left">보험정보제공요청서</td>
+                        <td class="t_left">보험정보제공요청(납입내역서, 잔액증명서등)을 요청하는 경우 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','404');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">계약자 신분증</td>
+                      </tr>
+
+                      <tr class="posn지급신청">
+                        <td scope="row">지급신청</td>
+
+                        <td class="t_left">제지급금 지급신청</td>
+                        <td class="t_left"><p>중도인출, 연금, 만기, 해지등 제지급금신청 시 사용</p></td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','405');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left">계약자 신분증, 신규계좌일 경우&nbsp;통장사본</td>
+                      </tr>
+
+                      <tr class="posn채무조정 요청서">
+                        <td scope="row">채무조정 요청서</td>
+
+                        <td class="t_left">채무조정 요청서</td>
+                        <td class="t_left">채권금융회사에 채무조정을 요청하는 경우 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','420');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left"></td>
+                      </tr>
+
+                      <tr class="posn채무조정안(채무자용)">
+                        <td scope="row">채무조정안(채무자용)</td>
+
+                        <td class="t_left">채무조정안(채무자용)</td>
+                        <td class="t_left">채권금융회사에 채무조정을 요청하는 경우 사용</td>
+                        <td class="t_file">
+                          <a href="#!" onclick="onDownload('SC000014','421');">
+                            <span class="blind">파일 다운로드</span>
+                            <i class="icon line large download"></i>
+                          </a>
+                        </td>
+                        <td class="t_left"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="c_notice mt-50 tl">
+                  <strong class="text semibold crt tl">[추가 고객안내 사항]</strong>
+                  <ul>
+                    <li class="text tl">
+                      1) 고객님께서 원하시는 서비스의 범위등에 따라 위 서식외에 추가로 필요한 서류가 있을 수 있으니 당사 콜센터(<a href="tel:1577-4117">1577-4117</a> / <a href="tel:1644-4117">1644-4117</a>)를 통해 안내 받으실 수 있습니다.
+                    </li>
+                    <li class="text tl">2) PDF파일이 보이지 않을 경우 하단 버튼을 클릭하여 뷰어 프로그램을 다운받아 설치하시기 바랍니다.</li>
+                    <li>
+                      <div class="flexbox mt-10">
+                        <a href="https://get.adobe.com/kr/reader/" class="btn small ic ri gray filled" title="새창으로 이동" target="_blank">
+                          <i class="icon line w small download"></i>
+                          Get Adobe Reader
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+
+              <script type="text/javascript">
+                $(document).ready(function () {
+                  var userAgent = navigator.userAgent.toLowerCase();
+
+                  if (userAgent.indexOf("firefox") > -1) {
+                    document.getElementById("form").method = "get";
+                  }
+
+                  /* 목록으로 이동 */
+                  $("#btnGoToList").click(function () {
+                    document.getElementById("form").action = "/paging/HP_UNFI_BLTB_TYP1_LIST";
+                    document.getElementById("form").submit();
+                  });
+
+                  var doc = document.getElementById("unifMainContent");
+                  if (doc.offsetHeight != 0) {
+                    pageheight = doc.offsetHeight;
+                    parent.document.getElementById("iframe").height = pageheight + "px";
+                  }
+
+                  parent.document.title = "구비서류 안내 - IBK연금보험";
+                });
+
+                /* 상세화면 이동 */
+                function goType1DtlScr(seq) {
+                  document.getElementById("seq").value = seq;
+                  document.getElementById("form").action = "/process/HP_UNFI_BLTB_TYP1_SCR";
+                  document.getElementById("form").submit();
+                }
+
+                // -- 파일 다운로드 로직 신규 추가 Start --
+                function onDownload(filecors, seq) {
+                  var form = document.filedownloadForm;
+                  document.getElementById("pFidwSeq").value = seq;
+                  document.getElementById("pFilePath").value = filecors;
+
+                  form.target = "ifmdown";
+                  form.action = "/process/mFileDownload";
+                  form.method = "post";
+                  form.submit();
+                }
+              </script>
+            </body>
+          </div>
+        </section>
+      </div>
+      <!-- Footer S -->
+      <div data-include-path="../process/include/footer.html"></div>
+    </div>
+  </body>
+</html>

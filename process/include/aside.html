@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../com/res/css/slick.css" />
+    <script src="../../com/res/js/slick.js"></script>
+  </head>
+  <body>
+    <!-- Aside S -->
+    <aside id="aside" class="ismain">
+      <!-- 좌측 배너 -->
+      <div class="a_ad">
+        <ul>
+          <li>
+            <div class="aa_rate">
+              <ul>
+                <li>
+                  <strong>IBK연금보험</strong>
+                  <br />
+                  <strong>보험계약대출이율</strong>
+                  <em>(現)판매상품 기준</em>
+                  <span><mark>3</mark><span>.</span><mark>9</mark><mark>2</mark><span>%</span></span>
+                </li>
+                <li>
+                  <span>(유)연금저축: 3.50%</span>
+                </li>
+                <li>
+                  <i class="icon small w line call"></i>
+                  <a href="tel:15774117" tabindex="3000">1577-4117</a>
+                  <a href="tel:16444117" tabindex="3001">1644-4117</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/ninclude/cmnIbkSBClk.jsp?sSysID=HP_IBKSB" target="_blank" alt="IBK저축은행 신용대출화면으로 이동" title="IBK저축은행 신용대출화면 새창열림" aria-label="IBK저축은행 신용대출화면 새창열림">
+              <figure>
+                <img src="../com/res/images/common/pic_ad.jpg" alt="서민들을 위한 착한금리대출 IBK저축은행 서민금융상품 햇살론 사잇돌2 자세히보기" />
+                <figcaption class="blind">햇살론 사잇돌2에 대한 이미지이다</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="aa_close" tabindex="3200"><i class="icon small w line close2"></i><span class="blind">광고 닫기</span></button>
+      </div>
+
+      <!-- 하단 메뉴 제외 -->
+      <div class="a_wrap">
+        <button type="button" tabindex="4100" class="a_control on">
+          <span class="blind">퀵메뉴 제어 버튼</span>
+          <span class="blind t1"></span>
+          <span class="ac_deco"></span>
+          <span class="ac_deco t1"></span>
+        </button>
+      </div>
+
+      <!-- 우측 하단 플로팅 버튼 (AI상담, 팝업) -->
+      <!-- a_fuction 오타 수정 -->
+      <div class="a_function">
+        <ul>
+          <li class="af_ai">
+            <div class="afa_dim"></div>
+            <button type="button" tabindex="4101" aria-expanded="false"><span class="blind">AI 상담 열기</span><i></i></button>
+            <div class="afa_siri">
+              <div class="afas_bg">
+                <div class="afasb_ballwrap">
+                  <i class="afasb_ball sb"><i></i></i>
+                  <i class="afasb_ball sb t1"><i></i></i>
+                  <i class="afasb_ball sb t2"><i></i></i>
+                  <i class="afasb_ball p t1"><i></i></i>
+                  <i class="afasb_ball p t2"><i></i></i>
+                </div>
+              </div>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <script>
+        /* a_pop 개발 */
+        //slide가 하나라도 있을 경우 아래 코드 활성화
+        $(window).on("load", function () {
+          if (getCookie("popupAdClosed") !== "true") {
+            document.querySelector(".a_ad").classList.add("on");
+          }
+          // if (getCookie("popupClosed") !== "true") {
+          //   setTimeout(function () {
+          //     $("#aside .a_pop").addClass("open");
+          //     setTimeout(function () {
+          //       $("#aside .a_pop").addClass("open2");
+          //       $("#aside .a_function ul li.af_popbanner").addClass("open");
+          //     }, 10);
+          //   }, 1000);
+          // }
+
+          const key = "popupClosed";
+          const now = new Date();
+          const saved = localStorage.getItem(key);
+
+          if (!saved || new Date(saved) < now) {
+            setTimeout(function () {
+              $("#aside .a_pop").addClass("open");
+              setTimeout(function () {
+                $("#aside .a_pop").addClass("open2");
+                $("#aside .a_function ul li.af_popbanner").addClass("open");
+              }, 10);
+            }, 1000);
+          }
+        });
+      </script>
+
+      <!-- AI상담 -->
+      <div class="a_ai">
+        <div class="aa_bg">
+          <div class="aab_ballwrap">
+            <i class="aab_ball w"><i></i></i>
+            <i class="aab_ball w t1"><i></i></i>
+            <i class="aab_ball w t2"><i></i></i>
+            <i class="aab_ball sb"><i></i></i>
+            <i class="aab_ball sb t1"><i></i></i>
+            <i class="aab_ball sb t2"><i></i></i>
+            <i class="aab_ball p t1"><i></i></i>
+            <i class="aab_ball p t2"><i></i></i>
+          </div>
+        </div>
+        <div class="aa_menu">
+          <strong>
+            <span>노후 준비를 하려면?</span>
+            <span><mark>IBK연금이 검색!</mark></span>
+          </strong>
+          <p>
+            <span>어렵고 복잡한 연금, 금융 지식!?</span>
+            <span>IBK연금이에게 물어보면 <mark>원하는 정보</mark>를 얻을 수 있습니다.</span>
+          </p>
+          <!-- AI상담 메뉴 리스트(3항목) -->
+          <ul>
+            <!-- AI 챗봇 -->
+            <li>
+              <a href="#!" title="AI 챗봇 새창열림" tabindex="4110" onclick="window.open('https://tgram.hugraph.com/service/ibki', '_popupAIchat', 'width=600,height=850,top=100,left=100')">
+                <i class="icon line b ai"></i>
+                <span>AI 챗봇</span>
+                <div class="aam_more"><i class="icon line w small arrowup2"></i></div>
+              </a>
+            </li>
+            <!-- 채팅상담 챗봇 -->
+            <li>
+              <a href="#!" title="채팅상담/챗봇 새창열림" tabindex="4111" onclick="window.open('https://chat.ibki.co.kr:8443/#/ttalk_main/ibkcall/BOT?channel=HOM', '_popupChat', 'width=600,height=850,top=100,left=100')">
+                <i class="icon line b devicemessages"></i>
+                <span>채팅상담/챗봇</span>
+                <div class="aam_more"><i class="icon line w small arrowup2"></i></div>
+              </a>
+            </li>
+            <!-- 자주 묻는 질문 -->
+            <li>
+              <a href="/process/HP_CSCETR_FAQ?FAQ=01" tabindex="4112">
+                <i class="icon line b tasksquare"></i>
+                <span>자주 묻는 질문</span>
+                <div class="aam_more"><i class="icon line w small arrowup2"></i></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- Aside E -->
+  </body>
+</html>
