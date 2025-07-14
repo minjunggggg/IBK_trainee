@@ -83,7 +83,7 @@
           var path = $(this).attr("data-include-path");
           $(this).load(path, function (response, status, xhr) {
             if (status == "error") {
-              var msg = "Sory but there was an error:";
+              var msg = "Sorry but there was an error:";
               $(this).html(msg + xhr.status + "" + xhr.statusText);
             }
           });
@@ -94,6 +94,7 @@
 
   <body>
     <div id="wrap">
+      <!-- header -->
       <div data-include-path="../process/include/header.html"></div>
 
       <!-- Aside S -->
