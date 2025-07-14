@@ -2,8 +2,7 @@
 <html lang="ko">
   <head>
     <!-- 인코딩, 브라우저, 반응형 설정 -->
-    <!-- UTF-8로 변경 -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -51,7 +50,8 @@
     <!-- <script src="../com/res/js/jquery.typeahead.js"></script> 서치바 영역이라 제외 -->
     <script src="../com/res/js/sweetalert2.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bdf0cec0078d498390e9d4da4c7d6e18"></script>
-    <!-- alert -> sweetAlert로 대체 -->
+
+    <!-- prototype이란 게 없을 때, 스윗얼럿으로 뭔가 띄움 -->
     <script>
       (function () {
         //프로토타입 객체가 없는 경우에만 실행
@@ -77,6 +77,8 @@
         }
       });
     </script>
+
+    <!-- jquery include 돌면서 보여주기 -->
     <script>
       $(function () {
         $("div[data-include-path]").each(function () {
@@ -149,6 +151,7 @@
         <!-- a_fuction 오타 수정 -->
         <div class="a_function">
           <ul>
+            <!-- AI상담 버튼 -->
             <li class="af_ai">
               <div class="afa_dim"></div>
               <button type="button" tabindex="4101" aria-expanded="false"><span class="blind">AI 상담 열기</span><i></i></button>
@@ -173,6 +176,7 @@
                 <i></i>
               </div>
             </li>
+            <!-- 배너 버튼 -->
             <li class="af_popbanner">
               <button type="button" tabindex="4200" aria-expanded="false">
                 <span class="blind">배너 열기</span>
@@ -380,6 +384,8 @@
                     </div>
                   </div>
 
+                  <!-- 메인 히어로 배너 이미지 -->
+                  <!-- 백그라운드 이미지: css에 용이/img 태그: 접근성으로 추측 -->
                   <div class="cmh_slide t2">
                     <a
                       href="#!"
@@ -776,6 +782,7 @@
       <!-- Contents E -->
       <!-- charge_area 생략 -->
 
+      <!-- footer -->
       <div data-include-path="../process/include/footer.html"></div>
 
       <!-- TODO: form, script 남은 것 -->
