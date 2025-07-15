@@ -250,6 +250,21 @@ body.onload #aside .a_ai {
     text-align: left;
     letter-spacing: -0.032rem;
 }
+#cate .c_home:hover {
+    background: var(--basic-color-w);
+}
+#cate .c_menu > ul > li > button:hover {
+    background: var(--basic-color-w);
+}
+#cate .wrap > button:hover {
+    background: var(--basic-color-w);
+}
+#cate .c_menu > ul > li > ul a:hover, #cate .c_menu > ul > li > ul button:hover {
+    text-decoration: underline dotted;
+    text-decoration-color: rgba(13, 14, 15, 0.3);
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.4rem;
+}
 #cate .c_menu > ul > li > span {
     display: block;
     box-sizing: border-box;

@@ -26,3 +26,13 @@ if (newTitle) {
     }
   }
 }
+
+document.querySelectorAll(".c_menu a").forEach((link) => {
+  const linkPath = new URL(link.href, location.origin).pathname;
+  const currentPath = location.pathname;
+
+  // 비교 후 일치하면 .on 클래스 추가
+  if (linkPath === currentPath) {
+    link.classList.add("on");
+  }
+});

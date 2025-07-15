@@ -50,6 +50,7 @@
     <!-- <script src="/com/res/js/jquery.typeahead.js"></script> -->
     <script src="/com/res/js/sweetalert2.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bdf0cec0078d498390e9d4da4c7d6e18"></script>
+    <script src="/com/res/js/HP_CSCETR_FAQ.js"></script>
 
     <!-- prototype이란 게 없을 때, 스윗얼럿으로 뭔가 띄움 -->
     <script>
@@ -130,7 +131,7 @@
                         <i class="icon line w small search"></i>
                       </button>
                       <!-- 개발 : submit 검색 버튼을 누르면 숨겨져 있던 reset 버튼 노출 -->
-                      <button type="button" class="btn gray ic off round5 t1" onclick="location.href='/process/HP_CSCETR_FAQ?FAQ=01'">
+                      <button type="button" class="btn gray ic off round5 t1" onclick="">
                         <span class="blind">검색 초기화</span>
                         <i class="icon line g small reset"></i>
                       </button>
@@ -138,23 +139,23 @@
                   </div>
                   <ul class="tabwrap t1">
                     <li class="tab">
-                      <a class="t_btn on" onclick="onClickFaqTab('', '')" href="#" aria-expanded="true">전체</a>
+                      <a class="t_btn on" onclick="onClickFaqTab(this)" href="#" aria-expanded="true">전체</a>
                     </li>
 
                     <li class="tab">
-                      <a class="t_btn" href="#" onclick="onClickFaqTab('0001', '')" aria-expanded="false"> 연금보험 </a>
+                      <a class="t_btn" href="#" onclick="onClickFaqTab(this)" aria-expanded="false"> 연금보험 </a>
                     </li>
 
                     <li class="tab">
-                      <a class="t_btn" href="#" onclick="onClickFaqTab('0002', '')" aria-expanded="false"> 퇴직연금 </a>
+                      <a class="t_btn" href="#" onclick="onClickFaqTab(this)" aria-expanded="false"> 퇴직연금 </a>
                     </li>
 
                     <li class="tab">
-                      <a class="t_btn" href="#" onclick="onClickFaqTab('0003', '')" aria-expanded="false"> 사이버창구 </a>
+                      <a class="t_btn" href="#" onclick="onClickFaqTab(this)" aria-expanded="false"> 사이버창구 </a>
                     </li>
 
                     <li class="tab">
-                      <a class="t_btn" href="#" onclick="onClickFaqTab('0004', '')" aria-expanded="false"> 홈페이지 </a>
+                      <a class="t_btn" href="#" onclick="onClickFaqTab(this)" aria-expanded="false"> 홈페이지 </a>
                     </li>
                   </ul>
 
