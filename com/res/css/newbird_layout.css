@@ -329,6 +329,18 @@ body.onload #aside .a_ai {
     border-left: 0.1rem solid var(--secondary-color-6-line);
     border-right: 0.1rem solid var(--secondary-color-6-line);
 }
+#cate .c_menu > ul > li > ul::-webkit-scrollbar {
+    width: 1rem;
+}
+#cate .c_menu > ul > li > ul::-webkit-scrollbar-thumb {
+    background-color: var(--ibk-blue);
+    border-radius: 1rem;
+    background-clip: padding-box;
+    border: 0.2rem solid transparent;
+}
+#cate .c_menu > ul > li > ul::-webkit-scrollbar-track {
+    background-color: var(--basic-color-w);
+}
 
 /* 순서 변경 */
 #header * {
@@ -775,6 +787,7 @@ body.onload #aside .a_ai {
 
 /* footer */
 /* container, charge_area, p_box 생략 */
+/* 250715 p_box 추가 */
 #footer {
   display: inline-block; width: 100%; padding-top: 2rem; border-top: 0.1rem solid var(--secondary-color-6-line); font-size: 1.4rem;
 }
@@ -998,6 +1011,47 @@ body.onload #aside .a_ai {
   display: block; font-size: 1.2rem; font-weight: 400; line-height: 2.5rem; letter-spacing: -0.048rem; color: var(--secondary-color-3);
 }
 
+/* p_box */
+.p_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 1.9rem 3rem;
+    margin-top: -1rem;
+    margin-bottom: 6rem;
+    border: 0.1rem solid var(--secondary-color-5);
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem;
+    letter-spacing: -0.032rem;
+    color: var(--secondary-color-1);
+}
+.p_box > .p_charge {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.p_box > p, .p_box span {
+    display: flex;
+    align-items: center;
+}
+.p_box p mark:not(:first-child) {
+    margin-left: 2rem;
+}
+.p_box p span {
+    margin-left: 3rem;
+    font-family: "OpenSans";
+    font-weight: 400 !important;
+    color: var(--secondary-color-1) !important;
+}
+.charge_area {
+    overflow: visible;
+    width: 100%;
+    padding-bottom: 0;
+}
 /* wrap, container, content */
 #wrap {
     background: none;
