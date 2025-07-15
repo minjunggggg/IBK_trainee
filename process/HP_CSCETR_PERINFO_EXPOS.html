@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- 인코딩, 브라우저, 반응형 설정 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>개인정보 노출 등록/해제 - IBK연금보험</title>
+
+    <!-- 타이틀, 기본 정보 -->
+    <title>고객지원 전체보기 - IBK연금보험</title>
+    <meta name="description" content="Y" />
+    <meta name="keywords" content="IBK연금보험, IBKI, 연금보험, 연금저축보험, 개인연금, 퇴직연금, 노후자금, 노후대비" />
+    <meta name="author" content="IBK연금보험" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- 링크 공유 시 설정 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="고객지원 전체보기 - IBK연금보험" />
+    <meta property="og:site_name" content="IBK연금보험" />
+    <meta property="og:description" content="Y" />
+    <meta property="og:image" content="/com/res/css/images/og.jpg" />
+
+    <!-- 파비콘, 애플 터치 아이콘 -->
+    <!-- 변경(경로): 상대 경로로 수정 -->
+    <link rel="icon" href="/com/res/css/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/com/res/css/images/favicon_16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="/com/res/css/images/favicon_32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/com/res/css/images/favicon_48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="/com/res/css/images/favicon_192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="/com/res/css/images/apple-touch-icon.png" />
+
+    <!-- 스타일 -->
     <link rel="stylesheet" href="/com/res/css/jquery-ui.css" />
     <link rel="stylesheet" href="/com/res/css/newbird_init.css" />
     <link rel="stylesheet" href="/com/res/css/aos.css" />
@@ -12,8 +39,44 @@
     <link rel="stylesheet" href="/com/res/css/newbird_common.css" />
     <link rel="stylesheet" href="/com/res/css/newbird_layout.css" />
     <link rel="stylesheet" href="/com/res/css/newbird_contents.css" />
-    <link rel="stylesheet" href="/com/res/css/typeahead.css" />
+    <!-- <link rel="stylesheet" href="/com/res/css/typeahead.css"> -->
+    <link rel="stylesheet" href="/com/res/css/sweetalert2.min.css" />
+
+    <!-- 스크립트 -->
     <script src="/com/res/js/jquery-1.11.0.min.js"></script>
+    <script src="/com/res/js/aos.js"></script>
+    <script src="/com/res/js/slick.js"></script>
+    <script src="/com/res/js/lib.js"></script>
+    <!-- <script src="/com/res/js/jquery.typeahead.js"></script> -->
+    <script src="/com/res/js/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bdf0cec0078d498390e9d4da4c7d6e18"></script>
+
+    <!-- prototype이란 게 없을 때, 스윗얼럿으로 뭔가 띄움 -->
+    <script>
+      (function () {
+        //Prototype 객체가 없는경우에만 실행
+        if (typeof Prototype === "undefined") {
+          window.alert = function (message) {
+            var previousFocus;
+            Swal.fire({
+              title: decodeURIComponent("%EC%95%8C%EB%A6%BC"),
+              text: message,
+              icon: "info",
+              confirmButtonText: decodeURIComponent("%ED%99%95%EC%9D%B8"),
+              didOpen: () => {
+                previousFocus = document.activeElement;
+                document.querySelector(".swal2-confirm").focus();
+              },
+              didClose: () => {
+                if (previousFocus) {
+                  previousFocus.focus();
+                }
+              },
+            });
+          };
+        }
+      })();
+    </script>
 
     <!-- jquery include 돌면서 보여주기 -->
     <script>
@@ -30,16 +93,19 @@
       });
     </script>
   </head>
+
   <body>
     <div id="wrap">
-      <!-- 헤더 -->
+      <!-- header -->
       <div data-include-path="../process/include/header.html"></div>
+
+      <!-- Aside S -->
+      <div data-include-path="../process/include/aside.html"></div>
 
       <!-- 브레드크럼 바 -->
       <div data-include-path="../process/include/breadcrumb.html"></div>
 
-      <!-- Aside S -->
-      <div data-include-path="../process/include/aside.html"></div>
+      <!-- Contents S -->
       <div id="contents">
         <h2 class="blind">본문</h2>
         <section class="c_wrap c_prevent">
@@ -75,6 +141,10 @@
           </div>
         </section>
       </div>
+
+      <!-- 담당자 정보 -->
+      <div data-include-path="../process/include/charge_area.html"></div>
+
       <!-- Footer S -->
       <div data-include-path="../process/include/footer.html"></div>
     </div>
