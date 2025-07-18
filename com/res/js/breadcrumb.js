@@ -44,6 +44,9 @@ const subMenuKeyMap = {
   "MOB_SMT_CNTR_NTC_INDV.html": ["연금보험", "퇴직연금"],
   "HP_CSCETR_LON_GUID_PDT_NTC.html": ["상품안내", "대출계산기", "채무조정안내"],
   "HP_CSCETR_POSN_DOC_INS_LIST.html": ["연금보험", "퇴직연금"],
+  "HP_CSCETR_CVAP_APPL.html": ["민원 / 칭찬ㆍ불만ㆍ의견", "민원건수 공시", "금융소비자 보호체계", "금융소비자 보호실태평가", "소비자보호 우수사례", "유익한 소비자보호 정보", "소비자 금융교육", "금융소비자의 권리"],
+  "HP_CSCERT_INDV_INF_CON_NTC.html": ["개인정보 처리방침", "신용정보 활용체제", "전자금융거래약관", "위법신고", "고객권리 안내문", "영상정보처리기기 설치운영", "개인신용정보이용·제공조회"],
+  "HP_CSCETR_PERINFO_EXPOS.html": ["개인정보 노출 등록/해제"],
 };
 
 // 현재 경로에서 서브메뉴 키 추출
