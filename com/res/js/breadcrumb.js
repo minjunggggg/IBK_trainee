@@ -12,6 +12,7 @@ const pathMap = {
   "HP_CSCETR_PROG_EVNT_LIST.html": "이벤트",
 };
 
+// 현재 경로에서 브래드크럼 메뉴명 추출
 const currentPath = window.location.pathname;
 const fileName = currentPath.substring(currentPath.lastIndexOf("/") + 1);
 
@@ -27,11 +28,11 @@ if (newTitle) {
   }
 }
 
+// 현재 경로에서 브래드크럼 LNB 메뉴에 .on 클래스 추가하여 css 표시
 document.querySelectorAll(".c_menu a").forEach((link) => {
   const linkPath = new URL(link.href, location.origin).pathname;
   const currentPath = location.pathname;
 
-  // 비교 후 일치하면 .on 클래스 추가
   if (linkPath === currentPath) {
     link.classList.add("on");
   }

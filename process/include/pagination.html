@@ -1,0 +1,75 @@
+<div class="paging">
+  <div class="pg_wrap">
+    <div class="pg_left">
+      <a href="#" class="pg_page pg_start" onclick="activateFirstPage(); return false;"><span class="blind">처음으로</span><i class="icon small line arrowleft1"></i><i class="icon small line arrowleft1"></i></a>
+      <a href="#" class="pg_page pg_prev" onclick="activatePrevPage(); return false;"><span class="blind">이전</span><i class="icon small line arrowleft1"></i></a>
+    </div>
+    <div class="pg_center">
+      <a href="#" class="pg_page pg_current" onclick="pageNavigate(this); return false;">1</a> <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">2</a>
+      <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">3</a> <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">4</a> <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">5</a>
+      <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">6</a> <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">7</a> <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">8</a>
+      <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">9</a>
+      <a href="#" class="pg_page" onclick="pageNavigate(this); return false;">10</a>
+    </div>
+    <div class="pg_right">
+      <a href="#" class="pg_page pg_next" onclick="activateNextPage(); return false;"><span class="blind">다음</span><i class="icon small line arrowright1"></i></a>
+      <a href="#" class="pg_page pg_end" onclick="activateLastPage(); return false;"><span class="blind">끝으로</span><i class="icon small line arrowright1"></i><i class="icon small line arrowright1"></i></a>
+    </div>
+    <script type="text/javascript">
+      // 페이지 탭 클릭 시 해당 탭에 .pg_current 추가
+      // 다른 탭에서 .pg_current 제거
+      function pageNavigate(curPg) {
+        document.querySelectorAll(".pg_page").forEach((pg) => {
+          pg.classList.remove("pg_current");
+        });
+
+        // 클릭한 탭만 .on 추가
+        curPg.classList.add("pg_current");
+      }
+
+      //   맨 첫번째 페이지로 이동
+      function activateFirstPage() {
+        const pages = document.querySelectorAll(".pg_center .pg_page");
+        if (pages.length > 0) {
+          pages.forEach((pg) => pg.classList.remove("pg_current"));
+          pages[0].classList.add("pg_current");
+        }
+      }
+
+      //   이전 페이지로 이동
+      function activatePrevPage() {
+        const pages = document.querySelectorAll(".pg_center .pg_page");
+        const current = document.querySelector(".pg_current");
+        if (!current || pages.length === 0) return;
+        const currentIndex = Array.from(pages).indexOf(current);
+
+        if (currentIndex > 0) {
+          pages.forEach((pg) => pg.classList.remove("pg_current"));
+          pages[currentIndex - 1].classList.add("pg_current");
+        }
+      }
+
+      //   다음 페이지로 이동
+      function activateNextPage() {
+        const pages = document.querySelectorAll(".pg_center .pg_page");
+        const current = document.querySelector(".pg_current");
+        if (!current || pages.length === 0) return;
+        const currentIndex = Array.from(pages).indexOf(current);
+
+        if (currentIndex < pages.length - 1) {
+          pages.forEach((pg) => pg.classList.remove("pg_current"));
+          pages[currentIndex + 1].classList.add("pg_current");
+        }
+      }
+
+      //   맨 마지막 페이지로 이동
+      function activateLastPage() {
+        const pages = document.querySelectorAll(".pg_center .pg_page");
+        if (pages.length > 0) {
+          pages.forEach((pg) => pg.classList.remove("pg_current"));
+          pages[pages.length - 1].classList.add("pg_current");
+        }
+      }
+    </script>
+  </div>
+</div>

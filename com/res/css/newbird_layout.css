@@ -1358,17 +1358,17 @@ body.onload #aside .a_ai {
 }
 
 /* 모바일 */
-@media (max-width: 1033px) {
+/* @media (max-width: 1033px) {
   /* 헤더 */
-  #header {
+  /* #header {
     min-width: auto;
   }
   #header .h_wrap .h_menu ul {
     display: none;
-  }
+  } */
 
   /* 첫 번째 영역 */
-  .cm_area {
+  /* .cm_area {
     display: flex !important;
     flex-direction: column;
   }
@@ -1397,10 +1397,10 @@ body.onload #aside .a_ai {
   #contents.c_main .cm_nav ul li a > span {
     font-size: 2.5rem !important;
     margin-top: 1.5rem;
-  }
+  } */
 
   /* 두 번째 영역 */
-  .cm_info {
+  /* .cm_info {
     display: flex !important;
     width: calc(100vw - 5rem) !important;
   }
@@ -1409,10 +1409,10 @@ body.onload #aside .a_ai {
   }
   #contents.c_main .cm_info ul li .cmi_box p span {
     font-size: 16px;
-  }
+  } */
 
   /* 세 번째 영역 */
-  #contents.c_main .cm_board .cmb_list ul {
+  /* #contents.c_main .cm_board .cmb_list ul {
     display: grid !important;
     gap: 2rem;
   }
@@ -1424,10 +1424,10 @@ body.onload #aside .a_ai {
   }
   #contents.c_main .cm_board .cmb_list ul li:nth-child(n + 3){
     margin-top: 0 !important;
-  }
+  } */
 
   /* 네 번째 영역 */
-  #contents.c_main .cm_inquiry ul {
+  /* #contents.c_main .cm_inquiry ul {
     display: grid !important;
     gap: 2rem;
   }
@@ -1445,5 +1445,5 @@ body.onload #aside .a_ai {
   html, body {
   max-width: 100%;
   overflow-x: hidden;
-}
-}
+} */
+/* } */

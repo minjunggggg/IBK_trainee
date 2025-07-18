@@ -1,14 +1,86 @@
-<div class="charge_area" id="charge_area">
-  <div class="wrap">
-    <div class="p_box">
-      <p class="p_charge">
-        <mark class="text dot cm bold">담당자</mark>&nbsp;:&nbsp; 유인경 &nbsp;
-        <em class="fw_b bold"> 고객서비스부 </em>
-        <span href="tel:02)2270-1619" class="f_orange01 fw_b"><i class="icon line small call mr-10"></i>02)2270-1619</span>
-        <mark class="text dot cm bold">담당자</mark>&nbsp;:&nbsp; 천영일 &nbsp;
-        <em class="fw_b bold"> 퇴직연금부 </em>
-        <span href="tel: 02)2270-1448" class="f_orange01 fw_b"><i class="icon line small call mr-10"></i> 02)2270-1448</span>
-      </p>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>담당자 표시 테스트</title>
+  </head>
+  <body>
+    <div class="charge_area" id="charge_area">
+      <div class="wrap">
+        <div class="p_box">
+          <p class="p_charge" id="p_charge"></p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+    <script>
+      const chargeKeyMap = {
+        "HP_CSCETR_FAQ.html": ["service", "pension"],
+        "HP_CSCETR_USE_PAYATT_MTT.html": "call",
+        "MOB_SMT_CNTR_NTC_INDV.html": "service",
+        "HP_CSCETR_LON_GUID_PDT_NTC.html": "service2",
+        "HP_CSCETR_POSN_DOC_INS_LIST.html": "service",
+        "HP_CSCETR_CVAP_APPL.html": "consumer",
+        "HP_CSCERT_INDV_INF_CON_NTC.html": "law",
+        "HP_CSCETR_PERINFO_EXPOS.html": ["service2", "pension2"],
+        "HP_CSCETR_TERM_BEF.html": "service",
+      };
+
+      const chargeData = {
+        service: [{ name: "유인경", dept: "고객서비스부", phone: "02)2270-1619" }],
+        pension: [{ name: "천영일", dept: "퇴직연금부", phone: "02)2270-1448" }],
+        call: [{ name: "콜센터", dept: "", phone: "1577-4117, 1644-4117(상담사 연결 0번)" }],
+        service2: [{ name: "박관수", dept: "고객서비스부", phone: "02)2270-1592" }],
+        consumer: [{ name: "이진경", dept: "소비자보호팀", phone: "02)2270-1528" }],
+        law: [{ name: "최종준", dept: "준법지원부", phone: "02)2270-1646" }],
+        pension2: [{ name: "김이현", dept: "퇴직연금기획부", phone: "02)2270-1638(퇴직계약)" }],
+        default: [{ name: "홍길동", dept: "총무부", phone: "02)0000-0000" }],
+      };
+
+      // url에서 키워드를 추출하여 해당 담당자 정보를 반환하는 함수
+      function getKeyFromURL() {
+        const url = window.location.href.toLowerCase();
+        for (const keyword in chargeKeyMap) {
+          if (url.includes(keyword.toLowerCase())) {
+            return chargeKeyMap[keyword];
+          }
+        }
+        return "default";
+      }
+
+      // 담당자 정보를 렌더링하는 함수
+      function renderChargeInfo() {
+        const keyOrKeys = getKeyFromURL();
+        const container = document.getElementById("p_charge");
+
+        if (!container) {
+          console.error("❌ #p_charge 요소 없음");
+          return;
+        }
+
+        const keys = Array.isArray(keyOrKeys) ? keyOrKeys : [keyOrKeys];
+        let html = "";
+
+        keys.forEach((key) => {
+          const list = chargeData[key];
+          if (!list) return;
+
+          list.forEach((person) => {
+            html += `
+            <mark class="text dot cm bold">담당자</mark>&nbsp;:&nbsp; ${person.name} &nbsp;
+            <em class="fw_b bold">${person.dept}</em>
+            <span class="f_orange01 fw_b">
+              <i class="icon line small call mr-10"></i>
+              <a href="tel:${person.phone.replace(/[^\d]/g, "")}">${person.phone}</a>
+            </span><br>
+          `;
+          });
+        });
+
+        container.innerHTML = html;
+      }
+
+      renderChargeInfo();
+    </script>
+  </body>
+</html>

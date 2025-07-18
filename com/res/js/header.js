@@ -12,6 +12,7 @@ const supportUrls = [
   "HP_CSCETR_PROG_EVNT_LIST.html",
 ];
 
+// 현재 경로에서 고객지원 LNB 메뉴에 .on 클래스 추가하여 css 표시
 const isSupportPage = supportUrls.some((url) => location.href.includes(url));
 if (isSupportPage) {
   const supportBtn = document.querySelector('button[type="button"][tabindex="1600"]');

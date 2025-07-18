@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- 타이틀, 기본 정보 -->
-    <title>고객지원 전체보기 - IBK연금보험</title>
+    <title>민원 신청 - 민원 / 칭찬ㆍ불만ㆍ의견 - IBK연금보험</title>
     <meta name="description" content="Y" />
     <meta name="keywords" content="IBK연금보험, IBKI, 연금보험, 연금저축보험, 개인연금, 퇴직연금, 노후자금, 노후대비" />
     <meta name="author" content="IBK연금보험" />
@@ -16,7 +16,7 @@
 
     <!-- 링크 공유 시 설정 -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="고객지원 전체보기 - IBK연금보험" />
+    <meta property="og:title" content="민원 신청 - 민원 / 칭찬ㆍ불만ㆍ의견 - IBK연금보험" />
     <meta property="og:site_name" content="IBK연금보험" />
     <meta property="og:description" content="Y" />
     <meta property="og:image" content="/com/res/css/images/og.jpg" />
@@ -115,39 +115,39 @@
           <div class="wrap">
             <ul class="tabwrap t1 div4">
               <li class="tab">
-                <a class="t_btn on" href="/process/HP_CSCETR_CVAP_APPL" aria-expanded="true">민원 / 칭찬ㆍ불만ㆍ의견</a>
+                <a class="t_btn on" href="#" aria-expanded="true">민원 / 칭찬ㆍ불만ㆍ의견</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/process/HP_CVAP_NCSE_PBANO_LIST" aria-expanded="false">민원건수 공시</a>
+                <a class="t_btn" href="#" aria-expanded="false">민원건수 공시</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/process/HP_FNC_SPND_SFGD_FMLT" aria-expanded="false">금융소비자 보호체계</a>
+                <a class="t_btn" href="#" aria-expanded="false">금융소비자 보호체계</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/process/HP_FNC_SPND_SFGD_PRT" aria-expanded="false">금융소비자 보호실태평가</a>
+                <a class="t_btn" href="#" aria-expanded="false">금융소비자 보호실태평가</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/process/HP_CS_SUP_EXMP_LIST" aria-expanded="false">소비자보호 우수사례</a>
+                <a class="t_btn" href="#" aria-expanded="false">소비자보호 우수사례</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/pr/contact/cscetr_fnc_spnd_sfgd_tst.jsp" aria-expanded="false">유익한 소비자보호 정보</a>
+                <a class="t_btn" href="#" aria-expanded="false">유익한 소비자보호 정보</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/process/HP_CS_SPND_FND_EDUN_LIST" aria-expanded="false">소비자 금융교육</a>
+                <a class="t_btn" href="#" aria-expanded="false">소비자 금융교육</a>
               </li>
               <li class="tab">
-                <a class="t_btn" href="/process/HP_COLOF_RGHT" aria-expanded="false">금융소비자의 권리</a>
+                <a class="t_btn" href="#" aria-expanded="false">금융소비자의 권리</a>
               </li>
             </ul>
             <ul class="tabwrap mt-50 t2">
               <li id="complaint" class="tab">
-                <a href="/process/HP_CSCETR_CVAP_APPL?tab01" class="t_btn tab01 on" aria-expanded="true">민원 신청</a>
+                <a href="#" class="t_btn tab01 on" aria-expanded="true">민원 신청</a>
               </li>
               <li id="opinion" class="tab">
-                <a href="/process/HP_CSCETR_CVAP_APPL?tab02" class="t_btn tab02" aria-expanded="false">칭찬 · 불만 · 의견</a>
+                <a href="#" class="t_btn tab02" aria-expanded="false">칭찬 · 불만 · 의견</a>
               </li>
               <li id="process" class="tab">
-                <a href="/process/HP_CSCETR_CVAP_APPL?tab03" class="t_btn tab03" aria-expanded="false">민원 처리 절차</a>
+                <a href="#" class="t_btn tab03" aria-expanded="false">민원 처리 절차</a>
               </li>
             </ul>
             <div class="tab01 on">
@@ -311,5 +311,31 @@
       <!-- Footer S -->
       <div data-include-path="../process/include/footer.html"></div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 모든 .tabwrap 별로 독립 처리
+        const tabwraps = document.querySelectorAll(".tabwrap");
+
+        tabwraps.forEach((tabwrap) => {
+          const tabButtons = tabwrap.querySelectorAll(".tab a");
+
+          tabButtons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              // 해당 tabwrap 내 모든 탭에서 .on 제거, aria-expanded false
+              tabButtons.forEach((el) => {
+                el.classList.remove("on");
+                el.setAttribute("aria-expanded", "false");
+              });
+
+              // 클릭된 탭에 .on 추가, aria-expanded true
+              this.classList.add("on");
+              this.setAttribute("aria-expanded", "true");
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>

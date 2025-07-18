@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- 타이틀, 기본 정보 -->
-    <title>고객지원 전체보기 - IBK연금보험</title>
+    <title>구비서류 안내 - IBK연금보험</title>
     <meta name="description" content="Y" />
     <meta name="keywords" content="IBK연금보험, IBKI, 연금보험, 연금저축보험, 개인연금, 퇴직연금, 노후자금, 노후대비" />
     <meta name="author" content="IBK연금보험" />
@@ -16,7 +16,7 @@
 
     <!-- 링크 공유 시 설정 -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="고객지원 전체보기 - IBK연금보험" />
+    <meta property="og:title" content="구비서류 안내 - IBK연금보험" />
     <meta property="og:site_name" content="IBK연금보험" />
     <meta property="og:description" content="Y" />
     <meta property="og:image" content="/com/res/css/images/og.jpg" />
@@ -133,17 +133,17 @@
 
                 <ul class="tabwrap t1">
                   <li class="tab">
-                    <button type="button" class="t_btn on" onclick="parent.location.href='/process/HP_CSCETR_POSN_DOC_INS_LIST?bltb_cod=SC000014&amp;sctn=in&amp;TAB=in'" aria-expanded="true">연금보험</button>
+                    <button type="button" class="t_btn on" onclick="activateTab(this);" aria-expanded="true" style="padding: 1.3rem 0; font-size: 1.5rem">연금보험</button>
                   </li>
                   <li class="tab">
-                    <button type="button" class="t_btn" onclick="parent.location.href='/process/HP_CSCETR_POSN_DOC_INS_LIST?bltb_cod=SC000014&amp;sctn=pe&amp;TAB=pe'" aria-expanded="false">퇴직연금</button>
+                    <button type="button" class="t_btn" onclick="activateTab(this);" aria-expanded="false" style="padding: 1.3rem 0; font-size: 1.5rem">퇴직연금</button>
                   </li>
                 </ul>
 
                 <!-- 개발 : 각 탭에 따른 페이지 생성 또는 탭별 테이블 숨기기 처리 / 탭별 테이블 숨기기 방식의 경우, tabwrap의 t_btn은 a태그가 아닌 button 태그로 변경되어야 함 -->
 
                 <div class="tablewrap mt-50">
-                  <table>
+                  <table style="font-size: 1.5rem">
                     <caption class="blind">
                       연금보험 관련 업무별 구비서류 목록
                     </caption>
@@ -443,5 +443,19 @@
       <!-- Footer S -->
       <div data-include-path="../process/include/footer.html"></div>
     </div>
+
+    <script>
+      function activateTab(btn) {
+        // 모든 탭 버튼에서 .on 제거
+        document.querySelectorAll(".tab .t_btn").forEach((el) => {
+          el.classList.remove("on");
+          el.setAttribute("aria-expanded", "false");
+        });
+
+        // 클릭된 버튼에만 .on 추가
+        btn.classList.add("on");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    </script>
   </body>
 </html>

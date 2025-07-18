@@ -1,3 +1,4 @@
+// 클릭한 탭 css 표시
 function onClickFaqTab(clickedEl) {
   // 모든 탭에서 .on 제거
   document.querySelectorAll(".t_btn").forEach((btn) => {
