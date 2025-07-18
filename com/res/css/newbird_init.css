@@ -1,15 +1,15 @@
 @charset "utf-8";
 
-/* À¥ÆùÆ® */
-/* ¿ÀÇÂ»ê½º ·¹±Ö·¯ 400 */
-/* @font-face {
+/* ì›¹í°íŠ¸ */
+/* ì˜¤í”ˆì‚°ìŠ¤ ë ˆê·¤ëŸ¬ 400 */
+@font-face {
   font-family: "OpenSans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(../font/OpenSans-Regular.woff) format("woff");
-} */
-/* ¿ÀÇÂ»ê½º ¼¼¹Ìº¼µå 500 */
+}
+/* ì˜¤í”ˆì‚°ìŠ¤ ì„¸ë¯¸ë³¼ë“œ 500 */
 @font-face {
   font-family: "OpenSans";
   font-style: normal;
@@ -17,7 +17,7 @@
   font-display: swap;
   src: url(../font/OpenSans-SemiBold.woff) format("woff");
 }
-/* ¿ÀÇÂ»ê½º º¼µå 600 */
+/* ì˜¤í”ˆì‚°ìŠ¤ ë³¼ë“œ 600 */
 @font-face {
   font-family: "OpenSans";
   font-style: normal;
@@ -25,15 +25,15 @@
   font-display: swap;
   src: url(../font/OpenSans-Bold.woff) format("woff");
 }
-/* ¿ÀÇÂ»ê½º ¿¢½ºÆ®¶óº¼µå 700 */
-/* @font-face {
+/* ì˜¤í”ˆì‚°ìŠ¤ ì—‘ìŠ¤íŠ¸ë¼ë³¼ë“œ 700 */
+@font-face {
   font-family: "OpenSans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(../font/OpenSans-ExtraBold.woff) format("woff");
-} */
-/* ÇÁ¸®ÅÙ´Ùµå ·¹±Ö·¯ 400 */
+}
+/* í”„ë¦¬í…ë‹¤ë“œ ë ˆê·¤ëŸ¬ 400 */
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -41,7 +41,7 @@
   font-display: swap;
   src: url(../font/Pretendard-Regular.woff) format("woff");
 }
-/* ÇÁ¸®ÅÙ´Ùµå ¹Ìµğ¿ò 500 */
+/* í”„ë¦¬í…ë‹¤ë“œ ë¯¸ë””ì›€ 500 */
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -49,7 +49,7 @@
   font-display: swap;
   src: url(../font/Pretendard-Medium.woff) format("woff");
 }
-/* ÇÁ¸®ÅÙ´Ùµå ¼¼¹Ìº¼µå 600 */
+/* í”„ë¦¬í…ë‹¤ë“œ ì„¸ë¯¸ë³¼ë“œ 600 */
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -57,7 +57,7 @@
   font-display: swap;
   src: url(../font/Pretendard-SemiBold.woff) format("woff");
 }
-/* ÇÁ¸®ÅÙ´Ùµå º¼µå 700 */
+/* í”„ë¦¬í…ë‹¤ë“œ ë³¼ë“œ 700 */
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -65,15 +65,15 @@
   font-display: swap;
   src: url(../font/Pretendard-Bold.woff) format("woff");
 }
-/* ÇÁ¸®ÅÙ´Ùµå ¿¢½ºÆ®¶óº¼µå 800 */
-/* @font-face {
+/* í”„ë¦¬í…ë‹¤ë“œ ì—‘ìŠ¤íŠ¸ë¼ë³¼ë“œ 800 */
+@font-face {
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 800;
   font-display: swap;
   src: url(../font/Pretendard-ExtraBold.woff) format("woff");
-} */
-/* ÇÁ¸®ÅÙ´Ùµå ºí·¢ 900 */
+}
+/* í”„ë¦¬í…ë‹¤ë“œ ë¸”ë™ 900 */
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
@@ -81,15 +81,15 @@
   font-display: swap;
   src: url(../font/Pretendard-Black.woff) format("woff");
 }
-/* ³ª´®½ºÄù¾î B 700 */
-/* @font-face {
+/* ë‚˜ëˆ”ìŠ¤í€˜ì–´ B 700 */
+@font-face {
   font-family: "NanumSquare";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(../font/NanumSquareB.woff) format("woff");
-} */
-/* IBK ¾ÆÀÌµå¸²À¥ L 400 */
+}
+/* IBK ì•„ì´ë“œë¦¼ì›¹ L 400 */
 @font-face {
   font-family: "iDreamWeb";
   font-style: normal;
@@ -97,7 +97,7 @@
   font-display: swap;
   src: url(../font/IBKIDreamWebL.woff) format("woff");
 }
-/* IBK ¾ÆÀÌµå¸²À¥ B 700 */
+/* IBK ì•„ì´ë“œë¦¼ì›¹ B 700 */
 @font-face {
   font-family: "iDreamWeb";
   font-style: normal;
@@ -117,8 +117,8 @@ sub { vertical-align: text-bottom; }
 strong, b { font-weight: inherit; }
 button { color: inherit; cursor: pointer; }
 input,textarea,select { margin: 0; padding: 0; border: none; background: inherit; font-family: inherit; font-size: inherit; font-weight: inherit; outline: none; color: inherit; }
-/* ÀÌÀü ºê¶ó¿ìÀú ´ëÀÀ */
-select { -webkit-appearance: none; /* Å©·Ò È­»ìÇ¥ ¾ø¾Ö±â */ -moz-appearance: none; /* ÆÄÀÌ¾îÆø½º È­»ìÇ¥ ¾ø¾Ö±â */ appearance: none; /* È­»ìÇ¥ ¾ø¾Ö±â */ }
+/* ì´ì „ ë¸Œë¼ìš°ì € ëŒ€ì‘ */
+select { -webkit-appearance: none; /* í¬ë¡¬ í™”ì‚´í‘œ ì—†ì• ê¸° */ -moz-appearance: none; /* íŒŒì´ì–´í­ìŠ¤ í™”ì‚´í‘œ ì—†ì• ê¸° */ appearance: none; /* í™”ì‚´í‘œ ì—†ì• ê¸° */ }
 a:link, a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 legend { display: none; }
@@ -130,10 +130,10 @@ body { background: #fff; line-height: 100%; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-/* ÆÄÀÌ¾îÆø½º¿¡¼­ÀÇ ÃÊ±âÈ­ ¹æ¹ı */
+/* íŒŒì´ì–´í­ìŠ¤ì—ì„œì˜ ì´ˆê¸°í™” ë°©ë²• */
 input[type="number"] { -moz-appearance: textfield; }
 
-/* css ±âº»°ª Á¤ÀÇ */
+/* css ê¸°ë³¸ê°’ ì •ì˜ */
 .blind { display: block; overflow: hidden; position: absolute !important; left: -9999px; width: 1px; height: 1px; font-size: 0; line-height: 0; text-indent: -9999px !important; }
 .fl { float: left !important; }
 .fr { float: right !important; }
@@ -141,7 +141,7 @@ input[type="number"] { -moz-appearance: textfield; }
 .tl { text-align: left !important; }
 .tr { text-align: right !important; }
 
-/* ³Êºñ Å¬·¡½º Á¤ÀÇ */
+/* ë„ˆë¹„ í´ë˜ìŠ¤ ì •ì˜ */
 .w10 { width: 1rem !important; }
 .w20 { width: 2rem !important; }
 .w30 { width: 3rem !important; }

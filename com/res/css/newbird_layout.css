@@ -287,8 +287,7 @@ body.onload #aside .a_ai {
     }
 }
 #cate .c_menu > ul > li > button i {
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -298,6 +297,9 @@ body.onload #aside .a_ai {
     height: 1.2rem;
     transform: translateY(-50%);
     transition: 0.2s;
+}
+#cate .c_menu > ul > li.on > button i {
+    transform: rotate(-180deg) translateY(50%);
 }
 @media (max-height: 900px) {
     #cate .c_menu > ul > li > ul {

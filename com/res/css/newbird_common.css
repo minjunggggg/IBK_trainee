@@ -487,6 +487,9 @@ em.text {display:inline-block}
 .tablewrap table mark.crt.regular {position:relative; top:-0.7rem; font-size:1.2rem;}
 .tablewrap table em.crt {position:relative; top:-0.5rem; font-size:1.2rem; font-weight:400 !important;}
 
+/* 연금보험 테이블 css 추가(iframe 벗기면서 추가 필요) */
+.pension table td {padding: 1.2rem 1.8rem; line-height: 2.4rem;}
+
 /* terms */
 .terms {display:inline-block; float:left; width:100%; text-align:left; word-break:keep-all;}
 .terms .text {display:inline-block; float:left; width:100%;}

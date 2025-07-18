@@ -37,3 +37,56 @@ document.querySelectorAll(".c_menu a").forEach((link) => {
     link.classList.add("on");
   }
 });
+
+// 서브메뉴 추가
+// 현재 경로에 따라 서브메뉴를 추가
+const subMenuKeyMap = {
+  "MOB_SMT_CNTR_NTC_INDV.html": ["연금보험", "퇴직연금"],
+  "HP_CSCETR_LON_GUID_PDT_NTC.html": ["상품안내", "대출계산기", "채무조정안내"],
+  "HP_CSCETR_POSN_DOC_INS_LIST.html": ["연금보험", "퇴직연금"],
+};
+
+// 현재 경로에서 서브메뉴 키 추출
+const subMenu = subMenuKeyMap[fileName];
+// 브래드크럼 ul 가져오기
+const subMenuElement = document.querySelector(".c_menu > ul");
+
+// 서브메뉴 li 생성
+const newLi = document.createElement("li");
+newLi.className = "off";
+newLi.innerHTML = `<button type="button" aria-expanded="false">
+                    ${subMenu[0]}
+                    <i class="icon line xsmall arrowdown1"></i>
+                  </button>
+                  <ul style="display: none">
+                    ${
+                      subMenu
+                        .map(
+                          (item) => `<li>
+                    <a href="#" class="off">${item}</a>
+                    </li>`
+                        )
+                        .join("") // 자바스크립트가 배열을 문자열로 변환할 때 자동으로 쉼표로 join하는 현상을 막아줌
+                    }
+                  </ul>`;
+
+// 브래드크럼 ul에 서브메뉴 li 추가
+subMenuElement.appendChild(newLi);
+
+// 클릭 이벤트에 따른 메뉴명 변경, css(class) 변경
+newLi.querySelector("ul").addEventListener("click", function (e) {
+  if (e.target.tagName.toLowerCase() === "a") {
+    e.preventDefault(); // 링크 이동 방지
+
+    const allLinks = newLi.querySelectorAll("a");
+    allLinks.forEach((a) => a.classList.remove("on"));
+    allLinks.forEach((a) => a.classList.add("off"));
+
+    e.target.classList.add("on");
+    e.target.classList.remove("off");
+
+    // 상단 버튼 텍스트를 해당 항목으로 변경
+    const button = newLi.querySelector("button");
+    button.childNodes[0].nodeValue = e.target.textContent + "\n"; // 텍스트만 교체
+  }
+});
